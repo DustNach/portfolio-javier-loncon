@@ -135,7 +135,7 @@ const SGCMockup = () => {
                   Sistema Seguro
                 </p>
                 <p className="text-gray-400 dark:text-gray-400 light:text-gray-600 text-sm">
-                  15 vulnerabilidades identificadas y corregidas • Cumplimiento OWASP
+                  Auditoría OWASP completada • Score 8.5/10 • 0 vulnerabilidades críticas activas
                 </p>
               </div>
             </div>

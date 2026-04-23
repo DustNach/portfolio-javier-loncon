@@ -77,15 +77,16 @@ export default function MLComparisonDemo() {
         <ResponsiveContainer width="100%" height={300}>
           <ScatterChart>
             <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-            <XAxis 
-              dataKey="real" 
-              name="Real" 
+            <XAxis
+              dataKey="real"
+              name="Valor Real"
               stroke="#94a3b8"
               style={{ fontSize: '12px' }}
               label={{ value: 'Valor Real', position: 'insideBottom', offset: -5, fill: '#94a3b8' }}
             />
-            <YAxis 
-              name="Predicción" 
+            <YAxis
+              dataKey="pred"
+              name="Predicción"
               stroke="#94a3b8"
               style={{ fontSize: '12px' }}
               label={{ value: 'Predicción', angle: -90, position: 'insideLeft', fill: '#94a3b8' }}
@@ -102,17 +103,15 @@ export default function MLComparisonDemo() {
             <Legend 
               wrapperStyle={{ fontSize: '12px' }}
             />
-            <Scatter 
-              name="SVM" 
-              data={predictionData.map(d => ({ x: d.real, y: d.svm }))} 
+            <Scatter
+              name="SVM"
+              data={predictionData.map(d => ({ real: d.real, pred: d.svm }))}
               fill="#a855f7"
-              line={{ stroke: '#a855f7', strokeWidth: 2 }}
             />
-            <Scatter 
-              name="Linear Regression" 
-              data={predictionData.map(d => ({ x: d.real, y: d.linear }))} 
+            <Scatter
+              name="Regresión Lineal"
+              data={predictionData.map(d => ({ real: d.real, pred: d.linear }))}
               fill="#00d4ff"
-              line={{ stroke: '#00d4ff', strokeWidth: 2 }}
             />
           </ScatterChart>
         </ResponsiveContainer>

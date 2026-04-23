@@ -5,7 +5,7 @@ import BigDataDemo from './demos/BigDataDemo'
 
 export default function Demos() {
   return (
-    <section id="demos" className="py-20 px-6 bg-gradient-to-b from-black to-gray-900">
+    <section id="demos" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

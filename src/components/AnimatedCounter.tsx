@@ -59,10 +59,10 @@ const AnimatedCounter = () => {
     },
     {
       icon: <Shield className="h-10 w-10" />,
-      value: 15,
-      suffix: '',
-      label: 'Vulnerabilidades',
-      description: 'Identificadas y corregidas',
+      value: 8,
+      suffix: '.5 / 10',
+      label: 'OWASP Score',
+      description: 'Auditoría de seguridad aprobada',
       gradient: 'from-green-500 to-emerald-500'
     }
   ]
