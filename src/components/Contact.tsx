@@ -6,25 +6,25 @@ const Contact = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       title: 'Email',
-      value: 'javier@example.com',
-      link: 'mailto:javier@example.com'
+      value: 'jaloncon95@gmail.com',
+      link: 'mailto:jaloncon95@gmail.com'
     },
     {
       icon: <Linkedin className="h-6 w-6" />,
       title: 'LinkedIn',
-      value: 'linkedin.com/in/javier-loncon',
-      link: 'https://linkedin.com'
+      value: 'linkedin.com/in/javier-loncon-20bb2b175',
+      link: 'https://linkedin.com/in/javier-loncon-20bb2b175/'
     },
     {
       icon: <Github className="h-6 w-6" />,
       title: 'GitHub',
-      value: 'github.com/javier-loncon',
-      link: 'https://github.com'
+      value: 'github.com/DustNach',
+      link: 'https://github.com/DustNach'
     },
     {
       icon: <MapPin className="h-6 w-6" />,
       title: 'Ubicación',
-      value: 'Chile',
+      value: 'Chillán, Chile',
       link: null
     }
   ]
@@ -88,10 +88,10 @@ const Contact = () => {
           <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 p-8 rounded-lg border border-blue-500/30 text-center">
             <h3 className="text-2xl font-bold text-white mb-4">¿Listo para trabajar juntos?</h3>
             <p className="text-gray-300 mb-6">
-              Estoy disponible para proyectos freelance, colaboraciones y oportunidades laborales.
+              Estoy disponible para proyectos de desarrollo, colaboraciones técnicas y oportunidades laborales en el área de tecnología.
             </p>
             <a
-              href="mailto:javier@example.com"
+              href="mailto:jaloncon95@gmail.com"
               className="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
             >
               Enviar Mensaje
