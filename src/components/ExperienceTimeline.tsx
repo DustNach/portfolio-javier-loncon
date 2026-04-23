@@ -1,6 +1,5 @@
-import { useRef } from 'react'
 import type { ReactNode } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Briefcase, GraduationCap, Award, Code } from 'lucide-react'
 
 interface TimelineItem {
@@ -13,14 +12,6 @@ interface TimelineItem {
 }
 
 const ExperienceTimeline = () => {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start end', 'end start']
-  })
-
-  const x = useTransform(scrollYProgress, [0, 1], ['0%', '-50%'])
-
   const timeline: TimelineItem[] = [
     {
       year: '2025',
@@ -88,7 +79,7 @@ const ExperienceTimeline = () => {
   }
 
   return (
-    <section ref={containerRef} className="py-20 px-4 overflow-hidden bg-gray-900/30 dark:bg-gray-900/30 light:bg-gray-50/30">
+    <section className="py-20 px-4 bg-gray-900/30 dark:bg-gray-900/30 light:bg-gray-50/30">
       <div className="max-w-7xl mx-auto mb-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -103,15 +94,13 @@ const ExperienceTimeline = () => {
             Mi recorrido profesional y académico en desarrollo de software
           </p>
           <p className="text-sm text-gray-500 dark:text-gray-500 light:text-gray-500">
-            ← Desliza horizontalmente →
+            ← Desliza horizontalmente para ver más →
           </p>
         </motion.div>
       </div>
 
-      <div className="relative">
-        <motion.div
-          style={{ x }}
-          className="flex gap-8 pb-8"
+      <div className="relative overflow-x-auto overflow-y-hidden scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-800 pb-4">
+        <div className="flex gap-8 px-4 min-w-max"
         >
           {timeline.map((item, index) => (
             <motion.div
@@ -146,7 +135,7 @@ const ExperienceTimeline = () => {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   )
