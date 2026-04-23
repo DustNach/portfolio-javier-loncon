@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
+import Demos from './components/Demos'
 import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -19,6 +20,7 @@ function App() {
               <Hero />
               <About />
               <Projects />
+              <Demos />
               <Contact />
             </>
           } />
