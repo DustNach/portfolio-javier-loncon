@@ -14,7 +14,6 @@ export const projects: Project[] = [
     technologies: ['TensorFlow', 'Keras', 'Python', 'OpenCV', 'Pillow', 'NumPy', 'Deep Learning', 'CNN', 'Jupyter Notebook'],
     category: 'ai',
     image: '/projects/nna-cnn.jpg',
-    localPath: 'A:\\nna.ipynb',
     features: [
       'Red Neuronal Convolucional con 32 y 64 filtros',
       'Capas de MaxPooling para reducción dimensional',
@@ -37,7 +36,6 @@ export const projects: Project[] = [
     technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'SVM', 'Linear Regression', 'Jupyter'],
     category: 'ai',
     image: '/projects/ml-phones.jpg',
-    localPath: 'E:\\Minería de datos\\Evaluación N 2',
     features: [
       'Análisis exploratorio de datos (EDA)',
       'Comparación SVM vs Regresión Lineal',
@@ -60,7 +58,6 @@ export const projects: Project[] = [
     technologies: ['Python', 'Scikit-learn', 'TensorFlow', 'NLTK', 'Pandas', 'Jupyter', 'Matplotlib', 'Seaborn'],
     category: 'ai',
     image: '/projects/ml-collection.jpg',
-    localPath: 'A:\\ia',
     features: [
       'Clasificación con Iris Dataset (flores)',
       'Predicción Titanic (supervivencia)',
@@ -83,7 +80,6 @@ export const projects: Project[] = [
     technologies: ['Python', 'TensorFlow', 'Keras', 'R', 'Pandas', 'NumPy', 'CNN', 'Data Mining'],
     category: 'data',
     image: '/projects/mineria-cnn.jpg',
-    localPath: 'E:\\Minería de datos',
     features: [
       'Implementación de CNN para minería de datos',
       'Análisis exploratorio con R y Python',
@@ -108,7 +104,6 @@ export const projects: Project[] = [
     technologies: ['Apache Hadoop', 'HDFS', 'MapReduce', 'Ubuntu', 'Linux', 'Python', 'Big Data', 'Distributed Systems'],
     category: 'data',
     image: '/projects/hadoop-cluster.jpg',
-    localPath: 'A:\\inacap ultimo semestre\\big_data',
     features: [
       'Cluster Hadoop 3.4.0 configurado',
       'Sistema de archivos distribuido HDFS',
@@ -133,7 +128,6 @@ export const projects: Project[] = [
     technologies: ['Django', 'Python', 'PostgreSQL', 'Redis', 'Celery', 'Twilio', 'Firebase', 'AWS S3', 'Azure Storage', 'Docker', 'Google Calendar API'],
     category: 'web',
     image: '/projects/amigo-mascota.jpg',
-    localPath: 'A:\\inacap ultimo semestre\\amigo-mascota',
     features: [
       'Gestión completa de mascotas y dueños',
       'Historial médico con seguimiento de peso',
@@ -158,7 +152,6 @@ export const projects: Project[] = [
     technologies: ['FastAPI', 'Python', 'PostgreSQL', 'SQLAlchemy', 'AI/ML', 'Docker', 'Microservicios', 'React'],
     category: 'ai',
     image: '/projects/vet-ia.jpg',
-    localPath: 'A:\\inacap ultimo semestre\\vet_v.2',
     features: [
       'Validación inteligente de datos veterinarios',
       'Análisis de riesgos con IA',
@@ -181,7 +174,7 @@ export const projects: Project[] = [
     technologies: ['Django', 'Django REST Framework', 'React', 'TypeScript', 'PostgreSQL', 'Redis', 'Celery', 'WebSockets', 'Docker', 'Nginx', 'CI/CD'],
     category: 'web',
     image: '/projects/sgc-syc.jpg',
-    localPath: 'https://sgc.sycchile.com',
+    demoUrl: 'https://sgc.sycchile.com',
     features: [
       'Gestión de 3,000+ usuarios activos',
       '29 empresas clientes',
@@ -205,7 +198,6 @@ export const projects: Project[] = [
     technologies: ['React', 'TypeScript', 'Face-API.js', 'Material-UI', 'Formik', 'Yup', 'jsPDF', 'CryptoJS', 'Webcam'],
     category: 'web',
     image: '/projects/iwie-nda.jpg',
-    localPath: 'A:\\inacap ultimo semestre\\iwie\\iwie-nda',
     features: [
       'Reconocimiento facial con Face-API.js',
       'Captura de firma digital en canvas',
@@ -232,7 +224,6 @@ export const projects: Project[] = [
     technologies: ['React Native', 'Expo', 'TypeScript', 'Firebase', 'Firestore', 'React Navigation', 'Metro', 'Jest'],
     category: 'mobile',
     image: '/projects/iwie-drones.jpg',
-    localPath: 'A:\\inacap ultimo semestre\\iwie\\iwie-drones-new',
     features: [
       'App multiplataforma (iOS/Android/Web)',
       'Autenticación con Firebase Auth',
@@ -257,7 +248,6 @@ export const projects: Project[] = [
     technologies: ['Expo', 'React Native', 'TypeScript', 'Face Recognition', 'Camera API'],
     category: 'mobile',
     image: '/projects/face-register.jpg',
-    localPath: 'A:\\inacap ultimo semestre\\iwie\\iwie-register-face-app',
     features: [
       'Captura facial con cámara nativa',
       'Procesamiento de imágenes faciales',
@@ -280,7 +270,6 @@ export const projects: Project[] = [
     technologies: ['Power BI', 'Tableau', 'Python', 'Orange', 'Excel', 'CSV', 'Data Visualization', 'BI'],
     category: 'data',
     image: '/projects/bi-powerbi.jpg',
-    localPath: 'A:\\15-06-2024\\Inteligencia de Negocios',
     features: [
       'Dashboards interactivos en Power BI',
       'Visualizaciones con Tableau',
@@ -305,7 +294,6 @@ export const projects: Project[] = [
     technologies: ['COBIT 2019', 'IT Governance', 'Audit', 'Risk Management', 'Compliance'],
     category: 'system',
     image: '/projects/auditoria-cobit.jpg',
-    localPath: 'A:\\15-06-2024\\Auditoria de Software',
     features: [
       'Aplicación de framework COBIT 2019',
       'Evaluación de gobierno de TI',
@@ -327,7 +315,6 @@ export const projects: Project[] = [
     technologies: ['MS Project', 'Excel', 'PowerPoint', 'Agile', 'Scrum', 'Project Management'],
     category: 'system',
     image: '/projects/gestion-proyectos.jpg',
-    localPath: 'A:\\15-06-2024\\Gestion de Proyectos',
     features: [
       'Carta Gantt detallada en MS Project',
       'Presentación KickOff profesional',
@@ -348,7 +335,6 @@ export const projects: Project[] = [
     technologies: ['Excel', 'Financial Analysis', 'VAN', 'TIR', 'Risk Analysis'],
     category: 'system',
     image: '/projects/eval-proyectos.jpg',
-    localPath: 'A:\\15-06-2024\\Evaluación de Proyectos',
     features: [
       'Análisis de viabilidad económica',
       'Cálculo de VAN y TIR',
@@ -371,7 +357,6 @@ export const projects: Project[] = [
     technologies: ['Research', 'Documentation', 'Analysis', 'Implementation', 'Presentation'],
     category: 'system',
     image: '/projects/tesis.jpg',
-    localPath: 'A:\\inacap ultimo semestre\\Proyecto_titulo',
     features: [
       'Investigación académica formal',
       'Análisis de factibilidad técnica',
@@ -396,7 +381,6 @@ export const projects: Project[] = [
     technologies: ['Kali Linux', 'Pentesting', 'Security Audit', 'Vulnerability Analysis', 'Cybersecurity'],
     category: 'system',
     image: '/projects/seguridad.jpg',
-    localPath: 'E:\\Seguridad INF',
     features: [
       'Pentesting con Kali Linux',
       'Análisis de vulnerabilidades',
