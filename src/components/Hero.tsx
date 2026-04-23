@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, MapPin, ArrowDown } from 'lucide-react'
+import { Github, Linkedin, Mail, MapPin, ArrowDown, Download } from 'lucide-react'
 import TerminalTypewriter from './TerminalTypewriter'
 
 const Hero = () => {

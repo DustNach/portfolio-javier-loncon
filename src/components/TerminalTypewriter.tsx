@@ -1,27 +1,50 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
+const lines = [
+  '> sgc.sycchile.com — 3,247 usuarios activos',
+  '> stack: Django · React · FastAPI · PostgreSQL',
+  '> OWASP audit: 8.5/10 — 0 critical vulnerabilities',
+  '> deploy: Docker · Nginx · CI/CD · VPS',
+  '> models: CNN 96% acc · SVM 92% acc · NLP',
+]
+
 const TerminalTypewriter = () => {
-  const text = '> Javier Loncon — Full Stack Engineer'
+  const [lineIndex, setLineIndex] = useState(0)
   const [displayText, setDisplayText] = useState('')
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [charIndex, setCharIndex] = useState(0)
   const [showCursor, setShowCursor] = useState(true)
+  const [pausing, setPausing] = useState(false)
 
+  // Type characters
   useEffect(() => {
-    if (currentIndex < text.length) {
-      const timeout = setTimeout(() => {
-        setDisplayText(prev => prev + text[currentIndex])
-        setCurrentIndex(prev => prev + 1)
+    if (pausing) return
+    const current = lines[lineIndex]
+    if (charIndex < current.length) {
+      const t = setTimeout(() => {
+        setDisplayText(current.slice(0, charIndex + 1))
+        setCharIndex(c => c + 1)
+      }, 38)
+      return () => clearTimeout(t)
+    } else {
+      // Finished line — pause then move to next
+      const t = setTimeout(() => {
+        setPausing(true)
+        setTimeout(() => {
+          setLineIndex(i => (i + 1) % lines.length)
+          setDisplayText('')
+          setCharIndex(0)
+          setPausing(false)
+        }, 1800)
       }, 100)
-      return () => clearTimeout(timeout)
+      return () => clearTimeout(t)
     }
-  }, [currentIndex, text])
+  }, [charIndex, lineIndex, pausing])
 
+  // Cursor blink
   useEffect(() => {
-    const cursorInterval = setInterval(() => {
-      setShowCursor(prev => !prev)
-    }, 530)
-    return () => clearInterval(cursorInterval)
+    const id = setInterval(() => setShowCursor(v => !v), 530)
+    return () => clearInterval(id)
   }, [])
 
   return (
@@ -29,21 +52,26 @@ const TerminalTypewriter = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.3 }}
-      className="font-mono text-sm md:text-base bg-gray-900/90 dark:bg-gray-950/90 light:bg-white/90 border border-gray-700 dark:border-gray-800 light:border-gray-300 rounded-lg p-4 md:p-6 shadow-2xl backdrop-blur-sm max-w-2xl mx-auto"
+      className="font-mono text-sm md:text-base bg-gray-900/90 dark:bg-gray-950/90 border border-gray-700/60 rounded-lg p-4 md:p-5 max-w-2xl mx-auto backdrop-blur-sm"
     >
+      {/* Window chrome */}
       <div className="flex items-center gap-2 mb-3">
         <div className="flex gap-1.5">
-          <div className="w-3 h-3 rounded-full bg-red-500"></div>
-          <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-          <div className="w-3 h-3 rounded-full bg-green-500"></div>
+          <div className="w-3 h-3 rounded-full bg-red-500/80" />
+          <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
+          <div className="w-3 h-3 rounded-full bg-green-500/80" />
         </div>
-        <span className="text-gray-500 text-xs">terminal</span>
+        <span className="text-gray-600 text-xs ml-1">javier@portfolio ~ bash</span>
       </div>
-      <div className="text-green-400 dark:text-green-400 light:text-green-600">
+
+      {/* Output */}
+      <div className="text-green-400 min-h-[1.5rem]">
         {displayText}
-        <span className={`inline-block w-2 h-4 bg-green-400 dark:bg-green-400 light:bg-green-600 ml-1 ${showCursor ? 'opacity-100' : 'opacity-0'}`}>
-          |
-        </span>
+        <span
+          className={`inline-block w-[2px] h-4 bg-green-400 ml-0.5 align-middle transition-opacity duration-100 ${
+            showCursor ? 'opacity-100' : 'opacity-0'
+          }`}
+        />
       </div>
     </motion.div>
   )

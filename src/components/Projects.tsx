@@ -8,10 +8,10 @@ const Projects = () => {
 
   const categories = [
     { id: 'all', name: 'Todos' },
-    { id: 'web', name: 'Web' },
-    { id: 'ai', name: 'IA' },
+    { id: 'web', name: 'Web & Cloud' },
+    { id: 'ai', name: 'IA & ML' },
     { id: 'data', name: 'Big Data' },
-    { id: 'system', name: 'Sistemas' }
+    { id: 'system', name: 'Seguridad' }
   ]
 
   const filteredProjects = filter === 'all' 
