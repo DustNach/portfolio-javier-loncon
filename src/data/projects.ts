@@ -4,6 +4,34 @@ import { Project } from '../types'
 // Portafolio profesional con 17+ proyectos de IA, Big Data, Web, Mobile y Sistemas
 
 export const projects: Project[] = [
+  // ==================== PROYECTO EN PRODUCCIÓN (DESTACADO) ====================
+  
+  {
+    id: 'sgc-syc-chile',
+    title: 'SGC SYC Chile - Sistema de Gestión de Calidad',
+    description: '⭐ EN PRODUCCIÓN - Plataforma web para gestión de capacitaciones empresariales con 3,000+ usuarios activos',
+    longDescription: 'Sistema de Gestión de Calidad en producción real para SYC Chile. Arquitectura completa con Django REST Framework, React, TypeScript y PostgreSQL. Gestiona más de 3,000 participantes activos de 29 empresas clientes. Incluye WebSockets para comunicación en tiempo real, Celery para tareas asíncronas, CI/CD automatizado con Docker, y auditoría de seguridad OWASP con puntuación 8.5/10.',
+    technologies: ['Django', 'Django REST Framework', 'React', 'TypeScript', 'PostgreSQL', 'Redis', 'Celery', 'WebSockets', 'Docker', 'Nginx', 'CI/CD', 'OWASP'],
+    category: 'web',
+    image: '/projects/sgc-syc.jpg',
+    localPath: 'https://sgc.sycchile.com',
+    features: [
+      '⭐ EN PRODUCCIÓN desde Enero 2024',
+      '3,000+ usuarios activos',
+      '29 empresas clientes',
+      'Auditoría OWASP 8.5/10',
+      'WebSockets para tiempo real',
+      'Celery para tareas asíncronas',
+      'CI/CD automatizado con Docker',
+      'Administración de VPS',
+      'Alta disponibilidad',
+      'Arquitectura escalable'
+    ],
+    status: 'completed',
+    year: 2024,
+    demoUrl: 'https://sgc.sycchile.com'
+  },
+
   // ==================== INTELIGENCIA ARTIFICIAL Y MACHINE LEARNING ====================
   
   {

@@ -16,15 +16,13 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto">
-            Desarrollador Full Stack especializado en{' '}
-            <span className="text-blue-400">IA</span>,{' '}
-            <span className="text-purple-400">Big Data</span> y{' '}
-            <span className="text-green-400">Microservicios</span>
+            Ingeniero en Informática | Desarrollador Full Stack
           </p>
 
           <p className="text-lg text-gray-500 mb-12 max-w-2xl mx-auto">
-            Creando soluciones innovadoras con Django, FastAPI, React y tecnologías de vanguardia.
-            Apasionado por la inteligencia artificial y el procesamiento de datos a gran escala.
+            Desarrollador Full Stack en <span className="text-blue-400 font-semibold">SYC Chile</span> con experiencia en sistemas de alto impacto.
+            Stack principal: <span className="text-purple-400">Django</span>, <span className="text-blue-400">React</span>, <span className="text-green-400">TypeScript</span>, PostgreSQL, Docker.
+            Gestiono plataforma en producción con <span className="font-semibold">3,000+ usuarios activos</span>.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -44,24 +42,27 @@ const Hero = () => {
 
           <div className="flex justify-center gap-6">
             <a
-              href="https://github.com"
+              href="https://github.com/DustNach"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors"
+              aria-label="GitHub"
             >
               <Github className="h-6 w-6" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/javier-loncon-20bb2b175/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors"
+              aria-label="LinkedIn"
             >
               <Linkedin className="h-6 w-6" />
             </a>
             <a
-              href="mailto:javier@example.com"
+              href="mailto:jaloncon95@gmail.com"
               className="text-gray-400 hover:text-white transition-colors"
+              aria-label="Email"
             >
               <Mail className="h-6 w-6" />
             </a>

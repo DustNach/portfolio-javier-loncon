@@ -4,13 +4,12 @@ export interface Project {
   description: string
   longDescription: string
   technologies: string[]
-  category: 'web' | 'ai' | 'data' | 'mobile' | 'system'
+  category: 'web' | 'mobile' | 'ai' | 'data' | 'system'
   image: string
-  demoUrl?: string
-  githubUrl?: string
   localPath?: string
+  demoUrl?: string
   features: string[]
-  status: 'completed' | 'in-progress' | 'archived'
+  status: 'completed' | 'in-progress' | 'planned'
   year: number
 }
 
