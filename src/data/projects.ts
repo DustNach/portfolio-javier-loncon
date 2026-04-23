@@ -2,6 +2,7 @@ import { Project } from '../types'
 
 // PROYECTOS REALES DE JAVIER LONCÓN - INGENIERO EN INFORMÁTICA
 // Portafolio profesional con 17+ proyectos de IA, Big Data, Web, Mobile y Sistemas
+// Última actualización: 2026-04-23 - Fix demoUrl duplicado
 
 export const projects: Project[] = [
   // ==================== INTELIGENCIA ARTIFICIAL Y MACHINE LEARNING ====================
