@@ -7,7 +7,6 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Background from './components/Background'
-import ThemeToggle from './components/ThemeToggle'
 import BentoGrid from './components/BentoGrid'
 import SkillsRadar from './components/SkillsRadar'
 import AnimatedCounter from './components/AnimatedCounter'
@@ -39,7 +38,6 @@ function App() {
           } />
         </Routes>
         <Footer />
-        <ThemeToggle />
       </div>
     </Router>
   )
