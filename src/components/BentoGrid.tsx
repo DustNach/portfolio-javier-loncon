@@ -104,7 +104,7 @@ const BentoGrid = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[200px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[220px]">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -115,44 +115,47 @@ const BentoGrid = () => {
               whileHover={{ scale: 1.02, y: -4 }}
               className={`${getSizeClasses(project.size)} group relative overflow-hidden rounded-2xl bg-gradient-to-br ${project.gradient} p-[1px]`}
             >
-              <div className="h-full w-full bg-gray-900/95 rounded-2xl p-6 flex flex-col justify-between backdrop-blur-sm">
-                {/* Top */}
-                <div>
-                  <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${project.gradient} text-white mb-4`}>
+              <div className="h-full w-full bg-gray-900/95 rounded-2xl p-5 flex flex-col backdrop-blur-sm">
+                {/* Header con icono y título */}
+                <div className="flex items-start gap-3 mb-3">
+                  <div className={`flex-shrink-0 p-2.5 rounded-lg bg-gradient-to-br ${project.gradient} text-white`}>
                     {project.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{project.description}</p>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg font-bold text-white mb-1 line-clamp-1">{project.title}</h3>
+                    {project.stat && (
+                      <div className="flex items-baseline gap-1.5">
+                        <span className="text-xl font-bold bg-gradient-to-r ${project.gradient} bg-clip-text text-transparent">{project.stat.value}</span>
+                        <span className="text-gray-500 text-xs">{project.stat.label}</span>
+                      </div>
+                    )}
+                  </div>
                 </div>
 
-                {/* Stat destacada (si existe) */}
-                {project.stat && (
-                  <div className={`my-4 px-4 py-3 rounded-xl bg-gradient-to-br ${project.gradient} bg-opacity-10 border border-white/5`}>
-                    <span className="text-2xl font-bold text-white">{project.stat.value}</span>
-                    <span className="text-gray-400 text-sm ml-2">{project.stat.label}</span>
-                  </div>
-                )}
+                {/* Descripción */}
+                <p className="text-gray-400 text-sm leading-relaxed mb-auto line-clamp-3">{project.description}</p>
 
-                {/* Bottom */}
-                <div>
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    {project.stack.slice(0, 3).map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-2 py-1 bg-gray-800/70 text-gray-300 rounded text-xs"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                {/* Footer con stack y links */}
+                <div className="mt-4 pt-3 border-t border-gray-800/50">
+                  <div className="flex items-center justify-between">
+                    <div className="flex flex-wrap gap-1.5">
+                      {project.stack.slice(0, 3).map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2 py-0.5 bg-gray-800/70 text-gray-400 rounded text-xs"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
 
-                  <div className="flex gap-3">
+                    <div className="flex gap-2">
                     {project.demoUrl && (
                       <a
                         href={project.demoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-500 hover:text-white transition-colors"
+                        className="text-gray-600 hover:text-white transition-colors"
                         title="Ver demo"
                       >
                         <ExternalLink className="h-4 w-4" />
@@ -163,17 +166,18 @@ const BentoGrid = () => {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-500 hover:text-white transition-colors"
+                        className="text-gray-600 hover:text-white transition-colors"
                         title="Ver código"
                       >
                         <Github className="h-4 w-4" />
                       </a>
                     )}
+                    </div>
                   </div>
                 </div>
 
                 {/* Glow hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-5 transition-opacity rounded-2xl pointer-events-none`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity rounded-2xl pointer-events-none`} />
               </div>
             </motion.div>
           ))}
