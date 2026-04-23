@@ -186,8 +186,7 @@ export const projects: Project[] = [
       'Alta disponibilidad'
     ],
     status: 'completed',
-    year: 2024,
-    demoUrl: 'https://sgc.sycchile.com'
+    year: 2024
   },
 
   {

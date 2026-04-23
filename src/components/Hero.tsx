@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail } from 'lucide-react'
+import TerminalTypewriter from './TerminalTypewriter'
 
 const Hero = () => {
   return (
@@ -18,6 +19,10 @@ const Hero = () => {
           <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto">
             Ingeniero en Informática | Creador de Soluciones Tecnológicas
           </p>
+
+          <div className="mb-8">
+            <TerminalTypewriter />
+          </div>
 
           <p className="text-lg text-gray-500 mb-12 max-w-2xl mx-auto">
             Apasionado por crear proyectos que combinan <span className="text-blue-400 font-semibold">Inteligencia Artificial</span>, 

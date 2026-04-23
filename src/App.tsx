@@ -7,6 +7,13 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Background from './components/Background'
+import ThemeToggle from './components/ThemeToggle'
+import BentoGrid from './components/BentoGrid'
+import SkillsRadar from './components/SkillsRadar'
+import AnimatedCounter from './components/AnimatedCounter'
+import ExperienceTimeline from './components/ExperienceTimeline'
+import ChatbotDemo from './components/ChatbotDemo'
+import SGCMockup from './components/SGCMockup'
 
 function App() {
   return (
@@ -19,6 +26,12 @@ function App() {
             <>
               <Hero />
               <About />
+              <SkillsRadar />
+              <BentoGrid />
+              <AnimatedCounter />
+              <ExperienceTimeline />
+              <ChatbotDemo />
+              <SGCMockup />
               <Projects />
               <Demos />
               <Contact />
@@ -26,6 +39,7 @@ function App() {
           } />
         </Routes>
         <Footer />
+        <ThemeToggle />
       </div>
     </Router>
   )
