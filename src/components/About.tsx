@@ -63,9 +63,8 @@ const About = () => {
             </p>
 
             <p className="text-gray-300 text-lg leading-relaxed">
-              Mi diferenciador: no solo desarrollo — también <span className="font-semibold text-white">administro infraestructura</span>, 
-              implemento <span className="text-orange-400">seguridad (OWASP)</span>, optimizo rendimiento, y gestiono sistemas en producción. 
-              Integro herramientas de IA como <span className="text-purple-300">Claude Code y Cursor</span> en mi flujo de trabajo para maximizar productividad y calidad del código.
+              Mi diferenciador: no solo desarrollo — también <span className="font-semibold text-white">administro infraestructura</span>,
+              implemento <span className="text-orange-400">seguridad (OWASP)</span>, optimizo rendimiento, y gestiono sistemas en producción con usuarios reales.
             </p>
           </div>
 
