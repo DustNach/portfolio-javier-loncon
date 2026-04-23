@@ -7,8 +7,29 @@
   line-height: 1.5;
   font-weight: 400;
   color-scheme: dark;
-  background-color: #0a0a0a;
+  background-color: #080810;
   color: #ffffff;
+}
+
+/* Aurora animations */
+@keyframes aurora-drift-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(5%, 8%) scale(1.08); }
+  66%       { transform: translate(-4%, 4%) scale(0.95); }
+}
+@keyframes aurora-drift-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(-6%, 5%) scale(1.05); }
+  66%       { transform: translate(4%, -6%) scale(1.1); }
+}
+@keyframes aurora-drift-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%       { transform: translate(4%, -8%) scale(1.12); }
+}
+@keyframes aurora-drift-4 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(-5%, -5%) scale(1.06); }
+  66%       { transform: translate(6%, 4%) scale(0.94); }
 }
 
 body {

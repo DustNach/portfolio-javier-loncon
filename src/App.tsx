@@ -5,11 +5,13 @@ import Projects from './components/Projects'
 import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Background from './components/Background'
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
+      <div className="min-h-screen">
+        <Background />
         <Navbar />
         <Routes>
           <Route path="/" element={
@@ -17,7 +19,6 @@ function App() {
               <Hero />
               <About />
               <Projects />
-              <Demos />
               <Contact />
             </>
           } />

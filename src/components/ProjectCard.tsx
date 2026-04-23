@@ -19,12 +19,6 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
     return colors[category as keyof typeof colors] || colors.web
   }
 
-  const handleOpenLocal = () => {
-    if (project.localPath) {
-      alert(`Ruta local del proyecto:\n${project.localPath}\n\nPuedes abrir esta carpeta en tu explorador de archivos.`)
-    }
-  }
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -77,22 +71,13 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
           </div>
           
           <div className="flex gap-3">
-            {project.localPath && (
-              <button
-                onClick={handleOpenLocal}
-                className="text-gray-400 hover:text-blue-400 transition-colors"
-                title="Ver ruta local"
-              >
-                <FolderOpen className="h-5 w-5" />
-              </button>
-            )}
             {project.demoUrl && (
               <a
                 href={project.demoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-400 transition-colors"
-                title="Ver demo"
+                title="Ver demo en vivo"
               >
                 <ExternalLink className="h-5 w-5" />
               </a>
