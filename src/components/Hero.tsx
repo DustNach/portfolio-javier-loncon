@@ -16,13 +16,14 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto">
-            Ingeniero en Informática | Desarrollador Full Stack
+            Ingeniero en Informática | Creador de Soluciones Tecnológicas
           </p>
 
           <p className="text-lg text-gray-500 mb-12 max-w-2xl mx-auto">
-            Desarrollador Full Stack en <span className="text-blue-400 font-semibold">SYC Chile</span> con experiencia en sistemas de alto impacto.
-            Stack principal: <span className="text-purple-400">Django</span>, <span className="text-blue-400">React</span>, <span className="text-green-400">TypeScript</span>, PostgreSQL, Docker.
-            Gestiono plataforma en producción con <span className="font-semibold">3,000+ usuarios activos</span>.
+            Apasionado por crear proyectos que combinan <span className="text-blue-400 font-semibold">Inteligencia Artificial</span>, 
+            <span className="text-purple-400 font-semibold"> Big Data</span> y <span className="text-green-400 font-semibold">Desarrollo Full Stack</span>.
+            Desde redes neuronales convolucionales hasta clusters Hadoop, desde apps móviles con reconocimiento facial hasta sistemas de microservicios.
+            <span className="block mt-3 text-gray-400">Exploro, aprendo y construyo soluciones innovadoras.</span>
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
