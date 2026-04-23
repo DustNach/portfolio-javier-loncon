@@ -7,33 +7,11 @@ const Hero = () => {
     <section id="hero" className="min-h-screen flex items-center justify-center pt-16 px-4">
       <div className="max-w-5xl mx-auto text-center">
 
-        {/* Impact numbers — lo primero que ve el visitante */}
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-wrap justify-center gap-6 mb-10"
-        >
-          {[
-            { value: '3,000+', label: 'usuarios en producción' },
-            { value: '29', label: 'empresas activas' },
-            { value: 'OWASP 8.5', label: 'score de seguridad' },
-          ].map((stat) => (
-            <div
-              key={stat.label}
-              className="px-5 py-2 rounded-full border border-blue-500/30 bg-blue-500/5 backdrop-blur-sm"
-            >
-              <span className="text-blue-400 font-bold text-sm">{stat.value}</span>
-              <span className="text-gray-500 text-sm ml-2">{stat.label}</span>
-            </div>
-          ))}
-        </motion.div>
-
         {/* Nombre y título */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1 }}
+          transition={{ duration: 0.7 }}
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
             <span className="text-gradient">Javier Loncón</span>
@@ -55,7 +33,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.25 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
           className="mb-8"
         >
           <TerminalTypewriter />
@@ -65,7 +43,7 @@ const Hero = () => {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.6 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
           className="text-gray-400 text-lg mb-10 max-w-xl mx-auto leading-relaxed"
         >
           Construyo sistemas que van a producción —{' '}
@@ -77,7 +55,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           <a
@@ -114,7 +92,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.6, duration: 0.5 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
           className="flex justify-center gap-5 mb-16"
         >
           <a
