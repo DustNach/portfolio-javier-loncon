@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { ExternalLink, Github, Folder, FolderOpen } from 'lucide-react'
 import { projects } from '../data/projects'
 import ProjectCard from './ProjectCard'
 

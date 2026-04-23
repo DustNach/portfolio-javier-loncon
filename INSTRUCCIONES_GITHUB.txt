@@ -1,0 +1,29 @@
+CREAR REPOSITORIO EN GITHUB - PASO A PASO
+
+1. Abre este link en tu navegador:
+   https://github.com/new
+
+2. En "Repository name" escribe exactamente:
+   portafolio-javier
+
+3. Selecciona "Public"
+
+4. NO marques ninguna casilla de "Initialize this repository"
+
+5. Click en el botón verde "Create repository"
+
+6. Una vez creado, vuelve aquí y escribe "creado"
+
+Eso es todo. Después yo subo el código automáticamente.
+
+---
+
+ALTERNATIVA: Si ya lo creaste, verifica que:
+- El nombre sea exactamente: portafolio-javier (sin mayúsculas, sin espacios)
+- Sea público (no privado)
+- Tu usuario sea: DustNach
+
+Puedes verificar visitando:
+https://github.com/DustNach/portafolio-javier
+
+Si ves un error 404, el repositorio no existe aún.
