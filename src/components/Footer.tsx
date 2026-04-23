@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="flex items-center gap-2 text-gray-400 text-sm">
             <span>Hecho con</span>
             <Heart className="h-4 w-4 text-red-500 fill-red-500" />
-            <span>usando React, TypeScript y TailwindCSS</span>
+            <span>usando React, TypeScript, Vite, TailwindCSS, Framer Motion y Recharts</span>
           </div>
 
           <div className="text-gray-400 text-sm">

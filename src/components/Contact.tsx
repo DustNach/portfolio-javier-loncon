@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Mail, Linkedin, Github, MapPin } from 'lucide-react'
+import { Mail, Linkedin, Github, MapPin, Download } from 'lucide-react'
 
 const Contact = () => {
   const contactMethods = [
@@ -90,12 +90,22 @@ const Contact = () => {
             <p className="text-gray-300 mb-6">
               Estoy disponible para proyectos de desarrollo, colaboraciones técnicas y oportunidades laborales en el área de tecnología.
             </p>
-            <a
-              href="mailto:jaloncon95@gmail.com"
-              className="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
-            >
-              Enviar Mensaje
-            </a>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="mailto:jaloncon95@gmail.com"
+                className="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-medium transition-colors shadow-lg shadow-blue-600/20"
+              >
+                Enviar Mensaje
+              </a>
+              <a
+                href="/cv-javier-loncon.pdf"
+                download
+                className="inline-flex items-center gap-2 px-8 py-3 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white rounded-lg font-medium transition-all border border-gray-600 hover:border-green-500/60"
+              >
+                <Download className="h-4 w-4" />
+                Descargar CV
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>

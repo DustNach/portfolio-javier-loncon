@@ -145,52 +145,14 @@ const About = () => {
             ))}
           </div>
 
-          <div className="mt-16 bg-gradient-to-r from-blue-900/20 to-purple-900/20 p-8 rounded-lg border border-blue-500/30 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-6 text-center">Proyectos y Logros Destacados</h3>
-            <ul className="space-y-4 text-gray-300">
-              <li className="flex items-start">
-                <span className="text-purple-400 mr-3 text-xl">▹</span>
-                <div>
-                  <p className="text-white font-semibold mb-1">Redes Neuronales Convolucionales (CNN)</p>
-                  <p className="text-gray-400 text-sm">Clasificación de imágenes con TensorFlow, Keras y OpenCV. Arquitectura con capas convolucionales, max pooling y dropout para evitar overfitting.</p>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-400 mr-3 text-xl">▹</span>
-                <div>
-                  <p className="text-white font-semibold mb-1">Cluster Hadoop para Big Data</p>
-                  <p className="text-gray-400 text-sm">Procesamiento distribuido de grandes volúmenes de datos con MapReduce, HDFS y ecosistema Hadoop completo.</p>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-3 text-xl">▹</span>
-                <div>
-                  <p className="text-white font-semibold mb-1">Sistema Veterinario con IA y Microservicios</p>
-                  <p className="text-gray-400 text-sm">Arquitectura de microservicios con FastAPI, validación inteligente de datos, análisis de riesgos con IA, motor de recomendaciones y monitoreo en tiempo real.</p>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <span className="text-orange-400 mr-3 text-xl">▹</span>
-                <div>
-                  <p className="text-white font-semibold mb-1">Reconocimiento Facial y Firma Digital</p>
-                  <p className="text-gray-400 text-sm">App React con Face-API.js para reconocimiento facial, captura de firma digital, generación de PDFs y encriptación con CryptoJS.</p>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <span className="text-cyan-400 mr-3 text-xl">▹</span>
-                <div>
-                  <p className="text-white font-semibold mb-1">SGC en Producción (SYC Chile)</p>
-                  <p className="text-gray-400 text-sm">Sistema de gestión de calidad con Django + React + TypeScript + PostgreSQL. 3,000+ usuarios activos, WebSockets, Celery, CI/CD con Docker, auditoría OWASP 8.5/10.</p>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <span className="text-pink-400 mr-3 text-xl">▹</span>
-                <div>
-                  <p className="text-white font-semibold mb-1">Business Intelligence y Análisis de Datos</p>
-                  <p className="text-gray-400 text-sm">Dashboards interactivos con Power BI y Tableau, análisis de datos con Python, visualizaciones avanzadas y reportes automatizados.</p>
-                </div>
-              </li>
-            </ul>
+          {/* CTA hacia proyectos */}
+          <div className="mt-16 text-center">
+            <a
+              href="#projects"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-medium transition-all duration-200 shadow-lg shadow-blue-600/20 hover:shadow-blue-500/30"
+            >
+              Ver todos los proyectos →
+            </a>
           </div>
         </motion.div>
       </div>

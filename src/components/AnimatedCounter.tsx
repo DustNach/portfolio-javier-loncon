@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Users, Building2, Shield } from 'lucide-react'
+import { Users, Building2, Shield, BookOpen } from 'lucide-react'
 
 interface CounterProps {
   end: number
@@ -64,6 +64,14 @@ const AnimatedCounter = () => {
       label: 'OWASP Score',
       description: 'Auditoría de seguridad aprobada',
       gradient: 'from-green-500 to-emerald-500'
+    },
+    {
+      icon: <BookOpen className="h-10 w-10" />,
+      value: 1116,
+      suffix: '+',
+      label: 'Horas Certificadas',
+      description: 'Formación en Cloud, Full Stack y Agile',
+      gradient: 'from-orange-500 to-amber-500'
     }
   ]
 
@@ -84,7 +92,7 @@ const AnimatedCounter = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
