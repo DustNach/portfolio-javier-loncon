@@ -127,7 +127,28 @@ const translations = {
       title: 'Proyectos en Vivo',
       subtitle: 'Sistemas reales en producción que puedes visitar ahora mismo',
       visitLive: 'Visitar Sistema en Vivo',
-      note: '🚀 Sistemas 100% funcionales en producción con usuarios reales'
+      note: '🚀 Sistemas 100% funcionales en producción con usuarios reales',
+      edulexis: {
+        description: 'Plataforma legal para sostenedores educacionales en producción',
+        completeness: 'Completitud',
+        djangoApps: 'Apps Django',
+        apis: 'APIs'
+      },
+      sgc: {
+        description: 'Sistema de gestión de capacitación empresarial',
+        stack: 'Stack',
+        database: 'Base de Datos',
+        status: 'Estado',
+        production: 'Producción'
+      },
+      sycchile: {
+        description: 'Sitio web corporativo de SYC Chile - Capacitación y consultoría empresarial',
+        type: 'Tipo',
+        corporate: 'Corporativo',
+        services: 'Servicios',
+        training: 'Capacitación',
+        online: 'En Línea'
+      }
     },
     skillsRadar: {
       title: 'Stack Técnico',
@@ -218,7 +239,28 @@ const translations = {
       title: 'Live Projects',
       subtitle: 'Real production systems you can visit right now',
       visitLive: 'Visit Live System',
-      note: '🚀 100% functional systems in production with real users'
+      note: '🚀 100% functional systems in production with real users',
+      edulexis: {
+        description: 'Legal platform for educational administrators in production',
+        completeness: 'Completeness',
+        djangoApps: 'Django Apps',
+        apis: 'APIs'
+      },
+      sgc: {
+        description: 'Corporate training management system',
+        stack: 'Stack',
+        database: 'Database',
+        status: 'Status',
+        production: 'Production'
+      },
+      sycchile: {
+        description: 'SYC Chile corporate website - Training and business consulting',
+        type: 'Type',
+        corporate: 'Corporate',
+        services: 'Services',
+        training: 'Training',
+        online: 'Online'
+      }
     },
     skillsRadar: {
       title: 'Technical Stack',

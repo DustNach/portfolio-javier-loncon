@@ -8,40 +8,40 @@ const LiveProjects = () => {
     {
       id: 'edulexis',
       title: 'EduLexis',
-      description: 'Plataforma legal para sostenedores educacionales en producción',
+      description: t('liveProjects.edulexis.description'),
       url: 'https://edulexis.cl',
       icon: <Server className="h-8 w-8" />,
       gradient: 'from-blue-500 to-cyan-500',
       stats: [
-        { label: 'Completitud', value: '92%' },
-        { label: 'Apps Django', value: '12' },
-        { label: 'APIs', value: '150+' }
+        { label: t('liveProjects.edulexis.completeness'), value: '92%' },
+        { label: t('liveProjects.edulexis.djangoApps'), value: '12' },
+        { label: t('liveProjects.edulexis.apis'), value: '150+' }
       ]
     },
     {
       id: 'sgc',
       title: 'SGC SYC Chile',
-      description: 'Sistema de gestión de capacitación empresarial',
+      description: t('liveProjects.sgc.description'),
       url: 'https://sgc.sycchile.com',
       icon: <Database className="h-8 w-8" />,
       gradient: 'from-green-500 to-emerald-500',
       stats: [
-        { label: 'Stack', value: 'Django + React' },
-        { label: 'Base de Datos', value: 'PostgreSQL' },
-        { label: 'Estado', value: 'Producción' }
+        { label: t('liveProjects.sgc.stack'), value: 'Django + React' },
+        { label: t('liveProjects.sgc.database'), value: 'PostgreSQL' },
+        { label: t('liveProjects.sgc.status'), value: t('liveProjects.sgc.production') }
       ]
     },
     {
       id: 'sycchile',
       title: 'SYC Chile',
-      description: 'Sitio web corporativo de SYC Chile - Capacitación y consultoría empresarial',
+      description: t('liveProjects.sycchile.description'),
       url: 'https://sycchile.com',
       icon: <Server className="h-8 w-8" />,
       gradient: 'from-orange-500 to-red-500',
       stats: [
-        { label: 'Tipo', value: 'Corporativo' },
-        { label: 'Servicios', value: 'Capacitación' },
-        { label: 'Estado', value: 'En Línea' }
+        { label: t('liveProjects.sycchile.type'), value: t('liveProjects.sycchile.corporate') },
+        { label: t('liveProjects.sycchile.services'), value: t('liveProjects.sycchile.training') },
+        { label: t('liveProjects.sycchile.status'), value: t('liveProjects.sycchile.online') }
       ]
     }
   ]
