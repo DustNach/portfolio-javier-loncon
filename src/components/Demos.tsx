@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion'
-import { Brain, TrendingUp, Database, CheckCircle, ChevronDown, ChevronUp, Github, Code } from 'lucide-react'
+import { Brain, TrendingUp, Database, CheckCircle, ChevronDown, ChevronUp, Github } from 'lucide-react'
 import { useState } from 'react'
-import CNNVisualization from './demos/CNNVisualization'
-import TitanicVisualization from './demos/TitanicVisualization'
 import CodeEditor from './CodeEditor'
 import { codeExamples } from '../data/codeExamples'
 
@@ -22,7 +20,6 @@ export default function Demos() {
         { label: 'Arquitectura', value: 'Conv2D + MaxPooling' },
         { label: 'Activación', value: 'ReLU + Sigmoid' }
       ],
-      visualization: <CNNVisualization />,
       codeExample: codeExamples.cnn,
       githubUrl: 'https://github.com/DustNach/cnn-cat-classifier'
     },
@@ -53,7 +50,6 @@ export default function Demos() {
         { label: 'Features', value: '12' },
         { label: 'Encoding', value: 'LabelEncoder + OneHot' }
       ],
-      visualization: <TitanicVisualization />,
       codeExample: codeExamples.titanic,
       githubUrl: 'https://github.com/DustNach/titanic-survival-prediction'
     },
@@ -149,7 +145,7 @@ export default function Demos() {
                     Ver Código
                   </a>
                 )}
-                {(demo.visualization || demo.codeExample) && (
+                {demo.codeExample && (
                   <button
                     onClick={() => setExpandedDemo(expandedDemo === demo.id ? null : demo.id)}
                     className={`${demo.githubUrl ? 'flex-1' : 'w-full'} flex items-center justify-center gap-2 px-4 py-3 bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 rounded-lg font-medium transition-all duration-200 border border-blue-500/20 hover:border-blue-500/40`}
@@ -162,37 +158,28 @@ export default function Demos() {
                     ) : (
                       <>
                         <ChevronDown className="h-4 w-4" />
-                        {demo.visualization ? 'Ver Demo' : 'Ver Código'}
+                        Ver Código
                       </>
                     )}
                   </button>
                 )}
               </div>
 
-              {expandedDemo === demo.id && (
+              {expandedDemo === demo.id && demo.codeExample && (
                 <motion.div
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="mt-6 overflow-hidden space-y-6"
+                  className="mt-6 overflow-hidden"
                 >
-                  {demo.visualization}
-                  {demo.codeExample && (
-                    <div>
-                      <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                        <Code className="h-5 w-5 text-blue-400" />
-                        Código Fuente
-                      </h4>
-                      <CodeEditor
-                        code={demo.codeExample.code}
-                        title={demo.codeExample.title}
-                        output={demo.codeExample.output}
-                        colabUrl={demo.codeExample.colabUrl}
-                        editable={true}
-                      />
-                    </div>
-                  )}
+                  <CodeEditor
+                    code={demo.codeExample.code}
+                    title={demo.codeExample.title}
+                    output={demo.codeExample.output}
+                    colabUrl={demo.codeExample.colabUrl}
+                    editable={true}
+                  />
                 </motion.div>
               )}
 
