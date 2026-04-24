@@ -140,22 +140,3 @@ export default function Demos() {
     </section>
   )
 }
-            <BigDataDemo />
-          </motion.div>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mt-16 text-center"
-        >
-          <p className="text-gray-500 text-sm">
-            💡 Hover sobre los gráficos para ver detalles interactivos
-          </p>
-        </motion.div>
-      </div>
-    </section>
-  )
-}
