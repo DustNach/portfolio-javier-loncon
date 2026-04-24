@@ -99,6 +99,21 @@ html {
     @apply bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent;
   }
   
+  .text-image-fill {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 8s ease infinite;
+    text-shadow: 0 0 80px rgba(102, 126, 234, 0.5);
+  }
+  
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
   .card-hover {
     @apply transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-soft cursor-pointer;
   }

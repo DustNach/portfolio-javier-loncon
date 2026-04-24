@@ -13,8 +13,10 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <h1 className="text-6xl md:text-8xl font-bold mb-4 tracking-wide font-bebas uppercase">
-            <span className="text-gradient">Javier Loncón</span>
+          <h1 className="text-7xl md:text-9xl font-black mb-6 tracking-wider font-bebas uppercase">
+            <span className="text-image-fill">
+              Javier Loncón
+            </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 font-medium mb-2">
