@@ -11,7 +11,7 @@ const About = () => {
     {
       icon: <Server className="h-8 w-8" />,
       title: 'Backend',
-      items: ['Django', 'FastAPI', 'Node.js', 'Express', 'PostgreSQL', 'REST APIs']
+      items: ['Django', 'FastAPI', 'Node.js', 'Express', 'PostgreSQL', 'MongoDB']
     },
     {
       icon: <Brain className="h-8 w-8" />,
