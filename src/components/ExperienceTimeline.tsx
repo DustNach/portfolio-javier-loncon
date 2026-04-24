@@ -52,14 +52,6 @@ const ExperienceTimeline = () => {
       description: 'Tablero Power BI con análisis de 217,013 estudiantes. Procesamiento con R y Python',
       icon: <Code className="h-6 w-6" />,
       type: 'project'
-    },
-    {
-      year: '2024',
-      title: 'BioClean Pro',
-      organization: 'E-commerce WordPress',
-      description: 'Tienda online para productos industriales de limpieza con WooCommerce y diseño personalizado',
-      icon: <Code className="h-6 w-6" />,
-      type: 'project'
     }
   ]
 
