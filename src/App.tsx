@@ -11,6 +11,7 @@ import SkillsRadar from './components/SkillsRadar'
 import AnimatedCounter from './components/AnimatedCounter'
 import ExperienceTimeline from './components/ExperienceTimeline'
 import LiveProjects from './components/LiveProjects'
+import Demos from './components/Demos'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
               <AnimatedCounter />
               <LiveProjects />
               <ExperienceTimeline />
+              <Demos />
               <Projects />
               <Contact />
             </>
