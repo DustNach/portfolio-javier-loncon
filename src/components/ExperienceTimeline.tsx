@@ -55,14 +55,6 @@ const ExperienceTimeline = () => {
     },
     {
       year: '2024',
-      title: 'Career-Ops',
-      organization: 'Proyecto Open Source',
-      description: 'Sistema multi-agente de búsqueda de empleo con IA. 740+ ofertas evaluadas, 100+ CVs personalizados',
-      icon: <Code className="h-6 w-6" />,
-      type: 'project'
-    },
-    {
-      year: '2024',
       title: 'BioClean Pro',
       organization: 'E-commerce WordPress',
       description: 'Tienda online para productos industriales de limpieza con WooCommerce y diseño personalizado',

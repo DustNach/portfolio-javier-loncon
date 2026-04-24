@@ -50,17 +50,6 @@ const BentoGrid = () => {
     },
     {
       id: '4',
-      title: 'Career-Ops',
-      description: 'Sistema multi-agente de búsqueda de empleo con IA. 740+ ofertas evaluadas, 100+ CVs personalizados.',
-      stack: ['Node.js', 'Claude AI', 'Playwright', 'Go'],
-      stat: { value: '740+', label: 'ofertas' },
-      githubUrl: 'https://github.com/santifer/career-ops',
-      icon: <Cpu className="h-8 w-8" />,
-      gradient: 'from-orange-500 to-red-500',
-      size: 'small'
-    },
-    {
-      id: '5',
       title: 'BioClean Pro',
       description: 'E-commerce WordPress para productos industriales de limpieza con diseño personalizado.',
       stack: ['WordPress', 'WooCommerce', 'Elementor'],

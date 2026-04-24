@@ -51,7 +51,7 @@ const AnimatedCounter = () => {
     },
     {
       icon: <Building2 className="h-10 w-10" />,
-      value: 5,
+      value: 4,
       suffix: '+',
       label: 'Proyectos Completados',
       description: 'Sistemas en producción real',
