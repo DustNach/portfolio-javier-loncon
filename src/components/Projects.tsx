@@ -2,11 +2,14 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useLanguage } from '../contexts/LanguageContext'
 import { projects } from '../data/projects'
+import { projectsEn } from '../data/projects.en'
 import ProjectCard from './ProjectCard'
 
 const Projects = () => {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
   const [filter, setFilter] = useState<string>('all')
+  
+  const currentProjects = language === 'en' ? projectsEn : projects
 
   const categories = [
     { id: 'all', name: t('projects.all') },
