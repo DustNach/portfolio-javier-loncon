@@ -62,7 +62,7 @@ const Hero = () => {
         >
           <a
             href="#projects"
-            className="px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-medium transition-all duration-200 shadow-lg shadow-blue-600/20 hover:shadow-blue-500/30"
+            className="px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-medium transition-all duration-200 shadow-lg shadow-blue-600/40 hover:shadow-blue-500/60 hover:shadow-xl"
           >
             Ver Proyectos
           </a>
@@ -70,21 +70,21 @@ const Hero = () => {
             href="https://sgc.sycchile.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium transition-all duration-200 border border-gray-700 hover:border-blue-500/50"
+            className="px-8 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium transition-all duration-200 border border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/30"
           >
             Sistema en Vivo →
           </a>
           <a
             href="/files/Javier_Loncon_CV(Español).pdf"
             download
-            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white rounded-lg font-medium transition-all duration-200 shadow-lg shadow-green-600/20 hover:shadow-green-500/30"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white rounded-lg font-medium transition-all duration-200 shadow-lg shadow-green-600/40 hover:shadow-green-500/60 hover:shadow-xl"
           >
             <Download className="h-4 w-4" />
             Descargar CV
           </a>
           <a
             href="#contact"
-            className="px-8 py-3 text-gray-400 hover:text-white rounded-lg font-medium transition-colors"
+            className="px-8 py-3 text-gray-400 hover:text-blue-400 rounded-lg font-medium transition-all duration-200 hover:bg-blue-500/10"
           >
             Contactar
           </a>
