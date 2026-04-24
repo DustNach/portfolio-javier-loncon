@@ -12,60 +12,60 @@ export default function Demos() {
   const demos = [
     {
       id: 'cnn-cats',
-      title: 'CNN - Clasificador de Gatos (Academic Project)',
-      description: 'Proyecto académico para aprender Deep Learning. Red neuronal convolucional con arquitectura: 2 capas Conv2D (32 y 64 filtros 3×3), MaxPooling2D, Flatten, Dense 128 neuronas + Dropout 0.5. Modelo compilado con Adam optimizer y binary crossentropy. Dataset de entrenamiento: 11 imágenes (proof of concept). Arquitectura diseñada para clasificación binaria de imágenes 150×150 RGB.',
+      title: t('demos.cnn.title'),
+      description: t('demos.cnn.description'),
       tech: ['TensorFlow', 'Keras', 'OpenCV', 'Python'],
       icon: <Brain className="h-8 w-8" />,
       gradient: 'from-purple-500 to-pink-500',
       metrics: [
-        { label: 'Epochs', value: '10' },
-        { label: 'Arquitectura', value: 'Conv2D + MaxPooling' },
-        { label: 'Activación', value: 'ReLU + Sigmoid' }
+        { label: t('demos.cnn.epochs'), value: '10' },
+        { label: t('demos.cnn.architecture'), value: 'Conv2D + MaxPooling' },
+        { label: t('demos.cnn.activation'), value: 'ReLU + Sigmoid' }
       ],
       codeExample: codeExamples.cnn,
       githubUrl: 'https://github.com/DustNach/cnn-cat-classifier'
     },
     {
       id: 'decision-tree',
-      title: 'Decision Tree - Aprobación de Préstamos (Academic)',
-      description: 'Proyecto académico de Machine Learning. Sistema de scoring crediticio con DecisionTreeClassifier. Features engineering: ingreso mensual normalizado y monto del préstamo. Pipeline completo: train_test_split (80/20), fit, predict y evaluación con accuracy_score. Dataset de entrenamiento: 10 registros (proof of concept). Logra 100% precisión en conjunto de prueba.',
+      title: t('demos.decisionTree.title'),
+      description: t('demos.decisionTree.description'),
       tech: ['Scikit-learn', 'Python', 'Pandas'],
       icon: <CheckCircle className="h-8 w-8" />,
       gradient: 'from-green-500 to-emerald-500',
       metrics: [
-        { label: 'Precisión Train', value: '100%' },
-        { label: 'Precisión Test', value: '100%' },
-        { label: 'Modelo', value: 'DecisionTreeClassifier' }
+        { label: t('demos.decisionTree.precisionTrain'), value: '100%' },
+        { label: t('demos.decisionTree.precisionTest'), value: '100%' },
+        { label: t('demos.decisionTree.model'), value: 'DecisionTreeClassifier' }
       ],
       codeExample: codeExamples.decisionTree,
       githubUrl: 'https://github.com/DustNach/decision-tree-loan-approval'
     },
     {
       id: 'titanic',
-      title: 'Titanic Survival Prediction (Kaggle Dataset)',
-      description: 'Proyecto académico con dataset clásico de Kaggle. Pipeline completo de Data Science: EDA + Feature Engineering + Modeling. Procesamiento de 891 registros con 12 features. Data cleaning: imputación de 177 NaN en Age, drop de Cabin (77% missing). Encoding: LabelEncoder para Sex, OneHotEncoder para Embarked. Random Forest Classifier con análisis de feature importance. Visualizaciones con Seaborn.',
+      title: t('demos.titanic.title'),
+      description: t('demos.titanic.description'),
       tech: ['Pandas', 'Scikit-learn', 'Seaborn', 'Matplotlib'],
       icon: <Database className="h-8 w-8" />,
       gradient: 'from-blue-500 to-cyan-500',
       metrics: [
-        { label: 'Registros', value: '891' },
-        { label: 'Features', value: '12' },
-        { label: 'Encoding', value: 'LabelEncoder + OneHot' }
+        { label: t('demos.titanic.records'), value: '891' },
+        { label: t('demos.titanic.features'), value: '12' },
+        { label: t('demos.titanic.encoding'), value: 'LabelEncoder + OneHot' }
       ],
       codeExample: codeExamples.titanic,
       githubUrl: 'https://github.com/DustNach/titanic-survival-prediction'
     },
     {
       id: 'mobile-price',
-      title: 'Análisis de Precios de Móviles (Academic)',
-      description: 'Proyecto académico de análisis comparativo en R. Modelos ML: SVM (e1071) vs Linear Regression. Feature analysis identifica RAM como predictor principal (correlación +90%). Pipeline: data split 75/25, model training, evaluation con RMSE/MSE. Visualización 3D interactiva con Plotly (RAM × Battery × Pixels), matriz de correlación con corrplot. Código reproducible para aprendizaje.',
+      title: t('demos.mobilePrice.title'),
+      description: t('demos.mobilePrice.description'),
       tech: ['R', 'e1071', 'ggplot2', 'Plotly'],
       icon: <TrendingUp className="h-8 w-8" />,
       gradient: 'from-orange-500 to-red-500',
       metrics: [
-        { label: 'Correlación RAM', value: '+90%' },
-        { label: 'Modelos', value: 'SVM + LR' },
-        { label: 'Visualización', value: '3D Interactiva' }
+        { label: t('demos.mobilePrice.correlation'), value: '+90%' },
+        { label: t('demos.mobilePrice.models'), value: 'SVM + LR' },
+        { label: t('demos.mobilePrice.visualization'), value: '3D Interactiva' }
       ],
       codeExample: codeExamples.mobilePrice,
       githubUrl: 'https://github.com/DustNach/mobile-price-analysis-r'
@@ -198,7 +198,7 @@ export default function Demos() {
           className="mt-12 text-center"
         >
           <p className="text-gray-500 text-sm">
-            💡 Proyectos académicos desarrollados con datos reales y métricas verificables
+            {t('demos.note')}
           </p>
         </motion.div>
       </div>

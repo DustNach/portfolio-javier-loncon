@@ -95,7 +95,36 @@ const translations = {
       hide: 'Ocultar',
       sourceCode: 'Código Fuente',
       openColab: 'Abrir en Colab',
-      viewOnGithub: 'Ver Código'
+      viewOnGithub: 'Ver Código',
+      note: '💡 Proyectos académicos desarrollados con datos reales y métricas verificables',
+      cnn: {
+        title: 'CNN - Clasificador de Gatos (Academic Project)',
+        description: 'Proyecto académico para aprender Deep Learning. Red neuronal convolucional con arquitectura: 2 capas Conv2D (32 y 64 filtros 3×3), MaxPooling2D, Flatten, Dense 128 neuronas + Dropout 0.5. Modelo compilado con Adam optimizer y binary crossentropy. Dataset de entrenamiento: 11 imágenes (proof of concept). Arquitectura diseñada para clasificación binaria de imágenes 150×150 RGB.',
+        epochs: 'Epochs',
+        architecture: 'Arquitectura',
+        activation: 'Activación'
+      },
+      decisionTree: {
+        title: 'Decision Tree - Aprobación de Préstamos (Academic)',
+        description: 'Proyecto académico de Machine Learning. Sistema de scoring crediticio con DecisionTreeClassifier. Features engineering: ingreso mensual normalizado y monto del préstamo. Pipeline completo: train_test_split (80/20), fit, predict y evaluación con accuracy_score. Dataset de entrenamiento: 10 registros (proof of concept). Logra 100% precisión en conjunto de prueba.',
+        precisionTrain: 'Precisión Train',
+        precisionTest: 'Precisión Test',
+        model: 'Modelo'
+      },
+      titanic: {
+        title: 'Titanic Survival Prediction (Kaggle Dataset)',
+        description: 'Proyecto académico con dataset clásico de Kaggle. Pipeline completo de Data Science: EDA + Feature Engineering + Modeling. Procesamiento de 891 registros con 12 features. Data cleaning: imputación de 177 NaN en Age, drop de Cabin (77% missing). Encoding: LabelEncoder para Sex, OneHotEncoder para Embarked. Random Forest Classifier con análisis de feature importance. Visualizaciones con Seaborn.',
+        records: 'Registros',
+        features: 'Features',
+        encoding: 'Encoding'
+      },
+      mobilePrice: {
+        title: 'Análisis de Precios de Móviles (Academic)',
+        description: 'Proyecto académico de análisis comparativo en R. Modelos ML: SVM (e1071) vs Linear Regression. Feature analysis identifica RAM como predictor principal (correlación +90%). Pipeline: data split 75/25, model training, evaluation con RMSE/MSE. Visualización 3D interactiva con Plotly (RAM × Battery × Pixels), matriz de correlación con corrplot. Código reproducible para aprendizaje.',
+        correlation: 'Correlación RAM',
+        models: 'Modelos',
+        visualization: 'Visualización'
+      }
     },
     projects: {
       title: 'Proyectos',
@@ -264,7 +293,36 @@ const translations = {
       hide: 'Hide',
       sourceCode: 'Source Code',
       openColab: 'Open in Colab',
-      viewOnGithub: 'View Code'
+      viewOnGithub: 'View Code',
+      note: '💡 Academic projects developed with real data and verifiable metrics',
+      cnn: {
+        title: 'CNN - Cat Classifier (Academic Project)',
+        description: 'Academic project to learn Deep Learning. Convolutional neural network with architecture: 2 Conv2D layers (32 and 64 filters 3×3), MaxPooling2D, Flatten, Dense 128 neurons + Dropout 0.5. Model compiled with Adam optimizer and binary crossentropy. Training dataset: 11 images (proof of concept). Architecture designed for binary classification of 150×150 RGB images.',
+        epochs: 'Epochs',
+        architecture: 'Architecture',
+        activation: 'Activation'
+      },
+      decisionTree: {
+        title: 'Decision Tree - Loan Approval (Academic)',
+        description: 'Academic Machine Learning project. Credit scoring system with DecisionTreeClassifier. Features engineering: normalized monthly income and loan amount. Complete pipeline: train_test_split (80/20), fit, predict and evaluation with accuracy_score. Training dataset: 10 records (proof of concept). Achieves 100% accuracy on test set.',
+        precisionTrain: 'Train Accuracy',
+        precisionTest: 'Test Accuracy',
+        model: 'Model'
+      },
+      titanic: {
+        title: 'Titanic Survival Prediction (Kaggle Dataset)',
+        description: 'Academic project with classic Kaggle dataset. Complete Data Science pipeline: EDA + Feature Engineering + Modeling. Processing 891 records with 12 features. Data cleaning: imputation of 177 NaN in Age, drop Cabin (77% missing). Encoding: LabelEncoder for Sex, OneHotEncoder for Embarked. Random Forest Classifier with feature importance analysis. Visualizations with Seaborn.',
+        records: 'Records',
+        features: 'Features',
+        encoding: 'Encoding'
+      },
+      mobilePrice: {
+        title: 'Mobile Price Analysis (Academic)',
+        description: 'Academic comparative analysis project in R. ML models: SVM (e1071) vs Linear Regression. Feature analysis identifies RAM as main predictor (correlation +90%). Pipeline: data split 75/25, model training, evaluation with RMSE/MSE. Interactive 3D visualization with Plotly (RAM × Battery × Pixels), correlation matrix with corrplot. Reproducible code for learning.',
+        correlation: 'RAM Correlation',
+        models: 'Models',
+        visualization: 'Visualization'
+      }
     },
     projects: {
       title: 'Projects',
