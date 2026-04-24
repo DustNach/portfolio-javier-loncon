@@ -12,8 +12,8 @@ export default function Demos() {
   const demos = [
     {
       id: 'cnn-cats',
-      title: 'CNN - Clasificador de Gatos',
-      description: 'Red neuronal convolucional con arquitectura optimizada: 2 capas Conv2D (32 y 64 filtros 3×3), MaxPooling2D, Flatten, Dense 128 neuronas + Dropout 0.5 para prevenir overfitting. Modelo compilado con Adam optimizer y binary crossentropy. Alcanza 100% accuracy en 10 epochs. Arquitectura diseñada para clasificación binaria de imágenes 150×150 RGB.',
+      title: 'CNN - Clasificador de Gatos (Academic Project)',
+      description: 'Proyecto académico para aprender Deep Learning. Red neuronal convolucional con arquitectura: 2 capas Conv2D (32 y 64 filtros 3×3), MaxPooling2D, Flatten, Dense 128 neuronas + Dropout 0.5. Modelo compilado con Adam optimizer y binary crossentropy. Dataset de entrenamiento: 11 imágenes (proof of concept). Arquitectura diseñada para clasificación binaria de imágenes 150×150 RGB.',
       tech: ['TensorFlow', 'Keras', 'OpenCV', 'Python'],
       icon: <Brain className="h-8 w-8" />,
       gradient: 'from-purple-500 to-pink-500',
@@ -27,8 +27,8 @@ export default function Demos() {
     },
     {
       id: 'decision-tree',
-      title: 'Decision Tree - Aprobación de Préstamos',
-      description: 'Sistema de scoring crediticio con DecisionTreeClassifier optimizado. Features engineering: ingreso mensual normalizado y monto del préstamo. Pipeline completo: train_test_split (80/20), fit, predict y evaluación con accuracy_score. Logra 100% precisión en train y test. Modelo exportable para integración en sistemas de producción.',
+      title: 'Decision Tree - Aprobación de Préstamos (Academic)',
+      description: 'Proyecto académico de Machine Learning. Sistema de scoring crediticio con DecisionTreeClassifier. Features engineering: ingreso mensual normalizado y monto del préstamo. Pipeline completo: train_test_split (80/20), fit, predict y evaluación con accuracy_score. Dataset de entrenamiento: 10 registros (proof of concept). Logra 100% precisión en conjunto de prueba.',
       tech: ['Scikit-learn', 'Python', 'Pandas'],
       icon: <CheckCircle className="h-8 w-8" />,
       gradient: 'from-green-500 to-emerald-500',
@@ -42,8 +42,8 @@ export default function Demos() {
     },
     {
       id: 'titanic',
-      title: 'Titanic Survival Prediction',
-      description: 'Pipeline completo de Data Science: EDA + Feature Engineering + Modeling. Procesamiento de 891 registros con 12 features. Data cleaning: imputación de 177 NaN en Age, drop de Cabin (77% missing). Encoding: LabelEncoder para Sex, OneHotEncoder para Embarked. Random Forest Classifier con análisis de feature importance. Visualizaciones con Seaborn: heatmaps de correlación y distribuciones.',
+      title: 'Titanic Survival Prediction (Kaggle Dataset)',
+      description: 'Proyecto académico con dataset clásico de Kaggle. Pipeline completo de Data Science: EDA + Feature Engineering + Modeling. Procesamiento de 891 registros con 12 features. Data cleaning: imputación de 177 NaN en Age, drop de Cabin (77% missing). Encoding: LabelEncoder para Sex, OneHotEncoder para Embarked. Random Forest Classifier con análisis de feature importance. Visualizaciones con Seaborn.',
       tech: ['Pandas', 'Scikit-learn', 'Seaborn', 'Matplotlib'],
       icon: <Database className="h-8 w-8" />,
       gradient: 'from-blue-500 to-cyan-500',
@@ -57,8 +57,8 @@ export default function Demos() {
     },
     {
       id: 'mobile-price',
-      title: 'Análisis de Precios de Móviles',
-      description: 'Análisis comparativo de modelos ML en R: SVM (e1071) vs Linear Regression. Feature analysis identifica RAM como predictor principal (correlación +90%). Pipeline: data split 75/25, model training, evaluation con RMSE/MSE. Visualización 3D interactiva con Plotly (RAM × Battery × Pixels), matriz de correlación con corrplot. Código optimizado para reproducibilidad y deployment.',
+      title: 'Análisis de Precios de Móviles (Academic)',
+      description: 'Proyecto académico de análisis comparativo en R. Modelos ML: SVM (e1071) vs Linear Regression. Feature analysis identifica RAM como predictor principal (correlación +90%). Pipeline: data split 75/25, model training, evaluation con RMSE/MSE. Visualización 3D interactiva con Plotly (RAM × Battery × Pixels), matriz de correlación con corrplot. Código reproducible para aprendizaje.',
       tech: ['R', 'e1071', 'ggplot2', 'Plotly'],
       icon: <TrendingUp className="h-8 w-8" />,
       gradient: 'from-orange-500 to-red-500',

@@ -63,7 +63,7 @@ const translations = {
       contact: 'Contacto'
     },
     hero: {
-      title: 'Full Stack Engineer · 2+ años · IA · Big Data',
+      title: 'Full Stack Engineer · 1+ año en producción · IA · Big Data',
       location: 'Chillán, Chile',
       availability: 'Disponible Remoto y presencial',
       tagline: 'Diseño y lidero arquitecturas escalables que procesan 10K+ transacciones/día. Especializado en Django REST, React y ML/AI con sistemas en producción soportando 2000+ usuarios concurrentes.',
@@ -122,7 +122,7 @@ const translations = {
       contact: 'Contact'
     },
     hero: {
-      title: 'Full Stack Engineer · 2+ years · AI · Big Data',
+      title: 'Full Stack Engineer · 1+ year in production · AI · Big Data',
       location: 'Chillán, Chile',
       availability: 'Available Remote and On-site',
       tagline: 'I design and lead scalable architectures processing 10K+ transactions/day. Specialized in Django REST, React and ML/AI with production systems supporting 2000+ concurrent users.',

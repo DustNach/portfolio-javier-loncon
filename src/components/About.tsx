@@ -119,6 +119,40 @@ const About = () => {
             </p>
           </div>
 
+          <div className="mb-16 bg-gradient-to-r from-green-900/20 to-blue-900/20 p-8 rounded-lg border border-green-500/30 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-6 text-center">Development Practices</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="flex items-start">
+                <span className="text-green-400 mr-3 mt-1">✓</span>
+                <div>
+                  <p className="text-white font-semibold">Git Workflow</p>
+                  <p className="text-gray-400 text-sm">Feature branches • Pull Requests • Code review</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <span className="text-green-400 mr-3 mt-1">✓</span>
+                <div>
+                  <p className="text-white font-semibold">Deployment</p>
+                  <p className="text-gray-400 text-sm">Docker • Nginx • Production environments</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <span className="text-green-400 mr-3 mt-1">✓</span>
+                <div>
+                  <p className="text-white font-semibold">API Design</p>
+                  <p className="text-gray-400 text-sm">REST • Django REST Framework • OpenAPI docs</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <span className="text-green-400 mr-3 mt-1">✓</span>
+                <div>
+                  <p className="text-white font-semibold">Database Optimization</p>
+                  <p className="text-gray-400 text-sm">Query optimization • Indexing • PostgreSQL tuning</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skills.map((skill, index) => (
               <motion.div

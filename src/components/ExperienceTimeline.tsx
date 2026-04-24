@@ -33,9 +33,9 @@ const ExperienceTimeline = () => {
     },
     {
       year: '2025',
-      title: 'EduLexis - Tech Lead',
+      title: 'EduLexis - Full Stack Developer',
       organization: 'Producción en edulexis.cl',
-      description: 'Plataforma legal para sostenedores educacionales. Arquitectura modular con 12 apps Django, 150+ endpoints REST API, PostgreSQL optimizado. Procesamiento de 10K+ transacciones/día, soporte para 2000+ usuarios concurrentes. Liderazgo técnico en diseño de arquitectura y code reviews.',
+      description: 'Plataforma legal para sostenedores educacionales. Desarrollé arquitectura modular con 12 apps Django, 150+ endpoints REST API, PostgreSQL optimizado. Responsable de: desarrollo de APIs, integración frontend React, optimización de queries (reducción 40% tiempo respuesta), deployment con Docker. Sistema procesa 10K+ transacciones/día con 2000+ usuarios concurrentes.',
       icon: <Briefcase className="h-6 w-6" />,
       type: 'work'
     },
