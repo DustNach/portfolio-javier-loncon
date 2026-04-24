@@ -74,8 +74,14 @@ const translations = {
     about: {
       title: 'Sobre Mí',
       subtitle: 'Ingeniero Full Stack especializado en desarrollo de sistemas escalables',
-      description: 'Con más de 2 años de experiencia desarrollando soluciones empresariales en producción. Especializado en arquitecturas Django REST + React, con expertise en Machine Learning, Big Data y optimización de sistemas que procesan miles de transacciones diarias.',
-      skillsTitle: 'Habilidades Técnicas'
+      paragraph1: 'Ingeniero en Informática titulado de INACAP (2025), con base en Chillán, Chile. Mi enfoque va más allá de escribir código: construyo sistemas completos de forma independiente — desde el diseño de arquitectura y bases de datos hasta el despliegue en producción y mantenimiento con usuarios reales.',
+      paragraph2: 'Me apasiona explorar la intersección entre Inteligencia Artificial, Big Data y Desarrollo Full Stack. He desarrollado desde redes neuronales convolucionales para clasificación de imágenes, hasta clusters Hadoop para procesamiento distribuido, pasando por aplicaciones móviles con reconocimiento facial y sistemas de microservicios con arquitecturas escalables.',
+      paragraph3: 'Mi diferenciador: no solo desarrollo — también administro infraestructura, implemento seguridad (OWASP), optimizo rendimiento, y gestiono sistemas en producción con usuarios reales.',
+      certifications: 'Certificaciones Profesionales',
+      certTotal: 'Total: 1,116+ horas de formación certificada',
+      devPractices: 'Development Practices',
+      skillsTitle: 'Habilidades Técnicas',
+      viewAllProjects: 'Ver todos los proyectos'
     },
     timeline: {
       title: 'Trayectoria',
@@ -133,8 +139,14 @@ const translations = {
     about: {
       title: 'About Me',
       subtitle: 'Full Stack Engineer specialized in scalable systems development',
-      description: 'With over 2 years of experience developing enterprise solutions in production. Specialized in Django REST + React architectures, with expertise in Machine Learning, Big Data and optimization of systems processing thousands of daily transactions.',
-      skillsTitle: 'Technical Skills'
+      paragraph1: 'Computer Engineering graduate from INACAP (2025), based in Chillán, Chile. My approach goes beyond writing code: I build complete systems independently — from architecture and database design to production deployment and maintenance with real users.',
+      paragraph2: 'I am passionate about exploring the intersection between Artificial Intelligence, Big Data and Full Stack Development. I have developed everything from convolutional neural networks for image classification, to Hadoop clusters for distributed processing, including mobile applications with facial recognition and microservices systems with scalable architectures.',
+      paragraph3: 'My differentiator: I don\'t just develop — I also manage infrastructure, implement security (OWASP), optimize performance, and manage production systems with real users.',
+      certifications: 'Professional Certifications',
+      certTotal: 'Total: 1,116+ hours of certified training',
+      devPractices: 'Development Practices',
+      skillsTitle: 'Technical Skills',
+      viewAllProjects: 'View all projects'
     },
     timeline: {
       title: 'Experience',

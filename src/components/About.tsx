@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion'
 import { Code, Database, Brain, Cloud, Server, Smartphone } from 'lucide-react'
+import { useLanguage } from '../contexts/LanguageContext'
 
 const About = () => {
+  const { t } = useLanguage()
+  
   const skills = [
     {
       icon: <Code className="h-8 w-8" />,
@@ -45,31 +48,49 @@ const About = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-black text-center mb-4 font-bebas uppercase">
-            <span className="text-image-fill">Sobre Mí</span>
+            <span className="text-image-fill">{t('about.title')}</span>
           </h2>
           
           <div className="max-w-4xl mx-auto mb-16">
             <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-              Ingeniero en Informática titulado de INACAP (2025), con base en <span className="text-blue-400">Chillán, Chile</span>. 
-              Mi enfoque va más allá de escribir código: construyo <span className="font-semibold text-white">sistemas completos de forma independiente</span> — 
-              desde el diseño de arquitectura y bases de datos hasta el despliegue en producción y mantenimiento con usuarios reales.
+              {t('about.paragraph1').split('Chillán, Chile')[0]}
+              <span className="text-blue-400">Chillán, Chile</span>
+              {t('about.paragraph1').split('Chillán, Chile')[1]?.split('sistemas completos de forma independiente')[0]}
+              <span className="font-semibold text-white">
+                {t('about.paragraph1').includes('complete systems independently') ? 'complete systems independently' : 'sistemas completos de forma independiente'}
+              </span>
+              {t('about.paragraph1').split('sistemas completos de forma independiente')[1] || t('about.paragraph1').split('complete systems independently')[1]}
             </p>
             
             <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-              Me apasiona explorar la intersección entre <span className="text-purple-400 font-semibold">Inteligencia Artificial</span>, 
-              <span className="text-green-400 font-semibold"> Big Data</span> y <span className="text-blue-400 font-semibold">Desarrollo Full Stack</span>. 
-              He desarrollado desde redes neuronales convolucionales para clasificación de imágenes, hasta clusters Hadoop para procesamiento distribuido, 
-              pasando por aplicaciones móviles con reconocimiento facial y sistemas de microservicios con arquitecturas escalables.
+              {t('about.paragraph2').split('Inteligencia Artificial')[0] || t('about.paragraph2').split('Artificial Intelligence')[0]}
+              <span className="text-purple-400 font-semibold">
+                {t('about.paragraph2').includes('Artificial Intelligence') ? 'Artificial Intelligence' : 'Inteligencia Artificial'}
+              </span>
+              {(t('about.paragraph2').split('Inteligencia Artificial')[1] || t('about.paragraph2').split('Artificial Intelligence')[1])?.split('Big Data')[0]}, 
+              <span className="text-green-400 font-semibold"> Big Data</span>
+              {t('about.paragraph2').split('Big Data')[1]?.split('Desarrollo Full Stack')[0] || t('about.paragraph2').split('Big Data')[1]?.split('Full Stack Development')[0]} 
+              <span className="text-blue-400 font-semibold">
+                {t('about.paragraph2').includes('Full Stack Development') ? 'Full Stack Development' : 'Desarrollo Full Stack'}
+              </span>
+              {t('about.paragraph2').split('Desarrollo Full Stack')[1] || t('about.paragraph2').split('Full Stack Development')[1]}
             </p>
 
             <p className="text-gray-300 text-lg leading-relaxed">
-              Mi diferenciador: no solo desarrollo — también <span className="font-semibold text-white">administro infraestructura</span>,
-              implemento <span className="text-orange-400">seguridad (OWASP)</span>, optimizo rendimiento, y gestiono sistemas en producción con usuarios reales.
+              {t('about.paragraph3').split('administro infraestructura')[0] || t('about.paragraph3').split('manage infrastructure')[0]}
+              <span className="font-semibold text-white">
+                {t('about.paragraph3').includes('manage infrastructure') ? 'manage infrastructure' : 'administro infraestructura'}
+              </span>
+              {(t('about.paragraph3').split('administro infraestructura')[1] || t('about.paragraph3').split('manage infrastructure')[1])?.split('seguridad (OWASP)')[0] || (t('about.paragraph3').split('administro infraestructura')[1] || t('about.paragraph3').split('manage infrastructure')[1])?.split('security (OWASP)')[0]}
+              <span className="text-orange-400">
+                {t('about.paragraph3').includes('security (OWASP)') ? 'security (OWASP)' : 'seguridad (OWASP)'}
+              </span>
+              {t('about.paragraph3').split('seguridad (OWASP)')[1] || t('about.paragraph3').split('security (OWASP)')[1]}
             </p>
           </div>
 
           <div className="mb-16 bg-gradient-to-r from-blue-900/20 to-purple-900/20 p-8 rounded-lg border border-blue-500/30 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-6 text-center">Certificaciones Profesionales</h3>
+            <h3 className="text-2xl font-bold text-white mb-6 text-center">{t('about.certifications')}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="flex items-start">
                 <span className="text-blue-400 mr-3 mt-1">✓</span>
@@ -115,12 +136,12 @@ const About = () => {
               </div>
             </div>
             <p className="text-center text-gray-400 text-sm mt-6">
-              Total: <span className="text-blue-400 font-semibold">1,116+ horas</span> de formación certificada
+              {t('about.certTotal').split('1,116+')[0]}<span className="text-blue-400 font-semibold">1,116+</span>{t('about.certTotal').split('1,116+')[1]}
             </p>
           </div>
 
           <div className="mb-16 bg-gradient-to-r from-green-900/20 to-blue-900/20 p-8 rounded-lg border border-green-500/30 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-6 text-center">Development Practices</h3>
+            <h3 className="text-2xl font-bold text-white mb-6 text-center">{t('about.devPractices')}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="flex items-start">
                 <span className="text-green-400 mr-3 mt-1">✓</span>
@@ -185,7 +206,7 @@ const About = () => {
               href="#projects"
               className="inline-flex items-center gap-2 px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-medium transition-all duration-200 shadow-lg shadow-blue-600/20 hover:shadow-blue-500/30"
             >
-              Ver todos los proyectos →
+              {t('about.viewAllProjects')} →
             </a>
           </div>
         </motion.div>
