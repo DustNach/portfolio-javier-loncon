@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion'
-import { Brain, TrendingUp, Database, CheckCircle, ChevronDown, ChevronUp, Github } from 'lucide-react'
+import { Brain, TrendingUp, Database, CheckCircle, ChevronDown, ChevronUp, Github, Code } from 'lucide-react'
 import { useState } from 'react'
 import CNNVisualization from './demos/CNNVisualization'
 import TitanicVisualization from './demos/TitanicVisualization'
+import CodeEditor from './CodeEditor'
+import { codeExamples } from '../data/codeExamples'
 
 export default function Demos() {
   const [expandedDemo, setExpandedDemo] = useState<string | null>(null)
@@ -21,6 +23,7 @@ export default function Demos() {
         { label: 'Activación', value: 'ReLU + Sigmoid' }
       ],
       visualization: <CNNVisualization />,
+      codeExample: codeExamples.cnn,
       githubUrl: 'https://github.com/DustNach/cnn-cat-classifier'
     },
     {
@@ -50,6 +53,7 @@ export default function Demos() {
         { label: 'Encoding', value: 'LabelEncoder + OneHot' }
       ],
       visualization: <TitanicVisualization />,
+      codeExample: codeExamples.titanic,
       githubUrl: 'https://github.com/DustNach/titanic-survival-prediction'
     },
     {
@@ -163,15 +167,30 @@ export default function Demos() {
                 )}
               </div>
 
-              {expandedDemo === demo.id && demo.visualization && (
+              {expandedDemo === demo.id && (
                 <motion.div
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="mt-6 overflow-hidden"
+                  className="mt-6 overflow-hidden space-y-6"
                 >
                   {demo.visualization}
+                  {demo.codeExample && (
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                        <Code className="h-5 w-5 text-blue-400" />
+                        Código Fuente
+                      </h4>
+                      <CodeEditor
+                        code={demo.codeExample.code}
+                        title={demo.codeExample.title}
+                        output={demo.codeExample.output}
+                        colabUrl={demo.codeExample.colabUrl}
+                        editable={true}
+                      />
+                    </div>
+                  )}
                 </motion.div>
               )}
 
