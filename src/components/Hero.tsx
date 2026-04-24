@@ -67,14 +67,6 @@ const Hero = () => {
             Ver Proyectos
           </a>
           <a
-            href="https://sgc.sycchile.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-8 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium transition-all duration-200 border border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/30"
-          >
-            Sistema en Vivo →
-          </a>
-          <a
             href="/files/Javier_Loncon_CV(Español).pdf"
             download
             className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white rounded-lg font-medium transition-all duration-200 shadow-lg shadow-green-600/40 hover:shadow-green-500/60 hover:shadow-xl"
