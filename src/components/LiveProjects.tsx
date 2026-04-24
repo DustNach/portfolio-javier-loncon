@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion'
 import { ExternalLink, Server, Database } from 'lucide-react'
+import { useLanguage } from '../contexts/LanguageContext'
 
 const LiveProjects = () => {
+  const { t } = useLanguage()
   const liveProjects = [
     {
       id: 'edulexis',
@@ -55,10 +57,10 @@ const LiveProjects = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-black mb-4 font-bebas uppercase">
-            <span className="text-image-fill">Proyectos en Vivo</span>
+            <span className="text-image-fill">{t('liveProjects.title')}</span>
           </h2>
           <p className="text-gray-400 dark:text-gray-400 light:text-gray-600 max-w-2xl mx-auto">
-            Sistemas reales en producción que puedes visitar ahora mismo
+            {t('liveProjects.subtitle')}
           </p>
         </motion.div>
 
@@ -107,7 +109,7 @@ const LiveProjects = () => {
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white rounded-lg font-medium transition-all duration-200 shadow-lg shadow-blue-600/20 hover:shadow-blue-500/30 group-hover:scale-105"
               >
                 <ExternalLink className="h-4 w-4" />
-                Visitar Sistema en Vivo
+                {t('liveProjects.visitLive')}
               </a>
 
               {/* Gradient Border Effect */}
@@ -125,7 +127,7 @@ const LiveProjects = () => {
           className="mt-12 text-center"
         >
           <p className="text-gray-500 dark:text-gray-500 light:text-gray-600 text-sm">
-            🚀 Sistemas 100% funcionales en producción con usuarios reales
+            {t('liveProjects.note')}
           </p>
         </motion.div>
       </div>

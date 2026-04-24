@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion'
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts'
+import { useLanguage } from '../contexts/LanguageContext'
 
 const SkillsRadar = () => {
+  const { t } = useLanguage()
   const data = [
     { skill: 'React/Frontend', value: 90, fullMark: 100 },
     { skill: 'Backend/APIs', value: 85, fullMark: 100 },
@@ -21,10 +23,10 @@ const SkillsRadar = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-black mb-4 font-bebas uppercase">
-            <span className="text-image-fill">Stack Técnico</span>
+            <span className="text-image-fill">{t('skillsRadar.title')}</span>
           </h2>
           <p className="text-gray-400 dark:text-gray-400 light:text-gray-600 max-w-2xl mx-auto">
-            Visualización interactiva de mis habilidades técnicas principales
+            {t('skillsRadar.subtitle')}
           </p>
         </motion.div>
 

@@ -122,6 +122,28 @@ const translations = {
       rights: 'Todos los derechos reservados',
       madeWith: 'Hecho con',
       using: 'usando React, TypeScript, Vite, TailwindCSS, Framer Motion y Recharts'
+    },
+    liveProjects: {
+      title: 'Proyectos en Vivo',
+      subtitle: 'Sistemas reales en producción que puedes visitar ahora mismo',
+      visitLive: 'Visitar Sistema en Vivo',
+      note: '🚀 Sistemas 100% funcionales en producción con usuarios reales'
+    },
+    skillsRadar: {
+      title: 'Stack Técnico',
+      subtitle: 'Visualización interactiva de mis habilidades técnicas principales'
+    },
+    counter: {
+      title: 'Impacto Real',
+      subtitle: 'Números que demuestran el alcance de mis proyectos en producción',
+      linesOfCode: 'Líneas de Código',
+      linesDesc: 'En proyectos de producción',
+      projectsCompleted: 'Proyectos Completados',
+      projectsDesc: 'Sistemas en producción real',
+      recordsProcessed: 'Registros Procesados',
+      recordsDesc: 'Análisis de datos educacionales',
+      hoursCertified: 'Horas Certificadas',
+      hoursDesc: 'Formación en Cloud, Full Stack y Agile'
     }
   },
   en: {
@@ -191,6 +213,28 @@ const translations = {
       rights: 'All rights reserved',
       madeWith: 'Made with',
       using: 'using React, TypeScript, Vite, TailwindCSS, Framer Motion and Recharts'
+    },
+    liveProjects: {
+      title: 'Live Projects',
+      subtitle: 'Real production systems you can visit right now',
+      visitLive: 'Visit Live System',
+      note: '🚀 100% functional systems in production with real users'
+    },
+    skillsRadar: {
+      title: 'Technical Stack',
+      subtitle: 'Interactive visualization of my main technical skills'
+    },
+    counter: {
+      title: 'Real Impact',
+      subtitle: 'Numbers demonstrating the reach of my production projects',
+      linesOfCode: 'Lines of Code',
+      linesDesc: 'In production projects',
+      projectsCompleted: 'Completed Projects',
+      projectsDesc: 'Real production systems',
+      recordsProcessed: 'Records Processed',
+      recordsDesc: 'Educational data analysis',
+      hoursCertified: 'Certified Hours',
+      hoursDesc: 'Training in Cloud, Full Stack and Agile'
     }
   }
 }

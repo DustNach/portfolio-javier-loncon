@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { Code, Building2, Database, BookOpen } from 'lucide-react'
+import { useLanguage } from '../contexts/LanguageContext'
 
 interface CounterProps {
   end: number
@@ -40,37 +41,39 @@ const Counter = ({ end, duration = 2, suffix = '', prefix = '' }: CounterProps) 
 }
 
 const AnimatedCounter = () => {
+  const { t } = useLanguage()
+  
   const stats = [
     {
       icon: <Code className="h-10 w-10" />,
       value: 43000,
       suffix: '+',
-      label: 'Líneas de Código',
-      description: 'En proyectos de producción',
+      label: t('counter.linesOfCode'),
+      description: t('counter.linesDesc'),
       gradient: 'from-blue-500 to-cyan-500'
     },
     {
       icon: <Building2 className="h-10 w-10" />,
       value: 4,
       suffix: '+',
-      label: 'Proyectos Completados',
-      description: 'Sistemas en producción real',
+      label: t('counter.projectsCompleted'),
+      description: t('counter.projectsDesc'),
       gradient: 'from-purple-500 to-pink-500'
     },
     {
       icon: <Database className="h-10 w-10" />,
       value: 217,
       suffix: 'k+',
-      label: 'Registros Procesados',
-      description: 'Análisis de datos educacionales',
+      label: t('counter.recordsProcessed'),
+      description: t('counter.recordsDesc'),
       gradient: 'from-green-500 to-emerald-500'
     },
     {
       icon: <BookOpen className="h-10 w-10" />,
       value: 1116,
       suffix: '+',
-      label: 'Horas Certificadas',
-      description: 'Formación en Cloud, Full Stack y Agile',
+      label: t('counter.hoursCertified'),
+      description: t('counter.hoursDesc'),
       gradient: 'from-orange-500 to-amber-500'
     }
   ]
@@ -85,10 +88,10 @@ const AnimatedCounter = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-black mb-4 font-bebas uppercase">
-            <span className="text-image-fill">Impacto Real</span>
+            <span className="text-image-fill">{t('counter.title')}</span>
           </h2>
           <p className="text-gray-400 dark:text-gray-400 light:text-gray-600 max-w-2xl mx-auto">
-            Números que demuestran el alcance de mis proyectos en producción
+            {t('counter.subtitle')}
           </p>
         </motion.div>
 
