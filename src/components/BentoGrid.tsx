@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { motion } from 'framer-motion'
-import { ExternalLink, Github, Brain, Database, Server, Code2, Cpu } from 'lucide-react'
+import { ExternalLink, Github, Brain, Database, Server, Code2 } from 'lucide-react'
 
 interface BentoProject {
   id: string
