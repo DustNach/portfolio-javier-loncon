@@ -73,7 +73,7 @@ const Hero = () => {
             Sistema en Vivo →
           </a>
           <a
-            href="/files/CV_Javier_Loncon.pdf"
+            href="/files/Javier_Loncon_CV(Español).pdf"
             download
             className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white rounded-lg font-medium transition-all duration-200 shadow-lg shadow-green-600/20 hover:shadow-green-500/30"
           >
