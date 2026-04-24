@@ -17,8 +17,8 @@ const Projects = () => {
   ]
 
   const filteredProjects = filter === 'all' 
-    ? projects 
-    : projects.filter(p => p.category === filter)
+    ? currentProjects 
+    : currentProjects.filter(p => p.category === filter)
 
   return (
     <section id="projects" className="py-20 px-4">

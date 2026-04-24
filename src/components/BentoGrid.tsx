@@ -19,11 +19,28 @@ interface BentoProject {
 const BentoGrid = () => {
   const { t } = useLanguage()
   
+  const projectDescriptions = {
+    es: {
+      edulexis: 'Plataforma legal para sostenedores educacionales. Sistema completo con 12 apps Django, 150+ APIs, en producción en edulexis.cl',
+      sgc: 'Sistema de gestión de capacitación y consultoría empresarial. Gestión de cursos, empresas y documentación SENCE.',
+      eva: 'Tablero Power BI con análisis de 217,013 estudiantes. Visualización por comunas, género y rendimiento.',
+      bioclean: 'E-commerce WordPress para productos industriales de limpieza con diseño personalizado.'
+    },
+    en: {
+      edulexis: 'Legal platform for educational administrators. Complete system with 12 Django apps, 150+ APIs, in production at edulexis.cl',
+      sgc: 'Corporate training and consulting management system. Course, company and SENCE documentation management.',
+      eva: 'Power BI dashboard with analysis of 217,013 students. Visualization by communes, gender and performance.',
+      bioclean: 'WordPress e-commerce for industrial cleaning products with custom design.'
+    }
+  }
+  
+  const currentLang = t('nav.about') === 'About' ? 'en' : 'es'
+  
   const projects: BentoProject[] = [
     {
       id: '1',
       title: 'EduLexis',
-      description: 'Plataforma legal para sostenedores educacionales. Sistema completo con 12 apps Django, 150+ APIs, en producción en edulexis.cl',
+      description: projectDescriptions[currentLang].edulexis,
       stack: ['Django', 'React', 'PostgreSQL', 'Redis'],
       stat: { value: '92%', label: t('bentoGrid.completeness') },
       demoUrl: 'https://edulexis.cl',
@@ -34,7 +51,7 @@ const BentoGrid = () => {
     {
       id: '2',
       title: 'SGC SYC Chile',
-      description: 'Sistema de gestión de capacitación y consultoría empresarial. Gestión de cursos, empresas y documentación SENCE.',
+      description: projectDescriptions[currentLang].sgc,
       stack: ['Django', 'React', 'TypeScript', 'PostgreSQL'],
       demoUrl: 'https://sgc.sycchile.com',
       icon: <Database className="h-8 w-8" />,
@@ -44,7 +61,7 @@ const BentoGrid = () => {
     {
       id: '3',
       title: 'EVA - Análisis Educacional',
-      description: 'Tablero Power BI con análisis de 217,013 estudiantes. Visualización por comunas, género y rendimiento.',
+      description: projectDescriptions[currentLang].eva,
       stack: ['Power BI', 'R', 'Python'],
       stat: { value: '217k', label: t('bentoGrid.records') },
       icon: <Brain className="h-8 w-8" />,
@@ -54,7 +71,7 @@ const BentoGrid = () => {
     {
       id: '4',
       title: 'BioClean Pro',
-      description: 'E-commerce WordPress para productos industriales de limpieza con diseño personalizado.',
+      description: projectDescriptions[currentLang].bioclean,
       stack: ['WordPress', 'WooCommerce', 'Elementor'],
       icon: <Code2 className="h-8 w-8" />,
       gradient: 'from-indigo-500 to-purple-500',
