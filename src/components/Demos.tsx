@@ -11,7 +11,7 @@ export default function Demos() {
     {
       id: 'cnn-cats',
       title: 'CNN - Clasificador de Gatos',
-      description: 'Red neuronal convolucional con TensorFlow y Keras para clasificación binaria de imágenes',
+      description: 'Red neuronal convolucional profunda con arquitectura secuencial: 2 capas Conv2D (32 y 64 filtros), MaxPooling, Flatten, Dense de 128 neuronas con Dropout 0.5, y capa de salida con activación sigmoid. Entrenada durante 10 epochs alcanzando 100% de accuracy en el conjunto de entrenamiento con 11 imágenes.',
       tech: ['TensorFlow', 'Keras', 'OpenCV', 'Python'],
       icon: <Brain className="h-8 w-8" />,
       gradient: 'from-purple-500 to-pink-500',
@@ -26,7 +26,7 @@ export default function Demos() {
     {
       id: 'decision-tree',
       title: 'Decision Tree - Aprobación de Préstamos',
-      description: 'Árbol de decisión con Scikit-learn para clasificación de aprobación de créditos',
+      description: 'Modelo de clasificación binaria usando DecisionTreeClassifier de Scikit-learn para predecir aprobación de préstamos basado en ingreso y monto solicitado. Implementa división train/test (80/20) logrando 100% de precisión en ambos conjuntos. Dataset de 10 registros con features: ingreso mensual y monto del préstamo.',
       tech: ['Scikit-learn', 'Python', 'Pandas'],
       icon: <CheckCircle className="h-8 w-8" />,
       gradient: 'from-green-500 to-emerald-500',
@@ -40,7 +40,7 @@ export default function Demos() {
     {
       id: 'titanic',
       title: 'Titanic Survival Prediction',
-      description: 'Análisis y predicción de supervivencia con preprocesamiento avanzado de datos',
+      description: 'Análisis exploratorio y predictivo del dataset Titanic con 891 pasajeros y 12 features. Incluye limpieza de datos (imputación de 177 valores faltantes en Age con media), eliminación de columna Cabin (77% missing), encoding de variables categóricas (LabelEncoder para Sex, OneHotEncoder para Embarked), y análisis de correlación entre features. Visualizaciones con Seaborn y Matplotlib.',
       tech: ['Pandas', 'Scikit-learn', 'Seaborn', 'Matplotlib'],
       icon: <Database className="h-8 w-8" />,
       gradient: 'from-blue-500 to-cyan-500',
@@ -55,7 +55,7 @@ export default function Demos() {
     {
       id: 'mobile-price',
       title: 'Análisis de Precios de Móviles',
-      description: 'Comparación SVM vs Regresión Lineal con visualización 3D en R',
+      description: 'Estudio comparativo de modelos SVM (Support Vector Machine) y Regresión Lineal Múltiple en R para predicción de rangos de precio. Análisis de correlación revela RAM como feature más importante (+90%). Incluye visualización 3D interactiva con Plotly (RAM × Battery Power × Pixel Height), matriz de correlación con corrplot, y evaluación mediante RMSE y MSE. Dataset con división 75/25 train/test.',
       tech: ['R', 'e1071', 'ggplot2', 'Plotly'],
       icon: <TrendingUp className="h-8 w-8" />,
       gradient: 'from-orange-500 to-red-500',
