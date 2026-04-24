@@ -28,6 +28,19 @@ const LiveProjects = () => {
         { label: 'Base de Datos', value: 'PostgreSQL' },
         { label: 'Estado', value: 'Producción' }
       ]
+    },
+    {
+      id: 'sycchile',
+      title: 'SYC Chile',
+      description: 'Sitio web corporativo de SYC Chile - Capacitación y consultoría empresarial',
+      url: 'https://sycchile.com',
+      icon: <Server className="h-8 w-8" />,
+      gradient: 'from-orange-500 to-red-500',
+      stats: [
+        { label: 'Tipo', value: 'Corporativo' },
+        { label: 'Servicios', value: 'Capacitación' },
+        { label: 'Estado', value: 'En Línea' }
+      ]
     }
   ]
 
@@ -49,7 +62,7 @@ const LiveProjects = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {liveProjects.map((project, index) => (
             <motion.div
               key={project.id}
