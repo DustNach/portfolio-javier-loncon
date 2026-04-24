@@ -10,6 +10,7 @@ import BentoGrid from './components/BentoGrid'
 import SkillsRadar from './components/SkillsRadar'
 import AnimatedCounter from './components/AnimatedCounter'
 import ExperienceTimeline from './components/ExperienceTimeline'
+import LiveProjects from './components/LiveProjects'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
               <SkillsRadar />
               <BentoGrid />
               <AnimatedCounter />
+              <LiveProjects />
               <ExperienceTimeline />
               <Projects />
               <Contact />
