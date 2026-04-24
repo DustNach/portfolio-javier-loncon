@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { motion } from 'framer-motion'
-import { ExternalLink, Github, Brain, Database, Server, Shield, Code2, Cpu } from 'lucide-react'
+import { ExternalLink, Github, Brain, Database, Server, Code2, Cpu } from 'lucide-react'
 
 interface BentoProject {
   id: string
@@ -19,61 +19,53 @@ const BentoGrid = () => {
   const projects: BentoProject[] = [
     {
       id: '1',
-      title: 'SGC SYC Chile',
-      description: 'Sistema de gestión de calidad empresarial en producción real con 3,000+ usuarios activos y 29 empresas clientes.',
-      stack: ['Django', 'React', 'PostgreSQL', 'Docker'],
-      stat: { value: '3,247', label: 'usuarios activos' },
-      demoUrl: 'https://sgc.sycchile.com',
+      title: 'EduLexis',
+      description: 'Plataforma legal para sostenedores educacionales. Sistema completo con 12 apps Django, 150+ APIs, en producción en edulexis.cl',
+      stack: ['Django', 'React', 'PostgreSQL', 'Redis'],
+      stat: { value: '92%', label: 'completitud' },
+      demoUrl: 'https://edulexis.cl',
       icon: <Server className="h-8 w-8" />,
       gradient: 'from-blue-500 to-cyan-500',
       size: 'large'
     },
     {
       id: '2',
-      title: 'CNN Clasificador',
-      description: 'Red neuronal convolucional para clasificación binaria de imágenes con 96% de accuracy.',
-      stack: ['TensorFlow', 'Keras', 'Python'],
-      stat: { value: '96%', label: 'accuracy' },
-      icon: <Brain className="h-8 w-8" />,
-      gradient: 'from-purple-500 to-pink-500',
-      size: 'medium'
-    },
-    {
-      id: '3',
-      title: 'Hadoop Big Data',
-      description: 'Cluster distribuido HDFS + MapReduce procesando hasta 100GB con 99.8% uptime.',
-      stack: ['Hadoop', 'MapReduce', 'Python'],
-      stat: { value: '100GB', label: 'procesados' },
+      title: 'SGC SYC Chile',
+      description: 'Sistema de gestión de capacitación y consultoría empresarial. Gestión de cursos, empresas y documentación SENCE.',
+      stack: ['Django', 'React', 'TypeScript', 'PostgreSQL'],
+      demoUrl: 'https://sgc.sycchile.com',
       icon: <Database className="h-8 w-8" />,
       gradient: 'from-green-500 to-emerald-500',
       size: 'medium'
     },
     {
+      id: '3',
+      title: 'EVA - Análisis Educacional',
+      description: 'Tablero Power BI con análisis de 217,013 estudiantes. Visualización por comunas, género y rendimiento.',
+      stack: ['Power BI', 'R', 'Python'],
+      stat: { value: '217k', label: 'registros' },
+      icon: <Brain className="h-8 w-8" />,
+      gradient: 'from-purple-500 to-pink-500',
+      size: 'medium'
+    },
+    {
       id: '4',
-      title: 'Vet IA v2.0',
-      description: 'Microservicios FastAPI con IA para diagnóstico y análisis de riesgos veterinarios.',
-      stack: ['FastAPI', 'ML', 'Docker'],
+      title: 'Career-Ops',
+      description: 'Sistema multi-agente de búsqueda de empleo con IA. 740+ ofertas evaluadas, 100+ CVs personalizados.',
+      stack: ['Node.js', 'Claude AI', 'Playwright', 'Go'],
+      stat: { value: '740+', label: 'ofertas' },
+      githubUrl: 'https://github.com/santifer/career-ops',
       icon: <Cpu className="h-8 w-8" />,
       gradient: 'from-orange-500 to-red-500',
       size: 'small'
     },
     {
       id: '5',
-      title: 'IWIE NDA',
-      description: 'Reconocimiento facial + firma digital + PDF encriptado en React.',
-      stack: ['React', 'Face-API.js', 'CryptoJS'],
+      title: 'BioClean Pro',
+      description: 'E-commerce WordPress para productos industriales de limpieza con diseño personalizado.',
+      stack: ['WordPress', 'WooCommerce', 'Elementor'],
       icon: <Code2 className="h-8 w-8" />,
       gradient: 'from-indigo-500 to-purple-500',
-      size: 'small'
-    },
-    {
-      id: '6',
-      title: 'Pentesting OWASP',
-      description: 'Auditoría de seguridad con Kali Linux. Score final 8.5/10.',
-      stack: ['Kali Linux', 'OWASP', 'Pentesting'],
-      stat: { value: '8.5/10', label: 'OWASP score' },
-      icon: <Shield className="h-8 w-8" />,
-      gradient: 'from-red-500 to-orange-500',
       size: 'small'
     },
   ]

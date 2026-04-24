@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Users, Building2, Shield, BookOpen } from 'lucide-react'
+import { Code, Building2, Database, BookOpen } from 'lucide-react'
 
 interface CounterProps {
   end: number
@@ -42,27 +42,27 @@ const Counter = ({ end, duration = 2, suffix = '', prefix = '' }: CounterProps) 
 const AnimatedCounter = () => {
   const stats = [
     {
-      icon: <Users className="h-10 w-10" />,
-      value: 3000,
+      icon: <Code className="h-10 w-10" />,
+      value: 43000,
       suffix: '+',
-      label: 'Usuarios Activos',
-      description: 'En sistemas en producción',
+      label: 'Líneas de Código',
+      description: 'En proyectos de producción',
       gradient: 'from-blue-500 to-cyan-500'
     },
     {
       icon: <Building2 className="h-10 w-10" />,
-      value: 29,
-      suffix: '',
-      label: 'Empresas',
-      description: 'Utilizando mis soluciones',
+      value: 5,
+      suffix: '+',
+      label: 'Proyectos Completados',
+      description: 'Sistemas en producción real',
       gradient: 'from-purple-500 to-pink-500'
     },
     {
-      icon: <Shield className="h-10 w-10" />,
-      value: 8,
-      suffix: '.5 / 10',
-      label: 'OWASP Score',
-      description: 'Auditoría de seguridad aprobada',
+      icon: <Database className="h-10 w-10" />,
+      value: 217,
+      suffix: 'k+',
+      label: 'Registros Procesados',
+      description: 'Análisis de datos educacionales',
       gradient: 'from-green-500 to-emerald-500'
     },
     {

@@ -23,43 +23,51 @@ const ExperienceTimeline = () => {
     },
     {
       year: '2025',
-      title: 'Certificación Arquitectura Cloud',
-      organization: 'INACAP',
-      description: '198 horas de formación en arquitecturas cloud y DevOps',
+      title: 'EduLexis - Plataforma Legal',
+      organization: 'Producción en edulexis.cl',
+      description: 'Sistema completo con 12 apps Django, 150+ APIs, 92% completitud. Gestión legal para sostenedores educacionales',
+      icon: <Briefcase className="h-6 w-6" />,
+      type: 'work'
+    },
+    {
+      year: '2024',
+      title: 'SGC SYC Chile',
+      organization: 'SYC Chile',
+      description: 'Sistema de gestión de capacitación empresarial. Django + React + TypeScript + PostgreSQL en producción',
+      icon: <Briefcase className="h-6 w-6" />,
+      type: 'work'
+    },
+    {
+      year: '2024',
+      title: 'Certificación Gestión de Proyectos IA',
+      organization: 'Certificado de Asistencia',
+      description: 'Formación especializada en gestión de proyectos de inteligencia artificial',
       icon: <Award className="h-6 w-6" />,
       type: 'certification'
     },
     {
       year: '2024',
-      title: 'Sistema Veterinario IA v2.0',
-      organization: 'Proyecto Personal',
-      description: 'Desarrollo de plataforma con IA para diagnóstico veterinario',
+      title: 'EVA - Análisis Educacional',
+      organization: 'Proyecto de Análisis de Datos',
+      description: 'Tablero Power BI con análisis de 217,013 estudiantes. Procesamiento con R y Python',
       icon: <Code className="h-6 w-6" />,
       type: 'project'
     },
     {
       year: '2024',
-      title: 'Cluster Hadoop Big Data',
-      organization: 'Proyecto Académico',
-      description: 'Implementación de cluster para procesamiento distribuido',
+      title: 'Career-Ops',
+      organization: 'Proyecto Open Source',
+      description: 'Sistema multi-agente de búsqueda de empleo con IA. 740+ ofertas evaluadas, 100+ CVs personalizados',
       icon: <Code className="h-6 w-6" />,
       type: 'project'
     },
     {
-      year: '2023',
-      title: 'Microservicios IWIE Space',
-      organization: 'Proyecto Personal',
-      description: 'Arquitectura de microservicios con Docker y Kubernetes',
+      year: '2024',
+      title: 'BioClean Pro',
+      organization: 'E-commerce WordPress',
+      description: 'Tienda online para productos industriales de limpieza con WooCommerce y diseño personalizado',
       icon: <Code className="h-6 w-6" />,
       type: 'project'
-    },
-    {
-      year: '2023',
-      title: 'Amigo Mascota',
-      organization: 'Sistema en Producción',
-      description: 'Sistema de gestión veterinaria con 3000+ usuarios activos',
-      icon: <Briefcase className="h-6 w-6" />,
-      type: 'work'
     }
   ]
 
