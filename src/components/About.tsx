@@ -26,12 +26,12 @@ const About = () => {
     {
       icon: <Cloud className="h-8 w-8" />,
       title: 'Cloud & DevOps',
-      items: ['Docker', 'Kubernetes', 'AWS', 'Azure', 'Vercel', 'Git/GitHub']
+      items: ['Linux', 'Docker', 'Kubernetes', 'AWS', 'Azure', 'Nginx', 'Git/GitHub']
     },
     {
       icon: <Smartphone className="h-8 w-8" />,
-      title: 'Otros',
-      items: ['Redis', 'Celery', 'Firebase', 'WordPress', 'Microservicios', 'OWASP']
+      title: 'Arquitectura & Otros',
+      items: ['Microservicios', 'REST/GraphQL', 'Redis', 'Celery', 'OWASP', 'Design Patterns']
     }
   ]
 
