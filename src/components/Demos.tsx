@@ -149,7 +149,7 @@ export default function Demos() {
                     Ver Código
                   </a>
                 )}
-                {demo.visualization && (
+                {(demo.visualization || demo.codeExample) && (
                   <button
                     onClick={() => setExpandedDemo(expandedDemo === demo.id ? null : demo.id)}
                     className={`${demo.githubUrl ? 'flex-1' : 'w-full'} flex items-center justify-center gap-2 px-4 py-3 bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 rounded-lg font-medium transition-all duration-200 border border-blue-500/20 hover:border-blue-500/40`}
@@ -162,7 +162,7 @@ export default function Demos() {
                     ) : (
                       <>
                         <ChevronDown className="h-4 w-4" />
-                        Ver Demo
+                        {demo.visualization ? 'Ver Demo' : 'Ver Código'}
                       </>
                     )}
                   </button>
