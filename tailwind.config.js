@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'bebas': ['"Bebas Neue"', 'sans-serif'],
+      },
       colors: {
         primary: {
           50: '#f0f9ff',
