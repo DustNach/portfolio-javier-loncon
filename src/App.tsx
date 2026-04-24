@@ -6,7 +6,6 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Background from './components/Background'
-import BentoGrid from './components/BentoGrid'
 import SkillsRadar from './components/SkillsRadar'
 import AnimatedCounter from './components/AnimatedCounter'
 import ExperienceTimeline from './components/ExperienceTimeline'
@@ -25,7 +24,6 @@ function App() {
               <Hero />
               <About />
               <SkillsRadar />
-              <BentoGrid />
               <AnimatedCounter />
               <LiveProjects />
               <ExperienceTimeline />

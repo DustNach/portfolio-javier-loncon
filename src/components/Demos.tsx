@@ -78,8 +78,8 @@ export default function Demos() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-gradient">Proyectos de IA y ML</span>
+          <h2 className="text-4xl md:text-5xl font-black mb-4 font-bebas uppercase">
+            <span className="text-image-fill">Proyectos de IA y ML</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-3xl mx-auto">
             Proyectos reales de Machine Learning, Deep Learning y Análisis de Datos desarrollados durante mi formación

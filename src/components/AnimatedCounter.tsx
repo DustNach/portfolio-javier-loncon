@@ -84,8 +84,8 @@ const AnimatedCounter = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-gradient">Impacto Real</span>
+          <h2 className="text-4xl md:text-5xl font-black mb-4 font-bebas uppercase">
+            <span className="text-image-fill">Impacto Real</span>
           </h2>
           <p className="text-gray-400 dark:text-gray-400 light:text-gray-600 max-w-2xl mx-auto">
             Números que demuestran el alcance de mis proyectos en producción
