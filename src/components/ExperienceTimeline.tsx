@@ -17,41 +17,41 @@ const ExperienceTimeline = () => {
   const timeline: TimelineItem[] = [
     {
       year: '2026',
-      title: 'SGC SYC Chile - Full Stack Engineer',
-      organization: 'SYC Chile',
-      description: 'Sistema empresarial que gestiona 500+ capacitaciones/mes para 50+ empresas. Arquitectura Django REST + React + TypeScript + PostgreSQL. Reducción de 40% en tiempo administrativo. Responsable de diseño de arquitectura, APIs RESTful y deployment en producción con 99.8% uptime.',
+      title: t('experienceTimeline.sgc.title'),
+      organization: t('experienceTimeline.sgc.organization'),
+      description: t('experienceTimeline.sgc.description'),
       icon: <Briefcase className="h-6 w-6" />,
       type: 'work'
     },
     {
       year: '2025',
-      title: 'Ingeniero en Informática',
-      organization: 'INACAP',
-      description: 'Titulado con especialización en IA, Big Data y Desarrollo Full Stack. Proyectos destacados: CNN con 100% accuracy, análisis predictivo Titanic, sistemas Big Data con Hadoop procesando 217K+ registros.',
+      title: t('experienceTimeline.education.title'),
+      organization: t('experienceTimeline.education.organization'),
+      description: t('experienceTimeline.education.description'),
       icon: <GraduationCap className="h-6 w-6" />,
       type: 'education'
     },
     {
       year: '2025',
-      title: 'EduLexis - Full Stack Developer',
-      organization: 'Producción en edulexis.cl',
-      description: 'Plataforma legal para sostenedores educacionales. Desarrollé arquitectura modular con 12 apps Django, 150+ endpoints REST API, PostgreSQL optimizado. Responsable de: desarrollo de APIs, integración frontend React, optimización de queries (reducción 40% tiempo respuesta), deployment con Docker. Sistema procesa 10K+ transacciones/día con 2000+ usuarios concurrentes.',
+      title: t('experienceTimeline.edulexis.title'),
+      organization: t('experienceTimeline.edulexis.organization'),
+      description: t('experienceTimeline.edulexis.description'),
       icon: <Briefcase className="h-6 w-6" />,
       type: 'work'
     },
     {
       year: '2024',
-      title: 'Certificación Gestión de Proyectos IA',
-      organization: 'Certificado de Asistencia',
-      description: 'Formación especializada en gestión de proyectos de inteligencia artificial, metodologías ágiles aplicadas a ML/AI, y liderazgo de equipos técnicos.',
+      title: t('experienceTimeline.certification.title'),
+      organization: t('experienceTimeline.certification.organization'),
+      description: t('experienceTimeline.certification.description'),
       icon: <Award className="h-6 w-6" />,
       type: 'certification'
     },
     {
       year: '2024',
-      title: 'EVA - Big Data Analytics',
-      organization: 'Proyecto de Análisis Masivo',
-      description: 'Pipeline de datos procesando 217,013 registros de estudiantes. Stack: Hadoop + R + Python + Power BI. Optimización de queries reduciendo tiempo de procesamiento en 60%. Dashboards interactivos con insights accionables para toma de decisiones.',
+      title: t('experienceTimeline.eva.title'),
+      organization: t('experienceTimeline.eva.organization'),
+      description: t('experienceTimeline.eva.description'),
       icon: <Code className="h-6 w-6" />,
       type: 'project'
     }

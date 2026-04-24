@@ -95,43 +95,43 @@ const About = () => {
               <div className="flex items-start">
                 <span className="text-blue-400 mr-3 mt-1">✓</span>
                 <div>
-                  <p className="text-white font-semibold">Arquitectura Cloud</p>
-                  <p className="text-gray-400 text-sm">INACAP • 198 horas • Oct 2025</p>
+                  <p className="text-white font-semibold">{t('certifications.cloudArchitecture')}</p>
+                  <p className="text-gray-400 text-sm">INACAP • 198 {t('certifications.hours')} • Oct 2025</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <span className="text-blue-400 mr-3 mt-1">✓</span>
                 <div>
-                  <p className="text-white font-semibold">Desarrollador Full Stack</p>
-                  <p className="text-gray-400 text-sm">INACAP • 162 horas • Oct 2025</p>
+                  <p className="text-white font-semibold">{t('certifications.fullStack')}</p>
+                  <p className="text-gray-400 text-sm">INACAP • 162 {t('certifications.hours')} • Oct 2025</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <span className="text-blue-400 mr-3 mt-1">✓</span>
                 <div>
-                  <p className="text-white font-semibold">Diseño y Gestión de Bases de Datos</p>
-                  <p className="text-gray-400 text-sm">INACAP • 126 horas • Oct 2025</p>
+                  <p className="text-white font-semibold">{t('certifications.database')}</p>
+                  <p className="text-gray-400 text-sm">INACAP • 126 {t('certifications.hours')} • Oct 2025</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <span className="text-blue-400 mr-3 mt-1">✓</span>
                 <div>
-                  <p className="text-white font-semibold">Diseño Ágil de Sistemas</p>
-                  <p className="text-gray-400 text-sm">INACAP • 126 horas • Oct 2025</p>
+                  <p className="text-white font-semibold">{t('certifications.agile')}</p>
+                  <p className="text-gray-400 text-sm">INACAP • 126 {t('certifications.hours')} • Oct 2025</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <span className="text-purple-400 mr-3 mt-1">✓</span>
                 <div>
-                  <p className="text-white font-semibold">Gestión de Proyectos de IA</p>
+                  <p className="text-white font-semibold">{t('certifications.aiProjects')}</p>
                   <p className="text-gray-400 text-sm">Certificate of Attendance • Dic 2024</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <span className="text-blue-400 mr-3 mt-1">✓</span>
                 <div>
-                  <p className="text-white font-semibold">Innovación y Emprendimiento</p>
-                  <p className="text-gray-400 text-sm">INACAP • 216 horas • Oct 2025</p>
+                  <p className="text-white font-semibold">{t('certifications.innovation')}</p>
+                  <p className="text-gray-400 text-sm">INACAP • 216 {t('certifications.hours')} • Oct 2025</p>
                 </div>
               </div>
             </div>
@@ -146,29 +146,29 @@ const About = () => {
               <div className="flex items-start">
                 <span className="text-green-400 mr-3 mt-1">✓</span>
                 <div>
-                  <p className="text-white font-semibold">Git Workflow</p>
-                  <p className="text-gray-400 text-sm">Feature branches • Pull Requests • Code review</p>
+                  <p className="text-white font-semibold">{t('certifications.gitWorkflow')}</p>
+                  <p className="text-gray-400 text-sm">{t('certifications.gitWorkflowDesc')}</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <span className="text-green-400 mr-3 mt-1">✓</span>
                 <div>
-                  <p className="text-white font-semibold">Deployment</p>
-                  <p className="text-gray-400 text-sm">Docker • Nginx • Production environments</p>
+                  <p className="text-white font-semibold">{t('certifications.deployment')}</p>
+                  <p className="text-gray-400 text-sm">{t('certifications.deploymentDesc')}</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <span className="text-green-400 mr-3 mt-1">✓</span>
                 <div>
-                  <p className="text-white font-semibold">API Design</p>
-                  <p className="text-gray-400 text-sm">REST • Django REST Framework • OpenAPI docs</p>
+                  <p className="text-white font-semibold">{t('certifications.apiDesign')}</p>
+                  <p className="text-gray-400 text-sm">{t('certifications.apiDesignDesc')}</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <span className="text-green-400 mr-3 mt-1">✓</span>
                 <div>
-                  <p className="text-white font-semibold">Database Optimization</p>
-                  <p className="text-gray-400 text-sm">Query optimization • Indexing • PostgreSQL tuning</p>
+                  <p className="text-white font-semibold">{t('certifications.dbOptimization')}</p>
+                  <p className="text-gray-400 text-sm">{t('certifications.dbOptimizationDesc')}</p>
                 </div>
               </div>
             </div>

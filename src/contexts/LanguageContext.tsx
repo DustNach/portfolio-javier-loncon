@@ -165,6 +165,50 @@ const translations = {
       recordsDesc: 'Análisis de datos educacionales',
       hoursCertified: 'Horas Certificadas',
       hoursDesc: 'Formación en Cloud, Full Stack y Agile'
+    },
+    experienceTimeline: {
+      sgc: {
+        title: 'SGC SYC Chile - Full Stack Engineer',
+        organization: 'SYC Chile',
+        description: 'Sistema empresarial que gestiona 500+ capacitaciones/mes para 50+ empresas. Arquitectura Django REST + React + TypeScript + PostgreSQL. Reducción de 40% en tiempo administrativo. Responsable de diseño de arquitectura, APIs RESTful y deployment en producción con 99.8% uptime.'
+      },
+      education: {
+        title: 'Ingeniero en Informática',
+        organization: 'INACAP',
+        description: 'Titulado con especialización en IA, Big Data y Desarrollo Full Stack. Proyectos destacados: CNN con 100% accuracy, análisis predictivo Titanic, sistemas Big Data con Hadoop procesando 217K+ registros.'
+      },
+      edulexis: {
+        title: 'EduLexis - Full Stack Developer',
+        organization: 'Producción en edulexis.cl',
+        description: 'Plataforma legal para sostenedores educacionales. Desarrollé arquitectura modular con 12 apps Django, 150+ endpoints REST API, PostgreSQL optimizado. Responsable de: desarrollo de APIs, integración frontend React, optimización de queries (reducción 40% tiempo respuesta), deployment con Docker. Sistema procesa 10K+ transacciones/día con 2000+ usuarios concurrentes.'
+      },
+      certification: {
+        title: 'Certificación Gestión de Proyectos IA',
+        organization: 'Certificado de Asistencia',
+        description: 'Formación especializada en gestión de proyectos de inteligencia artificial, metodologías ágiles aplicadas a ML/AI, y liderazgo de equipos técnicos.'
+      },
+      eva: {
+        title: 'EVA - Big Data Analytics',
+        organization: 'Proyecto de Análisis Masivo',
+        description: 'Pipeline de datos procesando 217,013 registros de estudiantes. Stack: Hadoop + R + Python + Power BI. Optimización de queries reduciendo tiempo de procesamiento en 60%. Dashboards interactivos con insights accionables para toma de decisiones.'
+      }
+    },
+    certifications: {
+      cloudArchitecture: 'Arquitectura Cloud',
+      fullStack: 'Desarrollador Full Stack',
+      database: 'Diseño y Gestión de Bases de Datos',
+      agile: 'Diseño Ágil de Sistemas',
+      aiProjects: 'Gestión de Proyectos de IA',
+      innovation: 'Innovación y Emprendimiento',
+      hours: 'horas',
+      gitWorkflow: 'Git Workflow',
+      gitWorkflowDesc: 'Feature branches • Pull Requests • Code review',
+      deployment: 'Deployment',
+      deploymentDesc: 'Docker • Nginx • Production environments',
+      apiDesign: 'API Design',
+      apiDesignDesc: 'REST • Django REST Framework • OpenAPI docs',
+      dbOptimization: 'Database Optimization',
+      dbOptimizationDesc: 'Query optimization • Indexing • PostgreSQL tuning'
     }
   },
   en: {
@@ -277,6 +321,50 @@ const translations = {
       recordsDesc: 'Educational data analysis',
       hoursCertified: 'Certified Hours',
       hoursDesc: 'Training in Cloud, Full Stack and Agile'
+    },
+    experienceTimeline: {
+      sgc: {
+        title: 'SGC SYC Chile - Full Stack Engineer',
+        organization: 'SYC Chile',
+        description: 'Enterprise system managing 500+ training sessions/month for 50+ companies. Architecture: Django REST + React + TypeScript + PostgreSQL. 40% reduction in administrative time. Responsible for architecture design, RESTful APIs and production deployment with 99.8% uptime.'
+      },
+      education: {
+        title: 'Computer Engineering',
+        organization: 'INACAP',
+        description: 'Graduate with specialization in AI, Big Data and Full Stack Development. Featured projects: CNN with 100% accuracy, Titanic predictive analysis, Big Data systems with Hadoop processing 217K+ records.'
+      },
+      edulexis: {
+        title: 'EduLexis - Full Stack Developer',
+        organization: 'Production at edulexis.cl',
+        description: 'Legal platform for educational administrators. Developed modular architecture with 12 Django apps, 150+ REST API endpoints, optimized PostgreSQL. Responsible for: API development, React frontend integration, query optimization (40% response time reduction), Docker deployment. System processes 10K+ transactions/day with 2000+ concurrent users.'
+      },
+      certification: {
+        title: 'AI Project Management Certification',
+        organization: 'Certificate of Attendance',
+        description: 'Specialized training in artificial intelligence project management, agile methodologies applied to ML/AI, and technical team leadership.'
+      },
+      eva: {
+        title: 'EVA - Big Data Analytics',
+        organization: 'Massive Analysis Project',
+        description: 'Data pipeline processing 217,013 student records. Stack: Hadoop + R + Python + Power BI. Query optimization reducing processing time by 60%. Interactive dashboards with actionable insights for decision making.'
+      }
+    },
+    certifications: {
+      cloudArchitecture: 'Cloud Architecture',
+      fullStack: 'Full Stack Developer',
+      database: 'Database Design and Management',
+      agile: 'Agile Systems Design',
+      aiProjects: 'AI Project Management',
+      innovation: 'Innovation and Entrepreneurship',
+      hours: 'hours',
+      gitWorkflow: 'Git Workflow',
+      gitWorkflowDesc: 'Feature branches • Pull Requests • Code review',
+      deployment: 'Deployment',
+      deploymentDesc: 'Docker • Nginx • Production environments',
+      apiDesign: 'API Design',
+      apiDesignDesc: 'REST • Django REST Framework • OpenAPI docs',
+      dbOptimization: 'Database Optimization',
+      dbOptimizationDesc: 'Query optimization • Indexing • PostgreSQL tuning'
     }
   }
 }
