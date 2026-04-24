@@ -98,7 +98,7 @@ const Contact = () => {
                 Enviar Mensaje
               </a>
               <a
-                href="/cv-javier-loncon.pdf"
+                href="/files/Javier_Loncon_CV(Español).pdf"
                 download
                 className="inline-flex items-center gap-2 px-8 py-3 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white rounded-lg font-medium transition-all border border-gray-600 hover:border-green-500/60"
               >
