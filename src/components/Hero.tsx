@@ -20,14 +20,14 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 font-medium mb-2">
-            Ingeniero Full Stack · IA · Big Data
+            Ingeniero Informática Full Stack · IA · Big Data
           </p>
 
           <div className="flex items-center justify-center gap-2 text-gray-500 text-sm mb-8">
             <MapPin className="h-4 w-4" />
             <span>Chillán, Chile</span>
             <span className="mx-2">·</span>
-            <span>Disponible para proyectos remotos</span>
+            <span>Disponible Remoto y presencial</span>
           </div>
         </motion.div>
 
