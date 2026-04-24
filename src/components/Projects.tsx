@@ -1,17 +1,19 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { useLanguage } from '../contexts/LanguageContext'
 import { projects } from '../data/projects'
 import ProjectCard from './ProjectCard'
 
 const Projects = () => {
+  const { t } = useLanguage()
   const [filter, setFilter] = useState<string>('all')
 
   const categories = [
-    { id: 'all', name: 'Todos' },
-    { id: 'web', name: 'Web & Cloud' },
-    { id: 'ai', name: 'IA & ML' },
-    { id: 'data', name: 'Big Data' },
-    { id: 'system', name: 'Seguridad' }
+    { id: 'all', name: t('projects.all') },
+    { id: 'web', name: t('projects.web') },
+    { id: 'ai', name: t('projects.ai') },
+    { id: 'data', name: t('projects.data') },
+    { id: 'system', name: t('projects.security') }
   ]
 
   const filteredProjects = filter === 'all' 
@@ -28,11 +30,10 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-black text-center mb-4 font-bebas uppercase">
-            <span className="text-image-fill">Proyectos</span>
+            <span className="text-image-fill">{t('projects.title')}</span>
           </h2>
           <p className="text-gray-400 text-center mb-12 max-w-3xl mx-auto">
-            Una colección de proyectos que demuestran mis habilidades en desarrollo web, 
-            inteligencia artificial, big data y arquitecturas de sistemas.
+            {t('projects.subtitle')}
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -59,7 +60,7 @@ const Projects = () => {
 
           {filteredProjects.length === 0 && (
             <div className="text-center py-20">
-              <p className="text-gray-500 text-lg">No hay proyectos en esta categoría</p>
+              <p className="text-gray-500 text-lg">{t('projects.noProjects')}</p>
             </div>
           )}
         </motion.div>

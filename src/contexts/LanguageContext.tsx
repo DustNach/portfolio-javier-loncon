@@ -98,26 +98,30 @@ const translations = {
       viewOnGithub: 'Ver Código'
     },
     projects: {
-      title: 'Proyectos Destacados',
-      subtitle: 'Sistemas en producción y soluciones empresariales',
+      title: 'Proyectos',
+      subtitle: 'Una colección de proyectos que demuestran mis habilidades en desarrollo web, inteligencia artificial, big data y arquitecturas de sistemas.',
+      all: 'Todos',
+      web: 'Web & Cloud',
+      ai: 'IA & ML',
+      data: 'Big Data',
+      security: 'Seguridad',
+      noProjects: 'No hay proyectos en esta categoría',
       liveDemo: 'Demo en Vivo',
       viewCode: 'Ver Código'
     },
     contact: {
       title: 'Contacto',
-      subtitle: 'Conversemos sobre tu próximo proyecto',
-      name: 'Nombre',
-      email: 'Email',
-      message: 'Mensaje',
-      send: 'Enviar Mensaje',
-      sending: 'Enviando...',
-      success: 'Mensaje enviado exitosamente',
-      error: 'Error al enviar mensaje'
+      subtitle: '¿Interesado en colaborar o tienes alguna pregunta? No dudes en contactarme a través de cualquiera de estos medios.',
+      location: 'Ubicación',
+      readyToWork: '¿Listo para trabajar juntos?',
+      available: 'Estoy disponible para proyectos de desarrollo, colaboraciones técnicas y oportunidades laborales en el área de tecnología.',
+      sendMessage: 'Enviar Mensaje',
+      downloadCV: 'Descargar CV'
     },
     footer: {
       rights: 'Todos los derechos reservados',
       madeWith: 'Hecho con',
-      by: 'por'
+      using: 'usando React, TypeScript, Vite, TailwindCSS, Framer Motion y Recharts'
     }
   },
   en: {
@@ -163,26 +167,30 @@ const translations = {
       viewOnGithub: 'View Code'
     },
     projects: {
-      title: 'Featured Projects',
-      subtitle: 'Production systems and enterprise solutions',
+      title: 'Projects',
+      subtitle: 'A collection of projects demonstrating my skills in web development, artificial intelligence, big data and system architectures.',
+      all: 'All',
+      web: 'Web & Cloud',
+      ai: 'AI & ML',
+      data: 'Big Data',
+      security: 'Security',
+      noProjects: 'No projects in this category',
       liveDemo: 'Live Demo',
       viewCode: 'View Code'
     },
     contact: {
       title: 'Contact',
-      subtitle: "Let's talk about your next project",
-      name: 'Name',
-      email: 'Email',
-      message: 'Message',
-      send: 'Send Message',
-      sending: 'Sending...',
-      success: 'Message sent successfully',
-      error: 'Error sending message'
+      subtitle: 'Interested in collaborating or have any questions? Feel free to contact me through any of these channels.',
+      location: 'Location',
+      readyToWork: 'Ready to work together?',
+      available: 'I am available for development projects, technical collaborations and job opportunities in the technology area.',
+      sendMessage: 'Send Message',
+      downloadCV: 'Download CV'
     },
     footer: {
       rights: 'All rights reserved',
       madeWith: 'Made with',
-      by: 'by'
+      using: 'using React, TypeScript, Vite, TailwindCSS, Framer Motion and Recharts'
     }
   }
 }

@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion'
 import { Mail, Linkedin, Github, MapPin, Download } from 'lucide-react'
+import { useLanguage } from '../contexts/LanguageContext'
 
 const Contact = () => {
+  const { t } = useLanguage()
+  
   const contactMethods = [
     {
       icon: <Mail className="h-6 w-6" />,
@@ -23,7 +26,7 @@ const Contact = () => {
     },
     {
       icon: <MapPin className="h-6 w-6" />,
-      title: 'Ubicación',
+      title: t('contact.location'),
       value: 'Chillán, Chile',
       link: null
     }
@@ -39,11 +42,10 @@ const Contact = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-black text-center mb-4 font-bebas uppercase">
-            <span className="text-image-fill">Contacto</span>
+            <span className="text-image-fill">{t('contact.title')}</span>
           </h2>
           <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-            ¿Interesado en colaborar o tienes alguna pregunta? 
-            No dudes en contactarme a través de cualquiera de estos medios.
+            {t('contact.subtitle')}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
@@ -86,16 +88,16 @@ const Contact = () => {
           </div>
 
           <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 p-8 rounded-lg border border-blue-500/30 text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">¿Listo para trabajar juntos?</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">{t('contact.readyToWork')}</h3>
             <p className="text-gray-300 mb-6">
-              Estoy disponible para proyectos de desarrollo, colaboraciones técnicas y oportunidades laborales en el área de tecnología.
+              {t('contact.available')}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="mailto:jaloncon95@gmail.com"
                 className="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-medium transition-colors shadow-lg shadow-blue-600/20"
               >
-                Enviar Mensaje
+                {t('contact.sendMessage')}
               </a>
               <a
                 href="/files/Javier_Loncon_CV(Español).pdf"
@@ -103,7 +105,7 @@ const Contact = () => {
                 className="inline-flex items-center gap-2 px-8 py-3 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white rounded-lg font-medium transition-all border border-gray-600 hover:border-green-500/60"
               >
                 <Download className="h-4 w-4" />
-                Descargar CV
+                {t('contact.downloadCV')}
               </a>
             </div>
           </div>

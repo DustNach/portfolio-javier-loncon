@@ -1,6 +1,8 @@
 import { Code2, Heart } from 'lucide-react'
+import { useLanguage } from '../contexts/LanguageContext'
 
 const Footer = () => {
+  const { t } = useLanguage()
   return (
     <footer className="bg-black border-t border-gray-800 py-8 px-4">
       <div className="max-w-7xl mx-auto">
@@ -11,13 +13,13 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-2 text-gray-400 text-sm">
-            <span>Hecho con</span>
+            <span>{t('footer.madeWith')}</span>
             <Heart className="h-4 w-4 text-red-500 fill-red-500" />
-            <span>usando React, TypeScript, Vite, TailwindCSS, Framer Motion y Recharts</span>
+            <span>{t('footer.using')}</span>
           </div>
 
           <div className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Todos los derechos reservados
+            © {new Date().getFullYear()} {t('footer.rights')}
           </div>
         </div>
       </div>
