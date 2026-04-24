@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react'
 import { Menu, X, Code2 } from 'lucide-react'
+import { useLanguage } from '../contexts/LanguageContext'
+import LanguageSelector from './LanguageSelector'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrollProgress, setScrollProgress] = useState(0)
+  const { t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,11 +19,10 @@ const Navbar = () => {
   }, [])
 
   const navItems = [
-    { name: 'Inicio', href: '#hero' },
-    { name: 'Sobre Mí', href: '#about' },
-    { name: 'Proyectos', href: '#projects' },
-    { name: 'Demos', href: '#demos' },
-    { name: 'Contacto', href: '#contact' },
+    { name: t('nav.about'), href: '#about' },
+    { name: t('nav.projects'), href: '#projects' },
+    { name: t('nav.demos'), href: '#demos' },
+    { name: t('nav.contact'), href: '#contact' },
   ]
 
   return (
@@ -37,8 +39,8 @@ const Navbar = () => {
             <span className="ml-2 text-xl font-bold text-white">Javier Loncón</span>
           </div>
 
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+          <div className="hidden md:flex items-center gap-6">
+            <div className="flex items-baseline space-x-4">
               {navItems.map((item) => (
                 <a
                   key={item.name}
@@ -49,9 +51,11 @@ const Navbar = () => {
                 </a>
               ))}
             </div>
+            <LanguageSelector />
           </div>
 
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-3">
+            <LanguageSelector />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-400 hover:text-white"

@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import { Briefcase, GraduationCap, Award, Code } from 'lucide-react'
+import { useLanguage } from '../contexts/LanguageContext'
 
 interface TimelineItem {
   year: string
@@ -12,6 +13,7 @@ interface TimelineItem {
 }
 
 const ExperienceTimeline = () => {
+  const { t } = useLanguage()
   const timeline: TimelineItem[] = [
     {
       year: '2026',
@@ -80,13 +82,13 @@ const ExperienceTimeline = () => {
           className="text-center"
         >
           <h2 className="text-4xl md:text-5xl font-black mb-4 font-bebas uppercase">
-            <span className="text-image-fill">Trayectoria</span>
+            <span className="text-image-fill">{t('timeline.title')}</span>
           </h2>
           <p className="text-gray-400 dark:text-gray-400 light:text-gray-600 max-w-2xl mx-auto mb-8">
-            Mi recorrido profesional y académico en desarrollo de software
+            {t('timeline.subtitle')}
           </p>
           <p className="text-sm text-gray-500 dark:text-gray-500 light:text-gray-500">
-            ← Desliza horizontalmente para ver más →
+            {t('timeline.swipeHint')}
           </p>
         </motion.div>
       </div>

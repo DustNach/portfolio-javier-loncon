@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, MapPin, ArrowDown, Download } from 'lucide-react'
+import { useLanguage } from '../contexts/LanguageContext'
 import TerminalTypewriter from './TerminalTypewriter'
 
 const Hero = () => {
+  const { t } = useLanguage()
+  
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center pt-16 px-4">
       <div className="max-w-5xl mx-auto text-center">
@@ -20,14 +23,14 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 font-medium mb-2">
-            Full Stack Engineer · 2+ años · IA · Big Data
+            {t('hero.title')}
           </p>
 
           <div className="flex items-center justify-center gap-2 text-gray-500 text-sm mb-8">
             <MapPin className="h-4 w-4" />
-            <span>Chillán, Chile</span>
+            <span>{t('hero.location')}</span>
             <span className="mx-2">·</span>
-            <span>Disponible Remoto y presencial</span>
+            <span>{t('hero.availability')}</span>
           </div>
         </motion.div>
 
@@ -48,11 +51,7 @@ const Hero = () => {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="text-gray-400 text-lg mb-10 max-w-xl mx-auto leading-relaxed"
         >
-          Diseño y lidero{' '}
-          <span className="text-white font-medium">arquitecturas escalables</span>{' '}
-          que procesan 10K+ transacciones/día. Especializado en{' '}
-          <span className="text-white font-medium">Django REST, React y ML/AI</span>{' '}
-          con sistemas en producción soportando 2000+ usuarios concurrentes.
+          {t('hero.tagline')}
         </motion.p>
 
         {/* CTAs */}
@@ -66,7 +65,7 @@ const Hero = () => {
             href="#projects"
             className="px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-medium transition-all duration-200 shadow-lg shadow-blue-600/40 hover:shadow-blue-500/60 hover:shadow-xl"
           >
-            Ver Proyectos
+            {t('hero.viewProjects')}
           </a>
           <a
             href="/files/Javier_Loncon_CV(Español).pdf"
@@ -74,13 +73,13 @@ const Hero = () => {
             className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white rounded-lg font-medium transition-all duration-200 shadow-lg shadow-green-600/40 hover:shadow-green-500/60 hover:shadow-xl"
           >
             <Download className="h-4 w-4" />
-            Descargar CV
+            {t('hero.downloadCV')}
           </a>
           <a
             href="#contact"
             className="px-8 py-3 text-gray-400 hover:text-blue-400 rounded-lg font-medium transition-all duration-200 hover:bg-blue-500/10"
           >
-            Contactar
+            {t('hero.contact')}
           </a>
         </motion.div>
 

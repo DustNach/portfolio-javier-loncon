@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion'
 import { Brain, TrendingUp, Database, CheckCircle, ChevronDown, ChevronUp, Github } from 'lucide-react'
 import { useState } from 'react'
+import { useLanguage } from '../contexts/LanguageContext'
 import CodeEditor from './CodeEditor'
 import { codeExamples } from '../data/codeExamples'
 
 export default function Demos() {
   const [expandedDemo, setExpandedDemo] = useState<string | null>(null)
+  const { t } = useLanguage()
 
   const demos = [
     {
@@ -81,10 +83,10 @@ export default function Demos() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-black mb-4 font-bebas uppercase">
-            <span className="text-image-fill">Proyectos de IA y ML</span>
+            <span className="text-image-fill">{t('demos.title')}</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-            Proyectos reales de Machine Learning, Deep Learning y Análisis de Datos desarrollados durante mi formación
+            {t('demos.subtitle')}
           </p>
         </motion.div>
 
@@ -142,7 +144,7 @@ export default function Demos() {
                     className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gray-700/50 hover:bg-gray-700 text-gray-300 hover:text-white rounded-lg font-medium transition-all duration-200 border border-gray-600/50 hover:border-gray-500"
                   >
                     <Github className="h-4 w-4" />
-                    Ver Código
+                    {t('demos.viewOnGithub')}
                   </a>
                 )}
                 {demo.codeExample && (
@@ -153,12 +155,12 @@ export default function Demos() {
                     {expandedDemo === demo.id ? (
                       <>
                         <ChevronUp className="h-4 w-4" />
-                        Ocultar
+                        {t('demos.hide')}
                       </>
                     ) : (
                       <>
                         <ChevronDown className="h-4 w-4" />
-                        Ver Código
+                        {t('demos.viewCode')}
                       </>
                     )}
                   </button>
