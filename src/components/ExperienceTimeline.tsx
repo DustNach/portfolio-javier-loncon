@@ -79,8 +79,8 @@ const ExperienceTimeline = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-gradient">Trayectoria</span>
+          <h2 className="text-4xl md:text-5xl font-black mb-4 font-bebas uppercase">
+            <span className="text-image-fill">Trayectoria</span>
           </h2>
           <p className="text-gray-400 dark:text-gray-400 light:text-gray-600 max-w-2xl mx-auto mb-8">
             Mi recorrido profesional y académico en desarrollo de software

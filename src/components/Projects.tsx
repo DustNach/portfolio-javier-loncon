@@ -27,8 +27,8 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            <span className="text-gradient">Proyectos</span>
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-4 font-bebas uppercase">
+            <span className="text-image-fill">Proyectos</span>
           </h2>
           <p className="text-gray-400 text-center mb-12 max-w-3xl mx-auto">
             Una colección de proyectos que demuestran mis habilidades en desarrollo web, 

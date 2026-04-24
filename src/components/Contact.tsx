@@ -38,8 +38,8 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            <span className="text-gradient">Contacto</span>
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-4 font-bebas uppercase">
+            <span className="text-image-fill">Contacto</span>
           </h2>
           <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
             ¿Interesado en colaborar o tienes alguna pregunta? 

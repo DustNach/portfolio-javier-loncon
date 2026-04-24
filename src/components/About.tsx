@@ -44,8 +44,8 @@ const About = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            <span className="text-gradient">Sobre Mí</span>
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-4 font-bebas uppercase">
+            <span className="text-image-fill">Sobre Mí</span>
           </h2>
           
           <div className="max-w-4xl mx-auto mb-16">
