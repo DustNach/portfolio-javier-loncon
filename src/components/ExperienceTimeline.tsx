@@ -14,6 +14,14 @@ interface TimelineItem {
 const ExperienceTimeline = () => {
   const timeline: TimelineItem[] = [
     {
+      year: '2026',
+      title: 'SGC SYC Chile',
+      organization: 'SYC Chile',
+      description: 'Sistema de gestión de capacitación empresarial. Django + React + TypeScript + PostgreSQL en producción',
+      icon: <Briefcase className="h-6 w-6" />,
+      type: 'work'
+    },
+    {
       year: '2025',
       title: 'Ingeniero en Informática',
       organization: 'INACAP',
@@ -26,14 +34,6 @@ const ExperienceTimeline = () => {
       title: 'EduLexis - Plataforma Legal',
       organization: 'Producción en edulexis.cl',
       description: 'Sistema completo con 12 apps Django, 150+ APIs, 92% completitud. Gestión legal para sostenedores educacionales',
-      icon: <Briefcase className="h-6 w-6" />,
-      type: 'work'
-    },
-    {
-      year: '2026',
-      title: 'SGC SYC Chile',
-      organization: 'SYC Chile',
-      description: 'Sistema de gestión de capacitación empresarial. Django + React + TypeScript + PostgreSQL en producción',
       icon: <Briefcase className="h-6 w-6" />,
       type: 'work'
     },
