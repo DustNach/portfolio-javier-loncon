@@ -6,32 +6,32 @@ const About = () => {
     {
       icon: <Code className="h-8 w-8" />,
       title: 'Frontend',
-      items: ['React', 'TypeScript', 'TailwindCSS', 'Vite']
+      items: ['React', 'Next.js', 'TypeScript', 'TailwindCSS', 'Vite', 'Framer Motion']
     },
     {
       icon: <Server className="h-8 w-8" />,
       title: 'Backend',
-      items: ['Django', 'FastAPI', 'Node.js', 'PostgreSQL']
+      items: ['Django', 'FastAPI', 'Node.js', 'Express', 'PostgreSQL', 'REST APIs']
     },
     {
       icon: <Brain className="h-8 w-8" />,
       title: 'IA & ML',
-      items: ['TensorFlow', 'Scikit-learn', 'NLP', 'Computer Vision']
+      items: ['TensorFlow', 'Keras', 'Scikit-learn', 'Pandas', 'NLP', 'Computer Vision']
     },
     {
       icon: <Database className="h-8 w-8" />,
-      title: 'Big Data',
-      items: ['Hadoop', 'MapReduce', 'HDFS', 'Data Analysis']
+      title: 'Big Data & Analytics',
+      items: ['Hadoop', 'MapReduce', 'HDFS', 'Python', 'R', 'Power BI']
     },
     {
       icon: <Cloud className="h-8 w-8" />,
       title: 'Cloud & DevOps',
-      items: ['Docker', 'Kubernetes', 'AWS', 'Azure']
+      items: ['Docker', 'Kubernetes', 'AWS', 'Azure', 'Vercel', 'Git/GitHub']
     },
     {
       icon: <Smartphone className="h-8 w-8" />,
       title: 'Otros',
-      items: ['Redis', 'Celery', 'Firebase', 'Microservicios']
+      items: ['Redis', 'Celery', 'Firebase', 'WordPress', 'Microservicios', 'OWASP']
     }
   ]
 
