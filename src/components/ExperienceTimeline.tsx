@@ -92,7 +92,7 @@ const ExperienceTimeline = () => {
       </div>
 
       <div className="relative overflow-x-auto overflow-y-hidden pb-4 [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-blue-500/30 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-blue-500/50">
-        <div className="flex gap-8 px-4 min-w-max"
+        <div className="flex gap-8 px-4 md:px-8 min-w-max justify-center md:justify-start"
         >
           {timeline.map((item, index) => (
             <motion.div
