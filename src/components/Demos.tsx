@@ -1,7 +1,12 @@
 import { motion } from 'framer-motion'
-import { Brain, TrendingUp, Database, CheckCircle } from 'lucide-react'
+import { Brain, TrendingUp, Database, CheckCircle, ChevronDown, ChevronUp } from 'lucide-react'
+import { useState } from 'react'
+import CNNVisualization from './demos/CNNVisualization'
+import TitanicVisualization from './demos/TitanicVisualization'
 
 export default function Demos() {
+  const [expandedDemo, setExpandedDemo] = useState<string | null>(null)
+
   const demos = [
     {
       id: 'cnn-cats',
@@ -14,7 +19,8 @@ export default function Demos() {
         { label: 'Epochs', value: '10' },
         { label: 'Arquitectura', value: 'Conv2D + MaxPooling' },
         { label: 'Activación', value: 'ReLU + Sigmoid' }
-      ]
+      ],
+      visualization: <CNNVisualization />
     },
     {
       id: 'decision-tree',
@@ -40,7 +46,8 @@ export default function Demos() {
         { label: 'Registros', value: '891' },
         { label: 'Features', value: '12' },
         { label: 'Encoding', value: 'LabelEncoder + OneHot' }
-      ]
+      ],
+      visualization: <TitanicVisualization />
     },
     {
       id: 'mobile-price',
@@ -107,7 +114,7 @@ export default function Demos() {
                 ))}
               </div>
 
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-3 gap-4 mb-6">
                 {demo.metrics.map((metric, i) => (
                   <div key={i} className="text-center">
                     <div className="text-lg font-bold text-white">
@@ -119,6 +126,37 @@ export default function Demos() {
                   </div>
                 ))}
               </div>
+
+              {demo.visualization && (
+                <button
+                  onClick={() => setExpandedDemo(expandedDemo === demo.id ? null : demo.id)}
+                  className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 rounded-lg font-medium transition-all duration-200 border border-blue-500/20 hover:border-blue-500/40"
+                >
+                  {expandedDemo === demo.id ? (
+                    <>
+                      <ChevronUp className="h-4 w-4" />
+                      Ocultar Visualización
+                    </>
+                  ) : (
+                    <>
+                      <ChevronDown className="h-4 w-4" />
+                      Ver Visualización Interactiva
+                    </>
+                  )}
+                </button>
+              )}
+
+              {expandedDemo === demo.id && demo.visualization && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="mt-6 overflow-hidden"
+                >
+                  {demo.visualization}
+                </motion.div>
+              )}
 
               <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${demo.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none`} />
             </motion.div>
