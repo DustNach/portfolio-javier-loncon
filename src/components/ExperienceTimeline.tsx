@@ -30,7 +30,7 @@ const ExperienceTimeline = () => {
       type: 'work'
     },
     {
-      year: '2024',
+      year: '2026',
       title: 'SGC SYC Chile',
       organization: 'SYC Chile',
       description: 'Sistema de gestión de capacitación empresarial. Django + React + TypeScript + PostgreSQL en producción',
