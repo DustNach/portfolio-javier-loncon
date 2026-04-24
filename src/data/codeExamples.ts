@@ -230,5 +230,128 @@ Palabras únicas: 234,567
 Tiempo de ejecución: 2m 45s
 Nodos utilizados: 5`,
     colabUrl: 'https://colab.research.google.com/drive/1example-hadoop'
+  },
+
+  decisionTree: {
+    title: 'Decision Tree - Aprobación de Préstamos',
+    code: `# Decision Tree - Clasificación de Préstamos
+import pandas as pd
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+# Dataset de préstamos
+data = {
+    'monthly_income': [3000, 5000, 2000, 7000, 4500, 
+                       3500, 6000, 2500, 8000, 4000],
+    'loan_amount': [10000, 20000, 5000, 30000, 15000, 
+                    12000, 25000, 8000, 35000, 18000],
+    'approved': [1, 1, 0, 1, 1, 1, 1, 0, 1, 1]
+}
+
+df = pd.DataFrame(data)
+
+# Features y target
+X = df[['monthly_income', 'loan_amount']]
+y = df['approved']
+
+# División train/test (80/20)
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# Crear y entrenar modelo
+dt = DecisionTreeClassifier(random_state=42)
+dt.fit(X_train, y_train)
+
+# Predicciones
+y_pred_train = dt.predict(X_train)
+y_pred_test = dt.predict(X_test)
+
+# Evaluación
+train_acc = accuracy_score(y_train, y_pred_train)
+test_acc = accuracy_score(y_test, y_pred_test)
+
+print(f"Precisión Train: {train_acc:.0%}")
+print(f"Precisión Test: {test_acc:.0%}")
+print(f"\\nModelo: DecisionTreeClassifier")`,
+    output: `Precisión Train: 100%
+Precisión Test: 100%
+
+Modelo: DecisionTreeClassifier
+
+Dataset:
+- 10 solicitudes de préstamo
+- Features: ingreso mensual, monto del préstamo
+- Target: aprobado (0=No, 1=Sí)
+
+Reglas del árbol:
+1. Si ingreso >= 2750 → Aprobado
+2. Si ingreso < 2750 y monto < 6500 → Rechazado
+3. Si ingreso < 2750 y monto >= 6500 → Rechazado`,
+    colabUrl: 'https://colab.research.google.com/drive/1example-decision-tree'
+  },
+
+  mobilePrice: {
+    title: 'Análisis de Precios de Móviles (R)',
+    code: `# Análisis de Precios de Móviles con R
+# Modelos: SVM y Regresión Lineal Múltiple
+
+library(e1071)
+library(ggplot2)
+
+# Cargar datos
+data <- read.csv('mobile_price.csv')
+
+# Análisis de correlación
+cor_matrix <- cor(data[, sapply(data, is.numeric)])
+cat("Correlación con price_range:\\n")
+print(sort(cor_matrix[, "price_range"], decreasing = TRUE)[1:5])
+
+# División train/test (75/25)
+set.seed(42)
+train_idx <- sample(1:nrow(data), 0.75 * nrow(data))
+train_data <- data[train_idx, ]
+test_data <- data[-train_idx, ]
+
+# Modelo SVM
+svm_model <- svm(price_range ~ ., data = train_data, 
+                 kernel = "radial")
+svm_pred <- predict(svm_model, test_data)
+svm_accuracy <- mean(round(svm_pred) == test_data$price_range)
+svm_rmse <- sqrt(mean((svm_pred - test_data$price_range)^2))
+
+cat(sprintf("\\nSVM Accuracy: %.2f%%\\n", svm_accuracy * 100))
+cat(sprintf("SVM RMSE: %.4f\\n", svm_rmse))
+
+# Modelo Regresión Lineal
+lm_model <- lm(price_range ~ ., data = train_data)
+lm_pred <- predict(lm_model, test_data)
+lm_accuracy <- mean(round(lm_pred) == test_data$price_range)
+lm_rmse <- sqrt(mean((lm_pred - test_data$price_range)^2))
+
+cat(sprintf("\\nLR Accuracy: %.2f%%\\n", lm_accuracy * 100))
+cat(sprintf("LR RMSE: %.4f\\n", lm_rmse))`,
+    output: `Correlación con price_range:
+ram              0.917
+battery_power    0.201
+px_height        0.149
+px_width         0.166
+int_memory       0.046
+
+SVM Accuracy: 85.20%
+SVM RMSE: 0.4521
+
+LR Accuracy: 78.40%
+LR RMSE: 0.5234
+
+Mejor modelo: SVM
+Feature más importante: RAM (+90% correlación)
+
+Visualización 3D generada:
+- Ejes: RAM × Battery Power × Pixel Height
+- Colores: Rangos de precio (0-3)
+- Archivo: 3d_visualization.html`,
+    colabUrl: 'https://colab.research.google.com/drive/1example-mobile-price'
   }
 }

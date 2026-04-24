@@ -38,6 +38,7 @@ export default function Demos() {
         { label: 'Precisión Test', value: '100%' },
         { label: 'Modelo', value: 'DecisionTreeClassifier' }
       ],
+      codeExample: codeExamples.decisionTree,
       githubUrl: 'https://github.com/DustNach/decision-tree-loan-approval'
     },
     {
@@ -68,6 +69,7 @@ export default function Demos() {
         { label: 'Modelos', value: 'SVM + LR' },
         { label: 'Visualización', value: '3D Interactiva' }
       ],
+      codeExample: codeExamples.mobilePrice,
       githubUrl: 'https://github.com/DustNach/mobile-price-analysis-r'
     }
   ]
