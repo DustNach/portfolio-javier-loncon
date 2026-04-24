@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Brain, TrendingUp, Database, CheckCircle, ChevronDown, ChevronUp } from 'lucide-react'
+import { Brain, TrendingUp, Database, CheckCircle, ChevronDown, ChevronUp, Github } from 'lucide-react'
 import { useState } from 'react'
 import CNNVisualization from './demos/CNNVisualization'
 import TitanicVisualization from './demos/TitanicVisualization'
@@ -20,7 +20,8 @@ export default function Demos() {
         { label: 'Arquitectura', value: 'Conv2D + MaxPooling' },
         { label: 'Activación', value: 'ReLU + Sigmoid' }
       ],
-      visualization: <CNNVisualization />
+      visualization: <CNNVisualization />,
+      githubUrl: 'https://github.com/DustNach/cnn-cat-classifier'
     },
     {
       id: 'decision-tree',
@@ -33,7 +34,8 @@ export default function Demos() {
         { label: 'Precisión Train', value: '100%' },
         { label: 'Precisión Test', value: '100%' },
         { label: 'Modelo', value: 'DecisionTreeClassifier' }
-      ]
+      ],
+      githubUrl: 'https://github.com/DustNach/decision-tree-loan-approval'
     },
     {
       id: 'titanic',
@@ -47,7 +49,8 @@ export default function Demos() {
         { label: 'Features', value: '12' },
         { label: 'Encoding', value: 'LabelEncoder + OneHot' }
       ],
-      visualization: <TitanicVisualization />
+      visualization: <TitanicVisualization />,
+      githubUrl: 'https://github.com/DustNach/titanic-survival-prediction'
     },
     {
       id: 'mobile-price',
@@ -60,7 +63,8 @@ export default function Demos() {
         { label: 'Correlación RAM', value: '+90%' },
         { label: 'Modelos', value: 'SVM + LR' },
         { label: 'Visualización', value: '3D Interactiva' }
-      ]
+      ],
+      githubUrl: 'https://github.com/DustNach/mobile-price-analysis-r'
     }
   ]
 
@@ -127,24 +131,37 @@ export default function Demos() {
                 ))}
               </div>
 
-              {demo.visualization && (
-                <button
-                  onClick={() => setExpandedDemo(expandedDemo === demo.id ? null : demo.id)}
-                  className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 rounded-lg font-medium transition-all duration-200 border border-blue-500/20 hover:border-blue-500/40"
-                >
-                  {expandedDemo === demo.id ? (
-                    <>
-                      <ChevronUp className="h-4 w-4" />
-                      Ocultar Visualización
-                    </>
-                  ) : (
-                    <>
-                      <ChevronDown className="h-4 w-4" />
-                      Ver Visualización Interactiva
-                    </>
-                  )}
-                </button>
-              )}
+              <div className="flex gap-3">
+                {demo.githubUrl && (
+                  <a
+                    href={demo.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gray-700/50 hover:bg-gray-700 text-gray-300 hover:text-white rounded-lg font-medium transition-all duration-200 border border-gray-600/50 hover:border-gray-500"
+                  >
+                    <Github className="h-4 w-4" />
+                    Ver Código
+                  </a>
+                )}
+                {demo.visualization && (
+                  <button
+                    onClick={() => setExpandedDemo(expandedDemo === demo.id ? null : demo.id)}
+                    className={`${demo.githubUrl ? 'flex-1' : 'w-full'} flex items-center justify-center gap-2 px-4 py-3 bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 rounded-lg font-medium transition-all duration-200 border border-blue-500/20 hover:border-blue-500/40`}
+                  >
+                    {expandedDemo === demo.id ? (
+                      <>
+                        <ChevronUp className="h-4 w-4" />
+                        Ocultar
+                      </>
+                    ) : (
+                      <>
+                        <ChevronDown className="h-4 w-4" />
+                        Ver Demo
+                      </>
+                    )}
+                  </button>
+                )}
+              </div>
 
               {expandedDemo === demo.id && demo.visualization && (
                 <motion.div
