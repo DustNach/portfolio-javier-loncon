@@ -20,7 +20,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 font-medium mb-2">
-            Ingeniero Informática Full Stack · IA · Big Data
+            Full Stack Engineer · 2+ años · IA · Big Data
           </p>
 
           <div className="flex items-center justify-center gap-2 text-gray-500 text-sm mb-8">
@@ -48,9 +48,11 @@ const Hero = () => {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="text-gray-400 text-lg mb-10 max-w-xl mx-auto leading-relaxed"
         >
-          Construyo sistemas que van a producción —{' '}
-          <span className="text-white font-medium">IA, arquitecturas escalables</span>{' '}
-          y seguridad desde el día uno.
+          Diseño y lidero{' '}
+          <span className="text-white font-medium">arquitecturas escalables</span>{' '}
+          que procesan 10K+ transacciones/día. Especializado en{' '}
+          <span className="text-white font-medium">Django REST, React y ML/AI</span>{' '}
+          con sistemas en producción soportando 2000+ usuarios concurrentes.
         </motion.p>
 
         {/* CTAs */}
