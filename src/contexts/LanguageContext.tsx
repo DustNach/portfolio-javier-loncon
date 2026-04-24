@@ -209,6 +209,19 @@ const translations = {
       apiDesignDesc: 'REST • Django REST Framework • OpenAPI docs',
       dbOptimization: 'Database Optimization',
       dbOptimizationDesc: 'Query optimization • Indexing • PostgreSQL tuning'
+    },
+    projectCard: {
+      viewLiveDemo: 'Ver demo en vivo',
+      viewMoreDetails: 'Ver más detalles',
+      features: 'Características:'
+    },
+    bentoGrid: {
+      title: 'Proyectos Destacados',
+      subtitle: 'Sistemas reales con usuarios reales — no sólo ejercicios académicos',
+      completeness: 'completitud',
+      records: 'registros',
+      viewDemo: 'Ver demo',
+      viewCode: 'Ver código'
     }
   },
   en: {
@@ -365,6 +378,19 @@ const translations = {
       apiDesignDesc: 'REST • Django REST Framework • OpenAPI docs',
       dbOptimization: 'Database Optimization',
       dbOptimizationDesc: 'Query optimization • Indexing • PostgreSQL tuning'
+    },
+    projectCard: {
+      viewLiveDemo: 'View live demo',
+      viewMoreDetails: 'View more details',
+      features: 'Features:'
+    },
+    bentoGrid: {
+      title: 'Featured Projects',
+      subtitle: 'Real systems with real users — not just academic exercises',
+      completeness: 'completeness',
+      records: 'records',
+      viewDemo: 'View demo',
+      viewCode: 'View code'
     }
   }
 }

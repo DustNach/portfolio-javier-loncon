@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { ExternalLink, FolderOpen, Calendar, CheckCircle } from 'lucide-react'
 import { Project } from '../types'
+import { useLanguage } from '../contexts/LanguageContext'
 
 interface ProjectCardProps {
   project: Project
@@ -8,6 +9,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ project, index }: ProjectCardProps) => {
+  const { t } = useLanguage()
   const getCategoryColor = (category: string) => {
     const colors = {
       web: 'bg-blue-500/10 text-blue-400 border-blue-500/30',
@@ -77,7 +79,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-400 transition-colors"
-                title="Ver demo en vivo"
+                title={t('projectCard.viewLiveDemo')}
               >
                 <ExternalLink className="h-5 w-5" />
               </a>
@@ -90,14 +92,14 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
         <details className="group/details">
           <summary className="cursor-pointer text-sm text-gray-400 hover:text-blue-400 transition-colors list-none">
             <span className="flex items-center justify-between">
-              <span>Ver más detalles</span>
+              <span>{t('projectCard.viewMoreDetails')}</span>
               <span className="group-open/details:rotate-180 transition-transform">▼</span>
             </span>
           </summary>
           <div className="mt-4 space-y-3">
             <p className="text-gray-300 text-sm">{project.longDescription}</p>
             <div>
-              <h4 className="text-white font-semibold mb-2 text-sm">Características:</h4>
+              <h4 className="text-white font-semibold mb-2 text-sm">{t('projectCard.features')}</h4>
               <ul className="space-y-1">
                 {project.features.slice(0, 5).map((feature, i) => (
                   <li key={i} className="text-gray-400 text-xs flex items-start">

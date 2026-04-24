@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import { ExternalLink, Github, Brain, Database, Server, Code2 } from 'lucide-react'
+import { useLanguage } from '../contexts/LanguageContext'
 
 interface BentoProject {
   id: string
@@ -16,13 +17,15 @@ interface BentoProject {
 }
 
 const BentoGrid = () => {
+  const { t } = useLanguage()
+  
   const projects: BentoProject[] = [
     {
       id: '1',
       title: 'EduLexis',
       description: 'Plataforma legal para sostenedores educacionales. Sistema completo con 12 apps Django, 150+ APIs, en producción en edulexis.cl',
       stack: ['Django', 'React', 'PostgreSQL', 'Redis'],
-      stat: { value: '92%', label: 'completitud' },
+      stat: { value: '92%', label: t('bentoGrid.completeness') },
       demoUrl: 'https://edulexis.cl',
       icon: <Server className="h-8 w-8" />,
       gradient: 'from-blue-500 to-cyan-500',
@@ -43,7 +46,7 @@ const BentoGrid = () => {
       title: 'EVA - Análisis Educacional',
       description: 'Tablero Power BI con análisis de 217,013 estudiantes. Visualización por comunas, género y rendimiento.',
       stack: ['Power BI', 'R', 'Python'],
-      stat: { value: '217k', label: 'registros' },
+      stat: { value: '217k', label: t('bentoGrid.records') },
       icon: <Brain className="h-8 w-8" />,
       gradient: 'from-purple-500 to-pink-500',
       size: 'medium'
@@ -78,10 +81,10 @@ const BentoGrid = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-gradient">Proyectos Destacados</span>
+            <span className="text-gradient">{t('bentoGrid.title')}</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Sistemas reales con usuarios reales — no sólo ejercicios académicos
+            {t('bentoGrid.subtitle')}
           </p>
         </motion.div>
 
@@ -137,7 +140,7 @@ const BentoGrid = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-gray-600 hover:text-white transition-colors"
-                        title="Ver demo"
+                        title={t('bentoGrid.viewDemo')}
                       >
                         <ExternalLink className="h-4 w-4" />
                       </a>
@@ -148,7 +151,7 @@ const BentoGrid = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-gray-600 hover:text-white transition-colors"
-                        title="Ver código"
+                        title={t('bentoGrid.viewCode')}
                       >
                         <Github className="h-4 w-4" />
                       </a>
