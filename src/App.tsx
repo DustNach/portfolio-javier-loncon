@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import { LanguageProvider } from './contexts/LanguageContext'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -37,6 +38,7 @@ function App() {
           </Routes>
           <Footer />
         </div>
+        <SpeedInsights />
       </Router>
     </LanguageProvider>
   )
