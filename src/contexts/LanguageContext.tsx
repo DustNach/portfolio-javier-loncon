@@ -211,6 +211,7 @@ const translations = {
         corporate: 'Corporativo',
         services: 'Servicios',
         training: 'Capacitación',
+        status: 'Estado',
         online: 'En Línea'
       }
     },
@@ -491,6 +492,7 @@ const translations = {
         corporate: 'Corporate',
         services: 'Services',
         training: 'Training',
+        status: 'Status',
         online: 'Online'
       }
     },
