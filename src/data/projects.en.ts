@@ -6,21 +6,21 @@ export const projectsEn: Project[] = [
   {
     id: 'sgc-syc-chile',
     title: 'SGC SYC Chile — Quality Management System',
-    description: '3,000+ active users · 29 companies · OWASP 8.5/10 · Production system',
-    longDescription: 'Quality Management System developed for SYC Chile. Full stack with Django REST Framework, React, TypeScript and PostgreSQL. Manages over 3,000 active participants from 29 client companies. WebSockets for real-time, Celery for async tasks, automated CI/CD with Docker, and OWASP 8.5/10 security audit.',
-    technologies: ['Django', 'Django REST Framework', 'React', 'TypeScript', 'PostgreSQL', 'Redis', 'Celery', 'WebSockets', 'Docker', 'Nginx'],
+    description: '🏗️ 3-Layer Architecture · 🔒 OWASP 8.5/10 · 🚀 99.8% uptime · 3,000+ active users',
+    longDescription: 'Complete enterprise system in production with 3-layer architecture (Django REST + React SPA + PostgreSQL). OWASP 8.5/10 Security: JWT with automatic rotation, CSRF/XSS protection, rate limiting, HSTS. DevOps: Docker multi-stage builds, Traefik reverse proxy, automatic SSL with Let\'s Encrypt, deployment with Dokploy. Automatic legacy system migration with zero downtime. 200+ files, senior audit 8.5/10, 0 critical vulnerabilities.',
+    technologies: ['Django 5.2', 'React 18', 'TypeScript 5.8', 'PostgreSQL 15', 'Redis 7', 'Celery', 'Docker', 'Traefik', 'Dokploy', 'Zod'],
     category: 'web',
     image: '/projects/sgc-syc.jpg',
     demoUrl: 'https://sgc.sycchile.com',
     features: [
-      '3,000+ active users in production',
-      '29 managed client companies',
-      'OWASP 8.5/10 security audit',
-      'WebSockets for real-time communication',
-      'Celery + Redis for async tasks',
-      'Automated CI/CD with Docker and Nginx',
-      'VPS administration and high availability',
-      'REST API with JWT authentication'
+      '🏗️ 3-layer architecture with separation of concerns',
+      '🔒 OWASP 8.5/10 Security - 0 critical vulnerabilities',
+      '🔑 JWT with automatic rotation (30min access, 7 days refresh)',
+      '🐳 Docker multi-stage builds + health checks',
+      '🚀 99.8% uptime · 3,000+ active users · 29 companies',
+      '📊 Automatic legacy migration with zero downtime',
+      '⚡ Query optimization: 40% response time reduction',
+      '🔧 200+ files · Senior audit 8.5/10'
     ],
     status: 'completed',
     year: 2024

@@ -6,21 +6,21 @@ export const projects: Project[] = [
   {
     id: 'sgc-syc-chile',
     title: 'SGC SYC Chile — Sistema de Gestión de Calidad',
-    description: '3,000+ usuarios activos · 29 empresas · OWASP 8.5/10 · Sistema en producción',
-    longDescription: 'Sistema de Gestión de Calidad desarrollado para SYC Chile. Stack completo con Django REST Framework, React, TypeScript y PostgreSQL. Gestiona más de 3,000 participantes activos de 29 empresas clientes. WebSockets para tiempo real, Celery para tareas asíncronas, CI/CD automatizado con Docker, y auditoría OWASP 8.5/10.',
-    technologies: ['Django', 'Django REST Framework', 'React', 'TypeScript', 'PostgreSQL', 'Redis', 'Celery', 'WebSockets', 'Docker', 'Nginx'],
+    description: '🏗️ Arquitectura 3 capas · 🔒 OWASP 8.5/10 · 🚀 99.8% uptime · 3,000+ usuarios activos',
+    longDescription: 'Sistema empresarial completo en producción con arquitectura de 3 capas (Django REST + React SPA + PostgreSQL). Seguridad OWASP 8.5/10: JWT con rotación automática, CSRF/XSS protection, rate limiting, HSTS. DevOps: Docker multi-stage builds, Traefik reverse proxy, SSL automático con Let\'s Encrypt, deployment con Dokploy. Migración automática de sistema legacy sin downtime. 200+ archivos, auditoría senior 8.5/10, 0 vulnerabilidades críticas.',
+    technologies: ['Django 5.2', 'React 18', 'TypeScript 5.8', 'PostgreSQL 15', 'Redis 7', 'Celery', 'Docker', 'Traefik', 'Dokploy', 'Zod'],
     category: 'web',
     image: '/projects/sgc-syc.jpg',
     demoUrl: 'https://sgc.sycchile.com',
     features: [
-      '3,000+ usuarios activos en producción',
-      '29 empresas clientes gestionadas',
-      'Auditoría de seguridad OWASP 8.5/10',
-      'WebSockets para comunicación en tiempo real',
-      'Celery + Redis para tareas asíncronas',
-      'CI/CD automatizado con Docker y Nginx',
-      'Administración de VPS y alta disponibilidad',
-      'API REST con autenticación JWT'
+      '🏗️ Arquitectura 3 capas con separación de responsabilidades',
+      '🔒 Seguridad OWASP 8.5/10 - 0 vulnerabilidades críticas',
+      '🔑 JWT con rotación automática (30min access, 7 días refresh)',
+      '🐳 Docker multi-stage builds + health checks',
+      '🚀 99.8% uptime · 3,000+ usuarios activos · 29 empresas',
+      '📊 Migración legacy automática sin downtime',
+      '⚡ Optimización queries: 40% reducción tiempo respuesta',
+      '🔧 200+ archivos · Auditoría senior 8.5/10'
     ],
     status: 'completed',
     year: 2024
