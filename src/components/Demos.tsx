@@ -141,26 +141,38 @@ export default function Demos() {
                     href={demo.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gray-700/50 hover:bg-gray-700 text-gray-300 hover:text-white rounded-lg font-medium transition-all duration-200 border border-gray-600/50 hover:border-gray-500"
+                    className="flex-1 relative flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-medium transition-all duration-300 group/gh overflow-hidden"
+                    style={{
+                      background: 'linear-gradient(#0f172a, #0f172a) padding-box, linear-gradient(135deg, #6b7280, #9ca3af) border-box',
+                      border: '1px solid transparent',
+                    }}
                   >
-                    <Github className="h-4 w-4" />
-                    {t('demos.viewOnGithub')}
+                    <span className="absolute inset-0 bg-gradient-to-r from-gray-500/10 to-gray-400/10 opacity-0 group-hover/gh:opacity-100 transition-opacity duration-300 rounded-lg" />
+                    <Github className="h-4 w-4 text-gray-400 group-hover/gh:text-gray-300 transition-colors relative z-10" />
+                    <span className="bg-gradient-to-r from-gray-300 to-gray-400 bg-clip-text text-transparent font-semibold relative z-10">
+                      {t('demos.viewOnGithub')}
+                    </span>
                   </a>
                 )}
                 {demo.codeExample && (
                   <button
                     onClick={() => setExpandedDemo(expandedDemo === demo.id ? null : demo.id)}
-                    className={`${demo.githubUrl ? 'flex-1' : 'w-full'} flex items-center justify-center gap-2 px-4 py-3 bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 rounded-lg font-medium transition-all duration-200 border border-blue-500/20 hover:border-blue-500/40`}
+                    className={`${demo.githubUrl ? 'flex-1' : 'w-full'} relative flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-medium transition-all duration-300 group/code overflow-hidden`}
+                    style={{
+                      background: 'linear-gradient(#0f172a, #0f172a) padding-box, linear-gradient(135deg, #3b82f6, #06b6d4) border-box',
+                      border: '1px solid transparent',
+                    }}
                   >
+                    <span className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 opacity-0 group-hover/code:opacity-100 transition-opacity duration-300 rounded-lg" />
                     {expandedDemo === demo.id ? (
                       <>
-                        <ChevronUp className="h-4 w-4" />
-                        {t('demos.hide')}
+                        <ChevronUp className="h-4 w-4 text-blue-400 group-hover/code:text-blue-300 transition-colors relative z-10" />
+                        <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent font-semibold relative z-10">{t('demos.hide')}</span>
                       </>
                     ) : (
                       <>
-                        <ChevronDown className="h-4 w-4" />
-                        {t('demos.viewCode')}
+                        <ChevronDown className="h-4 w-4 text-blue-400 group-hover/code:text-blue-300 transition-colors relative z-10" />
+                        <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent font-semibold relative z-10">{t('demos.viewCode')}</span>
                       </>
                     )}
                   </button>
