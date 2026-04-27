@@ -77,8 +77,9 @@ const Hero = () => {
           </a>
           <a
             href="#contact"
-            className="px-8 py-3 text-gray-400 hover:text-blue-400 rounded-lg font-medium transition-all duration-200 hover:bg-blue-500/10"
+            className="inline-flex items-center gap-2 px-8 py-3 text-gray-300 hover:text-white rounded-lg font-medium transition-all duration-200 border border-gray-600 hover:border-cyan-500/70 hover:bg-cyan-500/8 hover:shadow-lg hover:shadow-cyan-500/10"
           >
+            <Mail className="h-4 w-4" />
             {t('hero.contact')}
           </a>
         </motion.div>
