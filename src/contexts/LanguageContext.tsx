@@ -189,9 +189,10 @@ const translations = {
     },
     liveProjects: {
       title: 'Proyectos en Vivo',
-      subtitle: 'Sistemas reales en producción que puedes visitar ahora mismo',
+      subtitle: 'Sistema real en producción que puedes visitar ahora mismo',
       visitLive: 'Visitar Sistema en Vivo',
-      note: '🚀 Sistemas 100% funcionales en producción con usuarios reales',
+      liveBadge: 'En Producción',
+      note: '🚀 Sistema 100% funcional en producción con usuarios reales',
       edulexis: {
         description: 'Plataforma legal para sostenedores educacionales en producción',
         completeness: 'Completitud',
@@ -469,10 +470,11 @@ const translations = {
       using: 'using React, TypeScript, Vite, TailwindCSS, Framer Motion and Recharts'
     },
     liveProjects: {
-      title: 'Live Projects',
-      subtitle: 'Real production systems you can visit right now',
+      title: 'Live Project',
+      subtitle: 'Real production system you can visit right now',
       visitLive: 'Visit Live System',
-      note: '🚀 100% functional systems in production with real users',
+      liveBadge: 'In Production',
+      note: '🚀 100% functional system in production with real users',
       edulexis: {
         description: 'Legal platform for educational administrators in production',
         completeness: 'Completeness',
