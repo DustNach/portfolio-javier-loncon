@@ -61,20 +61,39 @@ const Hero = () => {
           transition={{ delay: 0.4, duration: 0.5 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
+          {/* Ver Proyectos */}
           <a
             href="#projects"
-            className="px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-medium transition-all duration-200 shadow-lg shadow-blue-600/40 hover:shadow-blue-500/60 hover:shadow-xl"
+            className="relative inline-flex items-center gap-2 px-8 py-3 rounded-lg font-medium transition-all duration-300 group overflow-hidden"
+            style={{
+              background: 'linear-gradient(#0f172a, #0f172a) padding-box, linear-gradient(135deg, #3b82f6, #06b6d4) border-box',
+              border: '1px solid transparent',
+            }}
           >
-            {t('hero.viewProjects')}
+            <span className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
+            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent font-semibold relative z-10">
+              {t('hero.viewProjects')}
+            </span>
           </a>
+
+          {/* Descargar CV */}
           <a
             href="/files/Javier_Loncon_CV(Español).pdf"
             download
-            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white rounded-lg font-medium transition-all duration-200 shadow-lg shadow-green-600/40 hover:shadow-green-500/60 hover:shadow-xl"
+            className="relative inline-flex items-center gap-2 px-8 py-3 rounded-lg font-medium transition-all duration-300 group overflow-hidden"
+            style={{
+              background: 'linear-gradient(#0f172a, #0f172a) padding-box, linear-gradient(135deg, #10b981, #06b6d4) border-box',
+              border: '1px solid transparent',
+            }}
           >
-            <Download className="h-4 w-4" />
-            {t('hero.downloadCV')}
+            <span className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
+            <Download className="h-4 w-4 text-emerald-400 group-hover:text-emerald-300 transition-colors relative z-10" />
+            <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent font-semibold relative z-10">
+              {t('hero.downloadCV')}
+            </span>
           </a>
+
+          {/* Contactar */}
           <a
             href="#contact"
             className="relative inline-flex items-center gap-2 px-8 py-3 rounded-lg font-medium transition-all duration-300 group overflow-hidden"
