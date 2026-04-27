@@ -12,6 +12,8 @@ import SkillsRadar from './components/SkillsRadar'
 import AnimatedCounter from './components/AnimatedCounter'
 import ExperienceTimeline from './components/ExperienceTimeline'
 import LiveProjects from './components/LiveProjects'
+import TechnicalHighlights from './components/TechnicalHighlights'
+import SGCCaseStudy from './components/SGCCaseStudy'
 import Demos from './components/Demos'
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
                 <SkillsRadar />
                 <AnimatedCounter />
                 <LiveProjects />
+                <SGCCaseStudy />
+                <TechnicalHighlights />
                 <ExperienceTimeline />
                 <Demos />
                 <Projects />

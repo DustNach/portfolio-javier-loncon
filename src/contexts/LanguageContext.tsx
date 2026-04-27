@@ -88,6 +88,41 @@ const translations = {
       subtitle: 'Mi recorrido profesional y académico en desarrollo de software',
       swipeHint: '← Desliza horizontalmente para ver más →'
     },
+    technicalHighlights: {
+      title: 'Profundidad Técnica',
+      subtitle: 'Decisiones de arquitectura, seguridad y optimización en proyectos reales de producción',
+      note: '💡 Implementaciones técnicas verificables en sistemas con usuarios reales',
+      architecture: {
+        title: 'Arquitectura de 3 Capas',
+        description: 'Diseño e implementación de arquitectura escalable con Django REST + React SPA + PostgreSQL. Separación clara de responsabilidades con modelos legacy (managed=False) y APIs RESTful consistentes.',
+        metrics: '200+ archivos · 8.5/10 auditoría senior'
+      },
+      security: {
+        title: 'Seguridad Empresarial OWASP 8.5/10',
+        description: 'JWT con rotación automática, CSRF/XSS protection, rate limiting, HSTS, sanitización con bleach/DOMPurify. Headers de seguridad HTTP completos y validaciones frontend/backend.',
+        metrics: '0 vulnerabilidades críticas'
+      },
+      legacy: {
+        title: 'Migración Automática de Sistema Legacy',
+        description: 'Migración transparente de contraseñas legacy a hash seguro (PBKDF2) sin interrumpir usuarios. Manejo de tablas legacy con managed=False y sincronización bidireccional.',
+        metrics: '3,000+ usuarios migrados sin downtime'
+      },
+      devops: {
+        title: 'DevOps con Docker Multi-Stage',
+        description: 'Builds optimizados con multi-stage, health checks, Traefik reverse proxy, SSL automático con Let\'s Encrypt, deployment con Dokploy y CI/CD automatizado.',
+        metrics: '99.8% uptime · Deploy automatizado'
+      },
+      optimization: {
+        title: 'Optimización de Queries y Performance',
+        description: 'Optimización de queries con select_related/prefetch_related, índices estratégicos en PostgreSQL, Redis para cache, Celery para tareas asíncronas. Reducción significativa de tiempos de respuesta.',
+        metrics: '40% reducción tiempo respuesta · 10K+ transacciones/día'
+      },
+      validation: {
+        title: 'Validaciones Robustas Multi-Capa',
+        description: 'Validaciones exhaustivas en frontend (Zod + React Hook Form) y backend (DRF Serializers). Sanitización de inputs, validación de RUT chileno, prevención de XSS/CSRF.',
+        metrics: 'Defensa en profundidad · 0 errores de validación'
+      }
+    },
     demos: {
       title: 'Proyectos de IA y Machine Learning',
       subtitle: 'Implementaciones prácticas de algoritmos de ML y análisis de datos',
@@ -251,6 +286,53 @@ const translations = {
       records: 'registros',
       viewDemo: 'Ver demo',
       viewCode: 'Ver código'
+    },
+    sgcCase: {
+      badge: 'Case Study',
+      title: 'SGC SYC Chile — De Cero a Producción',
+      subtitle: 'Cómo diseñé e implementé un sistema empresarial completo para 29 empresas y 3,247 usuarios activos.',
+      problem: {
+        title: 'El Problema',
+        desc: 'SYC Chile gestionaba capacitaciones de 29 empresas con planillas Excel y correos. Sin trazabilidad, sin reportes automatizados, sin control de acceso por empresa. El proceso manual consumía horas semanales de trabajo administrativo.'
+      },
+      solution: {
+        title: 'La Solución',
+        desc: 'Sistema multi-tenant con Django REST + React + PostgreSQL. Cada empresa ve solo sus datos. Reportes automáticos con Celery, notificaciones en tiempo real con WebSockets, auditoría OWASP y deployment containerizado con Docker.'
+      },
+      arch: {
+        title: 'Stack y Decisiones de Arquitectura',
+        decision: {
+          label: 'Decisión clave',
+          text: 'Elegí Django sobre FastAPI por el ORM maduro y el admin integrado — permitió entregar el MVP en 3 semanas con modelos legacy (managed=False) sin reescribir la base de datos existente.'
+        }
+      },
+      challenges: {
+        title: 'Desafíos Técnicos Resueltos',
+        multiTenant: {
+          title: 'Multi-tenant sin duplicar DB',
+          desc: 'Row-level security con middleware personalizado. Cada request filtra automáticamente por empresa sin que el desarrollador lo recuerde.'
+        },
+        realtime: {
+          title: 'Notificaciones en tiempo real',
+          desc: 'Django Channels + WebSockets para alertas de capacitaciones. Redis como channel layer. Sin polling, sin refrescar la página.'
+        },
+        security: {
+          title: 'Seguridad OWASP 8.5/10',
+          desc: 'JWT con rotación automática, CSRF/XSS protection, rate limiting, HSTS, migración de contraseñas legacy a PBKDF2 sin interrumpir usuarios.'
+        },
+        cicd: {
+          title: 'CI/CD sin downtime',
+          desc: 'Docker multi-stage builds, health checks, Traefik reverse proxy con SSL automático. Deploy en segundos con zero-downtime rolling updates.'
+        }
+      },
+      results: {
+        title: 'Resultados en Producción',
+        users: 'Usuarios Activos',
+        companies: 'Empresas Clientes',
+        owasp: 'Auditoría OWASP',
+        uptime: 'Uptime'
+      },
+      cta: 'Ver Sistema en Producción'
     }
   },
   en: {
@@ -285,6 +367,41 @@ const translations = {
       title: 'Experience',
       subtitle: 'My professional and academic journey in software development',
       swipeHint: '← Swipe horizontally to see more →'
+    },
+    technicalHighlights: {
+      title: 'Technical Deep Dive',
+      subtitle: 'Architecture, security, and optimization decisions in real production systems',
+      note: '💡 Verifiable technical implementations in systems with real users',
+      architecture: {
+        title: '3-Layer Architecture',
+        description: 'Design and implementation of scalable architecture with Django REST + React SPA + PostgreSQL. Clear separation of responsibilities with legacy models (managed=False) and consistent RESTful APIs.',
+        metrics: '200+ files · 8.5/10 senior audit'
+      },
+      security: {
+        title: 'Enterprise Security OWASP 8.5/10',
+        description: 'JWT with automatic rotation, CSRF/XSS protection, rate limiting, HSTS, sanitization with bleach/DOMPurify. Complete HTTP security headers and frontend/backend validations.',
+        metrics: '0 critical vulnerabilities'
+      },
+      legacy: {
+        title: 'Automatic Legacy System Migration',
+        description: 'Transparent migration of legacy passwords to secure hash (PBKDF2) without interrupting users. Legacy table handling with managed=False and bidirectional synchronization.',
+        metrics: '3,000+ users migrated with zero downtime'
+      },
+      devops: {
+        title: 'DevOps with Docker Multi-Stage',
+        description: 'Optimized builds with multi-stage, health checks, Traefik reverse proxy, automatic SSL with Let\'s Encrypt, deployment with Dokploy and automated CI/CD.',
+        metrics: '99.8% uptime · Automated deployment'
+      },
+      optimization: {
+        title: 'Query Optimization & Performance',
+        description: 'Query optimization with select_related/prefetch_related, strategic indexes in PostgreSQL, Redis for cache, Celery for async tasks. Significant reduction in response times.',
+        metrics: '40% response time reduction · 10K+ transactions/day'
+      },
+      validation: {
+        title: 'Robust Multi-Layer Validations',
+        description: 'Exhaustive validations in frontend (Zod + React Hook Form) and backend (DRF Serializers). Input sanitization, Chilean RUT validation, XSS/CSRF prevention.',
+        metrics: 'Defense in depth · 0 validation errors'
+      }
     },
     demos: {
       title: 'AI and Machine Learning Projects',
@@ -449,6 +566,53 @@ const translations = {
       records: 'records',
       viewDemo: 'View demo',
       viewCode: 'View code'
+    },
+    sgcCase: {
+      badge: 'Case Study',
+      title: 'SGC SYC Chile — From Zero to Production',
+      subtitle: 'How I designed and deployed a full enterprise system for 29 companies and 3,247 active users.',
+      problem: {
+        title: 'The Problem',
+        desc: 'SYC Chile managed training for 29 companies using Excel spreadsheets and emails. No traceability, no automated reports, no per-company access control. Manual processes consumed hours of administrative work every week.'
+      },
+      solution: {
+        title: 'The Solution',
+        desc: 'Multi-tenant system built with Django REST + React + PostgreSQL. Each company only sees their own data. Automated reports via Celery, real-time notifications with WebSockets, OWASP audit, and containerized deployment with Docker.'
+      },
+      arch: {
+        title: 'Stack & Architecture Decisions',
+        decision: {
+          label: 'Key decision',
+          text: 'Chose Django over FastAPI for its mature ORM and built-in admin — allowed delivering MVP in 3 weeks using legacy models (managed=False) without rewriting the existing database.'
+        }
+      },
+      challenges: {
+        title: 'Technical Challenges Solved',
+        multiTenant: {
+          title: 'Multi-tenant without DB duplication',
+          desc: 'Row-level security with custom middleware. Every request automatically filters by company without relying on developers to remember.'
+        },
+        realtime: {
+          title: 'Real-time notifications',
+          desc: 'Django Channels + WebSockets for training alerts. Redis as channel layer. No polling, no page refresh.'
+        },
+        security: {
+          title: 'Security OWASP 8.5/10',
+          desc: 'JWT with automatic rotation, CSRF/XSS protection, rate limiting, HSTS, migration of legacy passwords to PBKDF2 without interrupting users.'
+        },
+        cicd: {
+          title: 'CI/CD with zero downtime',
+          desc: 'Docker multi-stage builds, health checks, Traefik reverse proxy with automatic SSL. Deploy in seconds with zero-downtime rolling updates.'
+        }
+      },
+      results: {
+        title: 'Production Results',
+        users: 'Active Users',
+        companies: 'Client Companies',
+        owasp: 'OWASP Audit',
+        uptime: 'Uptime'
+      },
+      cta: 'View Live System'
     }
   }
 }
