@@ -77,10 +77,17 @@ const Hero = () => {
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-8 py-3 text-gray-300 hover:text-white rounded-lg font-medium transition-all duration-200 border border-gray-600 hover:border-cyan-500/70 hover:bg-cyan-500/8 hover:shadow-lg hover:shadow-cyan-500/10"
+            className="relative inline-flex items-center gap-2 px-8 py-3 rounded-lg font-medium transition-all duration-300 group overflow-hidden"
+            style={{
+              background: 'linear-gradient(#0f172a, #0f172a) padding-box, linear-gradient(135deg, #06b6d4, #8b5cf6) border-box',
+              border: '1px solid transparent',
+            }}
           >
-            <Mail className="h-4 w-4" />
-            {t('hero.contact')}
+            <span className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
+            <Mail className="h-4 w-4 text-cyan-400 group-hover:text-cyan-300 transition-colors relative z-10" />
+            <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent font-semibold relative z-10">
+              {t('hero.contact')}
+            </span>
           </a>
         </motion.div>
 
