@@ -186,6 +186,71 @@ export const projectsEn: Project[] = [
 
   // ── WEB / MOBILE ──────────────────────────────────────────────
   {
+    id: 'chile-abogados',
+    title: 'ChileAbogados — Legal Platform',
+    description: 'Django + React + WebSockets · Legal platform with AI, advanced search and real-time',
+    longDescription: 'Complete legal platform with Django REST + React + TypeScript. Advanced lawyer search with filters, detailed profiles, booking system, real-time notifications with WebSockets (Channels), Celery integration for async tasks and Redis as broker.',
+    technologies: ['Django', 'DRF', 'React', 'TypeScript', 'Tailwind', 'WebSockets', 'Celery', 'Redis', 'PostgreSQL', 'Docker'],
+    category: 'web',
+    image: '/projects/chile-abogados.jpg',
+    features: [
+      'Advanced lawyer search with dynamic filters',
+      'Real-time notifications with WebSockets (Django Channels)',
+      'Booking system and appointment management',
+      'Celery + Redis for async tasks',
+      'JWT authentication with react-hook-form + Zod',
+      'Dashboards with Recharts and visualizations',
+      'Automated tests with Playwright',
+      'Scalable architecture with Docker + CI/CD'
+    ],
+    status: 'completed',
+    year: 2025
+  },
+
+  {
+    id: 'syc-chile-web',
+    title: 'SYC Chile — Corporate Website',
+    description: 'Next.js · Corporate site for training and consulting company',
+    longDescription: 'Corporate website for SYC Chile, a business training and consulting company. Built with Next.js for optimal performance and SEO. Content management, course catalog and contact forms.',
+    technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Docker', 'SEO'],
+    category: 'web',
+    image: '/projects/syc-chile.jpg',
+    demoUrl: 'https://sycchile.com',
+    features: [
+      'Next.js for SSR and optimized SEO',
+      'Complete course and training catalog',
+      'Contact and quote forms',
+      'Responsive design for all devices',
+      'Integration with SYC Chile internal systems',
+      'Deploy with Docker + Nginx'
+    ],
+    status: 'completed',
+    year: 2024
+  },
+
+  {
+    id: 'bioclean-pro',
+    title: 'BioClean Pro — E-commerce',
+    description: 'WordPress + WooCommerce · Online store for cleaning products in production',
+    longDescription: 'E-commerce store in production built with WordPress and WooCommerce. Professional cleaning products catalog, payment gateway, inventory management and order system. SEO optimization and performance with cache and CDN.',
+    technologies: ['WordPress', 'WooCommerce', 'PHP', 'Elementor', 'SEO', 'WooCommerce Payments'],
+    category: 'web',
+    image: '/projects/bioclean.jpg',
+    features: [
+      'Complete e-commerce store with WooCommerce',
+      'Product catalog with filters and search',
+      'Integrated payment gateway',
+      'Inventory and order management',
+      'Design with Elementor Pro',
+      'SEO optimized with Yoast',
+      'Coupon and discount system',
+      'Sales and analytics dashboard'
+    ],
+    status: 'completed',
+    year: 2024
+  },
+
+  {
     id: 'iwie-nda-facial-recognition',
     title: 'IWIE NDA — Digital Signature + Facial Recognition',
     description: 'React + Face-API.js · digital signature · signed PDF · CryptoJS encryption',
