@@ -66,7 +66,7 @@ const translations = {
       title: 'Full Stack Engineer · Sistemas Escalables · IA · Big Data',
       location: 'Chillán, Chile',
       availability: 'Disponible Remoto y presencial',
-      tagline: 'Diseño y lidero arquitecturas escalables que procesan 10K+ transacciones/día. Especializado en Django REST, React y ML/AI con sistemas en producción soportando 2000+ usuarios concurrentes.',
+      tagline: 'Desarrollo sistemas web escalables con Django REST y React. Experiencia con sistemas en producción real: 3,570 participantes, 29 clientes, auditoría OWASP 8.5/10. Especializado en backend robusto, ML/AI y Big Data.',
       viewProjects: 'Ver Proyectos',
       downloadCV: 'Descargar CV',
       contact: 'Contactar'
@@ -128,7 +128,7 @@ const translations = {
       optimization: {
         title: 'Optimización de Queries y Performance',
         description: 'Optimización de queries con select_related/prefetch_related, índices estratégicos en PostgreSQL, Redis para cache, Celery para tareas asíncronas. Reducción significativa de tiempos de respuesta.',
-        metrics: '40% reducción tiempo respuesta · 10K+ transacciones/día'
+        metrics: '40% reducción tiempo respuesta · Arquitectura multi-tenant'
       },
       validation: {
         title: 'Validaciones Robustas Multi-Capa',
@@ -259,7 +259,7 @@ const translations = {
       edulexis: {
         title: 'EduLexis - Full Stack Developer',
         organization: 'Producción en edulexis.cl',
-        description: 'Plataforma legal para sostenedores educacionales. Desarrollé arquitectura modular con 12 apps Django, 150+ endpoints REST API, PostgreSQL optimizado. Responsable de: desarrollo de APIs, integración frontend React, optimización de queries (reducción 40% tiempo respuesta), deployment con Docker. Sistema procesa 10K+ transacciones/día con 2000+ usuarios concurrentes.'
+        description: 'Plataforma legal para sostenedores educacionales. Desarrollé arquitectura modular con 12 apps Django, 150+ endpoints REST API, PostgreSQL optimizado con select_related/prefetch_related. Responsable de: diseño de arquitectura, desarrollo de APIs, integración frontend React, optimización de queries (40% reducción tiempo respuesta), deployment con Docker + Nginx. Proyecto propio en producción activa.'
       },
       certification: {
         title: 'Certificación Gestión de Proyectos IA',
@@ -305,10 +305,10 @@ const translations = {
     sgcCase: {
       badge: 'Case Study',
       title: 'SGC SYC Chile — De Cero a Producción',
-      subtitle: 'Cómo diseñé e implementé un sistema empresarial completo para 29 empresas y 3,247 usuarios activos.',
+      subtitle: 'Trabajo freelance (Nov 2025 – Mar 2026, ~560h): sistema de gestión de capacitaciones para 29 clientes reales con 3,570 participantes.',
       problem: {
         title: 'El Problema',
-        desc: 'SYC Chile gestionaba capacitaciones de 29 empresas con planillas Excel y correos. Sin trazabilidad, sin reportes automatizados, sin control de acceso por empresa. El proceso manual consumía horas semanales de trabajo administrativo.'
+        desc: 'SYC Chile gestionaba capacitaciones de 29 clientes (AQUACHILE, AUSTRALIS, CAMANCHACA, MOWI y otros) con planillas Excel y correos. Sin trazabilidad, sin reportes automatizados, sin control de acceso por empresa. El proceso manual consumía horas semanales de trabajo administrativo.'
       },
       solution: {
         title: 'La Solución',
@@ -341,11 +341,11 @@ const translations = {
         }
       },
       results: {
-        title: 'Resultados en Producción',
-        users: 'Usuarios Activos',
-        companies: 'Empresas Clientes',
+        title: 'Resultados Verificables',
+        users: 'Participantes Reales',
+        companies: 'Clientes (29 empresas)',
         owasp: 'Auditoría OWASP',
-        uptime: 'Uptime'
+        hours: '~560h de trabajo'
       },
       cta: 'Ver Sistema en Producción'
     }
@@ -361,7 +361,7 @@ const translations = {
       title: 'Full Stack Engineer · Scalable Systems · AI · Big Data',
       location: 'Chillán, Chile',
       availability: 'Available Remote and On-site',
-      tagline: 'I design and lead scalable architectures processing 10K+ transactions/day. Specialized in Django REST, React and ML/AI with production systems supporting 2000+ concurrent users.',
+      tagline: 'I build scalable web systems with Django REST and React. Experience with real production systems: 3,570 participants, 29 clients, OWASP 8.5/10 audit. Specialized in robust backend, ML/AI and Big Data.',
       viewProjects: 'View Projects',
       downloadCV: 'Download CV',
       contact: 'Contact'
@@ -423,7 +423,7 @@ const translations = {
       optimization: {
         title: 'Query Optimization & Performance',
         description: 'Query optimization with select_related/prefetch_related, strategic indexes in PostgreSQL, Redis for cache, Celery for async tasks. Significant reduction in response times.',
-        metrics: '40% response time reduction · 10K+ transactions/day'
+        metrics: '40% response time reduction · Multi-tenant architecture'
       },
       validation: {
         title: 'Robust Multi-Layer Validations',
@@ -555,7 +555,7 @@ const translations = {
       edulexis: {
         title: 'EduLexis - Full Stack Developer',
         organization: 'Production at edulexis.cl',
-        description: 'Legal platform for educational administrators. Developed modular architecture with 12 Django apps, 150+ REST API endpoints, optimized PostgreSQL. Responsible for: API development, React frontend integration, query optimization (40% response time reduction), Docker deployment. System processes 10K+ transactions/day with 2000+ concurrent users.'
+        description: 'Legal platform for educational administrators. Developed modular architecture with 12 Django apps, 150+ REST API endpoints, optimized PostgreSQL with select_related/prefetch_related. Responsible for: architecture design, API development, React frontend integration, query optimization (40% response time reduction), Docker + Nginx deployment. Personal project in active production.'
       },
       certification: {
         title: 'AI Project Management Certification',
@@ -601,10 +601,10 @@ const translations = {
     sgcCase: {
       badge: 'Case Study',
       title: 'SGC SYC Chile — From Zero to Production',
-      subtitle: 'How I designed and deployed a full enterprise system for 29 companies and 3,247 active users.',
+      subtitle: 'Freelance work (Nov 2025 – Mar 2026, ~560h): training management system for 29 real clients with 3,570 participants.',
       problem: {
         title: 'The Problem',
-        desc: 'SYC Chile managed training for 29 companies using Excel spreadsheets and emails. No traceability, no automated reports, no per-company access control. Manual processes consumed hours of administrative work every week.'
+        desc: 'SYC Chile managed training for 29 clients (AQUACHILE, AUSTRALIS, CAMANCHACA, MOWI and others) using Excel spreadsheets and emails. No traceability, no automated reports, no per-company access control. Manual processes consumed hours of administrative work every week.'
       },
       solution: {
         title: 'The Solution',
@@ -637,11 +637,11 @@ const translations = {
         }
       },
       results: {
-        title: 'Production Results',
-        users: 'Active Users',
-        companies: 'Client Companies',
+        title: 'Verifiable Results',
+        users: 'Real Participants',
+        companies: 'Clients (29 companies)',
         owasp: 'OWASP Audit',
-        uptime: 'Uptime'
+        hours: '~560h of work'
       },
       cta: 'View Live System'
     }

@@ -6,48 +6,48 @@ export const projects: Project[] = [
   {
     id: 'edulexis',
     title: 'EduLexis — Plataforma Legal Educacional',
-    description: '🟢 En producción · 🏗️ 12 apps modulares · ⚡ 10K+ transacciones/día · 2000+ usuarios concurrentes',
-    longDescription: 'Plataforma legal para sostenedores educacionales con arquitectura modular Django. 12 aplicaciones independientes con separación de responsabilidades, 150+ endpoints REST API documentados, PostgreSQL optimizado con select_related/prefetch_related. Optimización de queries: 40% reducción tiempo respuesta. Sistema en producción activa procesando 10K+ transacciones/día con 2000+ usuarios concurrentes. Deployment con Docker, Nginx, monitoreo con logs centralizados.',
+    description: '🟢 Proyecto propio en producción · 12 apps Django · 150+ APIs · Co-fundador con abogado especialista',
+    longDescription: 'Proyecto personal: plataforma legal para sostenedores educacionales, desarrollada junto a mi hermano abogado. Arquitectura modular Django con 12 aplicaciones independientes, 150+ endpoints REST API documentados, PostgreSQL optimizado con select_related/prefetch_related. Diseñé la arquitectura completa, desarrollé el backend y frontend, y realicé el deployment con Docker + Nginx. En producción activa en edulexis.cl.',
     technologies: ['Django', 'React', 'TypeScript', 'PostgreSQL', 'Docker', 'REST API', 'Nginx', 'Redis'],
     category: 'web',
     image: '/projects/edulexis.jpg',
     demoUrl: 'https://edulexis.cl',
     features: [
-      '🟢 Sistema en producción activa (edulexis.cl)',
+      '🟢 Proyecto propio en producción activa (edulexis.cl)',
+      '👤 Co-fundador: desarrollador + hermano abogado especialista',
       '🏗️ 12 apps Django modulares con separación de responsabilidades',
       '📡 150+ endpoints REST API documentados',
-      '⚡ Optimización queries: 40% reducción tiempo respuesta',
-      '📊 10K+ transacciones/día · 2000+ usuarios concurrentes',
-      '🐳 Docker + Nginx + deployment automatizado',
-      '📈 Monitoreo con logs centralizados',
-      '🔧 PostgreSQL optimizado con índices estratégicos'
+      '⚡ Optimización queries con select_related/prefetch_related',
+      '🔑 Autenticación JWT con control de roles por perfil',
+      '🐳 Deployment Docker + Nginx + CI/CD automatizado',
+      '📐 Arquitectura diseñada para escalar horizontalmente'
     ],
     status: 'completed',
-    year: 2024
+    year: 2025
   },
 
   // ── PRODUCCIÓN ────────────────────────────────────────────────
   {
     id: 'sgc-syc-chile',
-    title: 'SGC SYC Chile — Sistema de Gestión de Calidad',
-    description: '🏗️ Arquitectura 3 capas · 🔒 OWASP 8.5/10 · 🚀 99.8% uptime · 3,000+ usuarios activos',
-    longDescription: 'Sistema empresarial completo en producción con arquitectura de 3 capas (Django REST + React SPA + PostgreSQL). Seguridad OWASP 8.5/10: JWT con rotación automática, CSRF/XSS protection, rate limiting, HSTS. DevOps: Docker multi-stage builds, Traefik reverse proxy, SSL automático con Let\'s Encrypt, deployment con Dokploy. Migración automática de sistema legacy sin downtime. 200+ archivos, auditoría senior 8.5/10, 0 vulnerabilidades críticas.',
+    title: 'SGC SYC Chile — Sistema de Gestión de Capacitación',
+    description: '💼 Freelance · Nov 2025–Mar 2026 · 3,570 participantes reales · 29 clientes · OWASP 8.5/10',
+    longDescription: 'Sistema de gestión de capacitaciones desarrollado como freelance para SYC Chile (Nov 2025 – Mar 2026, ~560 horas). Arquitectura 3 capas: Django REST + React SPA + PostgreSQL. Migración del sistema legacy sin downtime. En producción con 29 clientes reales (AQUACHILE, AUSTRALIS, CAMANCHACA, MOWI y otros), 47 empresas, 3,570 participantes y 3,957 inscripciones activas. Auditoría de seguridad propia con metodología OWASP Top 10: puntuación 8.5/10, 0 vulnerabilidades críticas.',
     technologies: ['Django 5.2', 'React 18', 'TypeScript 5.8', 'PostgreSQL 15', 'Redis 7', 'Celery', 'Docker', 'Traefik', 'Dokploy', 'Zod'],
     category: 'web',
     image: '/projects/sgc-syc.jpg',
     demoUrl: 'https://sgc.sycchile.com',
     features: [
+      '💼 Trabajo freelance pagado · Nov 2025 – Mar 2026 · ~560 horas',
+      '📊 3,570 participantes reales · 3,957 inscripciones · 29 clientes',
       '🏗️ Arquitectura 3 capas con separación de responsabilidades',
-      '🔒 Seguridad OWASP 8.5/10 - 0 vulnerabilidades críticas',
+      '🔒 Auditoría OWASP Top 10: 8.5/10 · 0 vulnerabilidades críticas',
       '🔑 JWT con rotación automática (30min access, 7 días refresh)',
-      '🐳 Docker multi-stage builds + health checks',
-      '🚀 99.8% uptime · 3,000+ usuarios activos · 29 empresas',
-      '📊 Migración legacy automática sin downtime',
-      '⚡ Optimización queries: 40% reducción tiempo respuesta',
-      '🔧 200+ archivos · Auditoría senior 8.5/10'
+      '🐳 Docker multi-stage builds + Traefik + SSL automático',
+      '📦 Migración sistema legacy a PostgreSQL sin downtime',
+      '⚡ Optimización queries con select_related/prefetch_related'
     ],
     status: 'completed',
-    year: 2024
+    year: 2025
   },
 
   {

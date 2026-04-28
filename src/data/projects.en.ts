@@ -6,48 +6,48 @@ export const projectsEn: Project[] = [
   {
     id: 'edulexis',
     title: 'EduLexis — Legal Education Platform',
-    description: '🟢 Live in production · 🏗️ 12 modular apps · ⚡ 10K+ transactions/day · 2000+ concurrent users',
-    longDescription: 'Legal platform for educational administrators with modular Django architecture. 12 independent applications with separation of concerns, 150+ documented REST API endpoints, optimized PostgreSQL with select_related/prefetch_related. Query optimization: 40% response time reduction. Live production system processing 10K+ transactions/day with 2000+ concurrent users. Deployment with Docker, Nginx, monitoring with centralized logs.',
+    description: '🟢 Personal project in production · 12 Django apps · 150+ APIs · Co-founder with specialist lawyer',
+    longDescription: 'Personal project: legal platform for educational administrators, built with my lawyer brother. Modular Django architecture with 12 independent applications, 150+ documented REST API endpoints, optimized PostgreSQL with select_related/prefetch_related. I designed the full architecture, built backend and frontend, and deployed with Docker + Nginx. Live in production at edulexis.cl.',
     technologies: ['Django', 'React', 'TypeScript', 'PostgreSQL', 'Docker', 'REST API', 'Nginx', 'Redis'],
     category: 'web',
     image: '/projects/edulexis.jpg',
     demoUrl: 'https://edulexis.cl',
     features: [
-      '🟢 Live production system (edulexis.cl)',
+      '🟢 Personal project live in production (edulexis.cl)',
+      '👤 Co-founder: developer + specialist lawyer brother',
       '🏗️ 12 modular Django apps with separation of concerns',
       '📡 150+ documented REST API endpoints',
-      '⚡ Query optimization: 40% response time reduction',
-      '📊 10K+ transactions/day · 2000+ concurrent users',
-      '🐳 Docker + Nginx + automated deployment',
-      '📈 Monitoring with centralized logs',
-      '🔧 Optimized PostgreSQL with strategic indexes'
+      '⚡ Query optimization with select_related/prefetch_related',
+      '🔑 JWT authentication with role-based access control',
+      '🐳 Docker + Nginx + automated CI/CD deployment',
+      '📐 Architecture designed for horizontal scaling'
     ],
     status: 'completed',
-    year: 2024
+    year: 2025
   },
 
   // ── PRODUCTION ────────────────────────────────────────────────
   {
     id: 'sgc-syc-chile',
-    title: 'SGC SYC Chile — Quality Management System',
-    description: '🏗️ 3-Layer Architecture · 🔒 OWASP 8.5/10 · 🚀 99.8% uptime · 3,000+ active users',
-    longDescription: 'Complete enterprise system in production with 3-layer architecture (Django REST + React SPA + PostgreSQL). OWASP 8.5/10 Security: JWT with automatic rotation, CSRF/XSS protection, rate limiting, HSTS. DevOps: Docker multi-stage builds, Traefik reverse proxy, automatic SSL with Let\'s Encrypt, deployment with Dokploy. Automatic legacy system migration with zero downtime. 200+ files, senior audit 8.5/10, 0 critical vulnerabilities.',
+    title: 'SGC SYC Chile — Training Management System',
+    description: '💼 Freelance · Nov 2025–Mar 2026 · 3,570 real participants · 29 clients · OWASP 8.5/10',
+    longDescription: 'Training management system developed as freelance for SYC Chile (Nov 2025 – Mar 2026, ~560 hours). 3-layer architecture: Django REST + React SPA + PostgreSQL. Legacy system migration with zero downtime. Live in production with 29 real clients (AQUACHILE, AUSTRALIS, CAMANCHACA, MOWI and others), 47 companies, 3,570 participants and 3,957 active enrollments. Security audit using OWASP Top 10 methodology: 8.5/10 score, 0 critical vulnerabilities.',
     technologies: ['Django 5.2', 'React 18', 'TypeScript 5.8', 'PostgreSQL 15', 'Redis 7', 'Celery', 'Docker', 'Traefik', 'Dokploy', 'Zod'],
     category: 'web',
     image: '/projects/sgc-syc.jpg',
     demoUrl: 'https://sgc.sycchile.com',
     features: [
+      '💼 Paid freelance work · Nov 2025 – Mar 2026 · ~560 hours',
+      '📊 3,570 real participants · 3,957 enrollments · 29 clients',
       '🏗️ 3-layer architecture with separation of concerns',
-      '🔒 OWASP 8.5/10 Security - 0 critical vulnerabilities',
+      '🔒 OWASP Top 10 audit: 8.5/10 · 0 critical vulnerabilities',
       '🔑 JWT with automatic rotation (30min access, 7 days refresh)',
-      '🐳 Docker multi-stage builds + health checks',
-      '🚀 99.8% uptime · 3,000+ active users · 29 companies',
-      '📊 Automatic legacy migration with zero downtime',
-      '⚡ Query optimization: 40% response time reduction',
-      '🔧 200+ files · Senior audit 8.5/10'
+      '🐳 Docker multi-stage builds + Traefik + automatic SSL',
+      '📦 Legacy system migration to PostgreSQL with zero downtime',
+      '⚡ Query optimization with select_related/prefetch_related'
     ],
     status: 'completed',
-    year: 2024
+    year: 2025
   },
 
   {

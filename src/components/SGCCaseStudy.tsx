@@ -40,10 +40,10 @@ const SGCCaseStudy = () => {
   ]
 
   const results = [
-    { value: '3,247', label: t('sgcCase.results.users'), icon: <Users className="h-5 w-5" /> },
+    { value: '3,570', label: t('sgcCase.results.users'), icon: <Users className="h-5 w-5" /> },
     { value: '29', label: t('sgcCase.results.companies'), icon: <TrendingUp className="h-5 w-5" /> },
     { value: '8.5/10', label: t('sgcCase.results.owasp'), icon: <Shield className="h-5 w-5" /> },
-    { value: '99.8%', label: t('sgcCase.results.uptime'), icon: <CheckCircle className="h-5 w-5" /> }
+    { value: '~560h', label: t('sgcCase.results.hours'), icon: <CheckCircle className="h-5 w-5" /> }
   ]
 
   const stack = [
