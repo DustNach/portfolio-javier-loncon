@@ -10,7 +10,7 @@ export const projects: Project[] = [
     longDescription: 'Proyecto personal: plataforma legal para sostenedores educacionales, desarrollada junto a mi hermano abogado. Arquitectura modular Django con 12 aplicaciones independientes, 150+ endpoints REST API documentados, PostgreSQL optimizado con select_related/prefetch_related. Diseñé la arquitectura completa, desarrollé el backend y frontend, y realicé el deployment con Docker + Nginx. En producción activa en edulexis.cl.',
     technologies: ['Django', 'React', 'TypeScript', 'PostgreSQL', 'Docker', 'REST API', 'Nginx', 'Redis'],
     category: 'web',
-    image: '/projects/edulexis.jpg',
+    image: '/projects/edulexis.svg',
     demoUrl: 'https://edulexis.cl',
     features: [
       '🟢 Proyecto propio en producción activa (edulexis.cl)',
@@ -34,8 +34,9 @@ export const projects: Project[] = [
     longDescription: 'Sistema de gestión de capacitaciones desarrollado como freelance para SYC Chile (Nov 2025 – Mar 2026, ~560 horas). Arquitectura 3 capas: Django REST + React SPA + PostgreSQL. Migración del sistema legacy sin downtime. En producción con 29 clientes reales (AQUACHILE, AUSTRALIS, CAMANCHACA, MOWI y otros), 47 empresas, 3,570 participantes y 3,957 inscripciones activas. Auditoría de seguridad propia con metodología OWASP Top 10: puntuación 8.5/10, 0 vulnerabilidades críticas.',
     technologies: ['Django 5.2', 'React 18', 'TypeScript 5.8', 'PostgreSQL 15', 'Redis 7', 'Celery', 'Docker', 'Traefik', 'Dokploy', 'Zod'],
     category: 'web',
-    image: '/projects/sgc-syc.jpg',
+    image: '/projects/sgc-syc.svg',
     demoUrl: 'https://sgc.sycchile.com',
+    caseStudyUrl: '/projects/sgc-case-study',
     features: [
       '💼 Trabajo freelance pagado · Nov 2025 – Mar 2026 · ~560 horas',
       '📊 3,570 participantes reales · 3,957 inscripciones · 29 clientes',
@@ -57,7 +58,7 @@ export const projects: Project[] = [
     longDescription: 'Sistema integral de gestión veterinaria con Django. Registro de mascotas, historial médico, notificaciones SMS/Push, integración Google Calendar, generación de PDFs, códigos QR únicos y almacenamiento en AWS S3 y Azure. Celery para tareas asíncronas y Redis para caché.',
     technologies: ['Django', 'Python', 'PostgreSQL', 'Redis', 'Celery', 'Twilio', 'Firebase', 'AWS S3', 'Azure', 'Docker'],
     category: 'web',
-    image: '/projects/amigo-mascota.jpg',
+    image: '/projects/amigo-mascota.svg',
     features: [
       'Gestión completa de mascotas y dueños',
       'Historial médico con seguimiento de peso',
@@ -80,7 +81,7 @@ export const projects: Project[] = [
     longDescription: 'Sistema avanzado de gestión veterinaria con IA integrada para validación de datos, análisis de riesgos de salud, recomendaciones personalizadas y monitoreo continuo. Arquitectura de microservicios con FastAPI, PostgreSQL y modelos de Machine Learning.',
     technologies: ['FastAPI', 'Python', 'PostgreSQL', 'SQLAlchemy', 'Machine Learning', 'Docker', 'Microservicios', 'React'],
     category: 'ai',
-    image: '/projects/vet-ia.jpg',
+    image: '/projects/vet-ia.svg',
     features: [
       'Validación inteligente de datos veterinarios',
       'Análisis de riesgos de salud con IA',
@@ -102,7 +103,7 @@ export const projects: Project[] = [
     longDescription: 'Proyecto de Deep Learning que implementa una CNN para clasificación binaria de imágenes. TensorFlow 2.17, Keras, OpenCV y Pillow. Capas convolucionales, max pooling y dropout. 96% accuracy en entrenamiento, 93% en validación.',
     technologies: ['TensorFlow', 'Keras', 'Python', 'OpenCV', 'NumPy', 'CNN', 'Deep Learning', 'Jupyter Notebook'],
     category: 'ai',
-    image: '/projects/nna-cnn.jpg',
+    image: '/projects/nna-cnn.svg',
     features: [
       '96% accuracy en entrenamiento final',
       '93% accuracy en validación',
@@ -124,7 +125,7 @@ export const projects: Project[] = [
     longDescription: 'Proyecto de ML que compara SVM y Regresión Lineal para predecir precios de teléfonos. Análisis exploratorio de datos, feature engineering, evaluación con métricas de rendimiento y visualizaciones interactivas.',
     technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'SVM', 'Jupyter'],
     category: 'ai',
-    image: '/projects/ml-phones.jpg',
+    image: '/projects/ml-phones.svg',
     features: [
       'SVM con kernel RBF: 92% accuracy',
       'Regresión Lineal: 85% accuracy',
@@ -147,7 +148,7 @@ export const projects: Project[] = [
     longDescription: 'Pipeline de análisis de datos educacionales que procesa 217,013 registros de estudiantes. Stack completo: Hadoop para procesamiento distribuido, R para análisis estadístico, Python para transformaciones y Power BI para dashboards interactivos. Optimización de queries con reducción del 60% en tiempo de procesamiento.',
     technologies: ['Hadoop', 'R', 'Python', 'Power BI', 'HDFS', 'MapReduce', 'Pandas', 'Data Analysis'],
     category: 'data',
-    image: '/projects/eva.jpg',
+    image: '/projects/eva.svg',
     features: [
       '217,013 registros de estudiantes procesados',
       'Pipeline ETL completo con Hadoop + R + Python',
@@ -169,7 +170,7 @@ export const projects: Project[] = [
     longDescription: 'Cluster Apache Hadoop 3.4.0 para procesamiento distribuido de grandes volúmenes de datos. Configuración de HDFS, MapReduce y YARN. Procesamiento de hasta 100GB con arquitectura de 3 nodos y replication factor 3.',
     technologies: ['Apache Hadoop', 'HDFS', 'MapReduce', 'YARN', 'Ubuntu', 'Python', 'Big Data'],
     category: 'data',
-    image: '/projects/hadoop-cluster.jpg',
+    image: '/projects/hadoop-cluster.svg',
     features: [
       '100GB de datos procesados en producción',
       'Cluster 3 nodos con replication factor 3',
@@ -192,7 +193,7 @@ export const projects: Project[] = [
     longDescription: 'Plataforma legal completa con Django REST + React + TypeScript. Búsqueda avanzada de abogados con filtros, perfiles detallados, sistema de reservas, notificaciones en tiempo real con WebSockets (Channels), integración con Celery para tareas asíncronas y Redis como broker.',
     technologies: ['Django', 'DRF', 'React', 'TypeScript', 'Tailwind', 'WebSockets', 'Celery', 'Redis', 'PostgreSQL', 'Docker'],
     category: 'web',
-    image: '/projects/chile-abogados.jpg',
+    image: '/projects/chile-abogados.svg',
     features: [
       'Búsqueda avanzada de abogados con filtros dinámicos',
       'Notificaciones en tiempo real con WebSockets (Django Channels)',
@@ -214,7 +215,7 @@ export const projects: Project[] = [
     longDescription: 'Sitio web corporativo para SYC Chile, empresa de capacitación y consultoría empresarial. Desarrollado con Next.js para rendimiento óptimo y SEO. Gestión de contenido, catálogo de cursos y formularios de contacto.',
     technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Docker', 'SEO'],
     category: 'web',
-    image: '/projects/syc-chile.jpg',
+    image: '/projects/syc-chile.svg',
     demoUrl: 'https://sycchile.com',
     features: [
       'Next.js para SSR y SEO optimizado',
@@ -235,7 +236,7 @@ export const projects: Project[] = [
     longDescription: 'Tienda e-commerce en producción desarrollada con WordPress y WooCommerce. Catálogo de productos de limpieza profesional, pasarela de pagos, gestión de inventario y sistema de pedidos. Optimización SEO y rendimiento con caché y CDN.',
     technologies: ['WordPress', 'WooCommerce', 'PHP', 'Elementor', 'SEO', 'WooCommerce Payments'],
     category: 'web',
-    image: '/projects/bioclean.jpg',
+    image: '/projects/bioclean.svg',
     features: [
       'Tienda e-commerce completa con WooCommerce',
       'Catálogo de productos con filtros y búsqueda',
@@ -257,7 +258,7 @@ export const projects: Project[] = [
     longDescription: 'App web con React y TypeScript que combina reconocimiento facial (Face-API.js), firma digital en canvas, generación de PDFs firmados, encriptación con CryptoJS y validación de formularios con Formik/Yup.',
     technologies: ['React', 'TypeScript', 'Face-API.js', 'Material-UI', 'jsPDF', 'CryptoJS', 'Formik', 'Yup'],
     category: 'web',
-    image: '/projects/iwie-nda.jpg',
+    image: '/projects/iwie-nda.svg',
     features: [
       'Reconocimiento facial en tiempo real con Face-API.js',
       'Captura de firma digital en canvas',
@@ -280,7 +281,7 @@ export const projects: Project[] = [
     longDescription: 'Proyectos de seguridad informática con Kali Linux: pentesting, análisis de vulnerabilidades, evaluación de controles y generación de informes. Complementa la auditoría OWASP aplicada en SGC SYC Chile.',
     technologies: ['Kali Linux', 'Pentesting', 'OWASP', 'Vulnerability Analysis', 'Security Audit', 'Cybersecurity'],
     category: 'system',
-    image: '/projects/seguridad.jpg',
+    image: '/projects/seguridad.svg',
     features: [
       'Pentesting ético con Kali Linux',
       'Análisis y explotación controlada de vulnerabilidades',

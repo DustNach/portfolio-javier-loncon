@@ -8,6 +8,7 @@ export interface Project {
   image: string
   localPath?: string
   demoUrl?: string
+  caseStudyUrl?: string
   features: string[]
   status: 'completed' | 'in-progress' | 'planned'
   year: number
