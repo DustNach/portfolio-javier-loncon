@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ExternalLink, BookOpen, Calendar, CheckCircle } from 'lucide-react'
+import { ExternalLink, BookOpen, Calendar, CheckCircle, Github } from 'lucide-react'
 import { Project } from '../types'
 import { useLanguage } from '../contexts/LanguageContext'
 
@@ -89,6 +89,23 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
           </div>
 
           <div className="flex gap-2">
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-300 overflow-hidden group/gh"
+                style={{
+                  background: 'linear-gradient(#0f172a, #0f172a) padding-box, linear-gradient(135deg, #6b7280, #9ca3af) border-box',
+                  border: '1px solid transparent',
+                }}
+                title="Ver en GitHub"
+              >
+                <span className="absolute inset-0 bg-gradient-to-r from-gray-500/10 to-gray-400/10 opacity-0 group-hover/gh:opacity-100 transition-opacity rounded-lg" />
+                <Github className="h-3.5 w-3.5 text-gray-400 relative z-10" />
+                <span className="text-gray-300 relative z-10">GitHub</span>
+              </a>
+            )}
             {project.caseStudyUrl && (
               <a
                 href={project.caseStudyUrl}

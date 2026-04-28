@@ -37,6 +37,7 @@ export const projectsEn: Project[] = [
     image: '/projects/sgc-syc.svg',
     demoUrl: 'https://sgc.sycchile.com',
     caseStudyUrl: '/projects/sgc-case-study',
+    githubUrl: 'https://github.com/DustNach/sgc-project',
     features: [
       '💼 Paid freelance work · Nov 2025 – Mar 2026 · ~560 hours',
       '📊 3,570 real participants · 3,957 enrollments · 29 clients',

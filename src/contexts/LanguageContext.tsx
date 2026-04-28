@@ -247,9 +247,9 @@ const translations = {
     },
     experienceTimeline: {
       sgc: {
-        title: 'SGC SYC Chile - Full Stack Engineer',
-        organization: 'SYC Chile',
-        description: 'Sistema empresarial que gestiona 500+ capacitaciones/mes para 50+ empresas. Arquitectura Django REST + React + TypeScript + PostgreSQL. Reducción de 40% en tiempo administrativo. Responsable de diseño de arquitectura, APIs RESTful y deployment en producción con 99.8% uptime.'
+        title: 'Full Stack Developer — Freelance',
+        organization: 'SYC Chile · Nov 2025 – Mar 2026 · ~560h',
+        description: 'Sistema de gestión de capacitaciones para 29 clientes reales (AQUACHILE, AUSTRALIS, CAMANCHACA, MOWI y otros), 47 empresas y 3,570 participantes. Stack: Django REST + React + TypeScript + PostgreSQL + Redis. Migración de sistema legacy sin downtime. Auditoría OWASP Top 10: 8.5/10, 0 vulnerabilidades críticas.'
       },
       education: {
         title: 'Ingeniero en Informática',
@@ -543,9 +543,9 @@ const translations = {
     },
     experienceTimeline: {
       sgc: {
-        title: 'SGC SYC Chile - Full Stack Engineer',
-        organization: 'SYC Chile',
-        description: 'Enterprise system managing 500+ training sessions/month for 50+ companies. Architecture: Django REST + React + TypeScript + PostgreSQL. 40% reduction in administrative time. Responsible for architecture design, RESTful APIs and production deployment with 99.8% uptime.'
+        title: 'Full Stack Developer — Freelance',
+        organization: 'SYC Chile · Nov 2025 – Mar 2026 · ~560h',
+        description: 'Training management system for 29 real clients (AQUACHILE, AUSTRALIS, CAMANCHACA, MOWI and others), 47 companies and 3,570 participants. Stack: Django REST + React + TypeScript + PostgreSQL + Redis. Legacy system migration with zero downtime. OWASP Top 10 audit: 8.5/10, 0 critical vulnerabilities.'
       },
       education: {
         title: 'Computer Engineering',

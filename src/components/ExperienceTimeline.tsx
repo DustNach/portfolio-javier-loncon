@@ -10,18 +10,22 @@ interface TimelineItem {
   description: string
   icon: ReactNode
   type: 'work' | 'education' | 'certification' | 'project'
+  badge?: string
+  badgeColor?: string
 }
 
 const ExperienceTimeline = () => {
   const { t } = useLanguage()
   const timeline: TimelineItem[] = [
     {
-      year: '2026',
+      year: '2025–26',
       title: t('experienceTimeline.sgc.title'),
       organization: t('experienceTimeline.sgc.organization'),
       description: t('experienceTimeline.sgc.description'),
       icon: <Briefcase className="h-6 w-6" />,
-      type: 'work'
+      type: 'work',
+      badge: 'FREELANCE',
+      badgeColor: '#f59e0b'
     },
     {
       year: '2025',
@@ -112,9 +116,19 @@ const ExperienceTimeline = () => {
                     <div className={`p-3 rounded-xl bg-gradient-to-br ${getTypeColor(item.type)} text-white`}>
                       {item.icon}
                     </div>
-                    <span className="text-2xl font-bold text-blue-400 dark:text-blue-400 light:text-blue-600">
-                      {item.year}
-                    </span>
+                    <div className="flex flex-col items-end gap-1">
+                      <span className="text-2xl font-bold text-blue-400 dark:text-blue-400 light:text-blue-600">
+                        {item.year}
+                      </span>
+                      {item.badge && (
+                        <span
+                          className="text-xs font-bold px-2 py-0.5 rounded-full border"
+                          style={{ color: item.badgeColor, borderColor: `${item.badgeColor}50`, background: `${item.badgeColor}15` }}
+                        >
+                          {item.badge}
+                        </span>
+                      )}
+                    </div>
                   </div>
                   <h3 className="text-xl font-bold text-white dark:text-white light:text-gray-900 mb-2">
                     {item.title}
