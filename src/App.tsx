@@ -13,6 +13,7 @@ import AnimatedCounter from './components/AnimatedCounter'
 import ExperienceTimeline from './components/ExperienceTimeline'
 import LiveProjects from './components/LiveProjects'
 import TechnicalHighlights from './components/TechnicalHighlights'
+import ImpactMetrics from './components/ImpactMetrics'
 import SGCCaseStudy from './components/SGCCaseStudy'
 import Demos from './components/Demos'
 
@@ -32,6 +33,7 @@ function App() {
                 <AnimatedCounter />
                 <LiveProjects />
                 <TechnicalHighlights />
+                <ImpactMetrics />
                 <ExperienceTimeline />
                 <Demos />
                 <Projects />

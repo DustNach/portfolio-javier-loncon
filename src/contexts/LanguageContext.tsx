@@ -88,6 +88,19 @@ const translations = {
       subtitle: 'Mi recorrido profesional y académico en desarrollo de software',
       swipeHint: '← Desliza horizontalmente para ver más →'
     },
+    impactMetrics: {
+      title: 'Impacto Medible',
+      subtitle: 'Métricas reales de sistemas en producción que demuestran resultados tangibles',
+      activeUsers: 'Usuarios Activos',
+      activeUsersDesc: 'Entre EduLexis y SGC SYC Chile en producción',
+      performance: 'Mejora de Performance',
+      performanceDesc: 'Reducción en tiempo de respuesta con optimización de queries',
+      uptime: 'Disponibilidad',
+      uptimeDesc: 'Uptime promedio en sistemas de producción',
+      security: 'Seguridad OWASP',
+      securityDesc: 'Calificación de auditoría senior en SGC',
+      note: '📊 Métricas verificables de sistemas reales en producción'
+    },
     technicalHighlights: {
       title: 'Profundidad Técnica',
       subtitle: 'Decisiones de arquitectura, seguridad y optimización en proyectos reales de producción',
@@ -369,6 +382,19 @@ const translations = {
       title: 'Experience',
       subtitle: 'My professional and academic journey in software development',
       swipeHint: '← Swipe horizontally to see more →'
+    },
+    impactMetrics: {
+      title: 'Measurable Impact',
+      subtitle: 'Real metrics from production systems demonstrating tangible results',
+      activeUsers: 'Active Users',
+      activeUsersDesc: 'Between EduLexis and SGC SYC Chile in production',
+      performance: 'Performance Improvement',
+      performanceDesc: 'Response time reduction with query optimization',
+      uptime: 'Uptime',
+      uptimeDesc: 'Average uptime across production systems',
+      security: 'OWASP Security',
+      securityDesc: 'Senior audit rating in SGC',
+      note: '📊 Verifiable metrics from real production systems'
     },
     technicalHighlights: {
       title: 'Technical Deep Dive',
