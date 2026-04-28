@@ -2,6 +2,30 @@ import { Project } from '../types'
 
 export const projects: Project[] = [
 
+  // ── PRODUCCIÓN ACTIVA ─────────────────────────────────────────
+  {
+    id: 'edulexis',
+    title: 'EduLexis — Plataforma Legal Educacional',
+    description: '🟢 En producción · 12 apps Django · 150+ APIs · Plataforma para sostenedores educacionales',
+    longDescription: 'Plataforma legal para sostenedores educacionales desarrollada con arquitectura modular Django. 12 aplicaciones Django independientes, 150+ endpoints REST API, PostgreSQL optimizado con queries de alta performance. Sistema en producción activa en edulexis.cl. Deployment con Docker y CI/CD automatizado.',
+    technologies: ['Django', 'React', 'TypeScript', 'PostgreSQL', 'Docker', 'REST API', 'Python', 'Nginx'],
+    category: 'web',
+    image: '/projects/edulexis.jpg',
+    demoUrl: 'https://edulexis.cl',
+    features: [
+      '🟢 Sistema en producción activa (edulexis.cl)',
+      '12 aplicaciones Django modulares e independientes',
+      '150+ endpoints REST API documentados',
+      'Arquitectura escalable con separación de responsabilidades',
+      'PostgreSQL optimizado con índices estratégicos',
+      'Deployment con Docker + Nginx + CI/CD',
+      'Autenticación JWT con control de roles',
+      '92% completitud del roadmap del producto'
+    ],
+    status: 'completed',
+    year: 2025
+  },
+
   // ── PRODUCCIÓN ────────────────────────────────────────────────
   {
     id: 'sgc-syc-chile',
@@ -117,6 +141,28 @@ export const projects: Project[] = [
 
   // ── BIG DATA ──────────────────────────────────────────────────
   {
+    id: 'eva-big-data',
+    title: 'EVA — Análisis de Datos Educacionales',
+    description: '217,013 registros procesados · Hadoop + R + Python · Pipeline Big Data completo',
+    longDescription: 'Pipeline de análisis de datos educacionales que procesa 217,013 registros de estudiantes. Stack completo: Hadoop para procesamiento distribuido, R para análisis estadístico, Python para transformaciones y Power BI para dashboards interactivos. Optimización de queries con reducción del 60% en tiempo de procesamiento.',
+    technologies: ['Hadoop', 'R', 'Python', 'Power BI', 'HDFS', 'MapReduce', 'Pandas', 'Data Analysis'],
+    category: 'data',
+    image: '/projects/eva.jpg',
+    features: [
+      '217,013 registros de estudiantes procesados',
+      'Pipeline ETL completo con Hadoop + R + Python',
+      '60% reducción en tiempo de procesamiento',
+      'Dashboards interactivos con Power BI',
+      'Análisis estadístico con R y visualizaciones',
+      'Insights accionables para toma de decisiones',
+      'Procesamiento distribuido con HDFS + MapReduce',
+      'Exportación de reportes automatizada'
+    ],
+    status: 'completed',
+    year: 2024
+  },
+
+  {
     id: 'big-data-hadoop-cluster',
     title: 'Cluster Hadoop — Big Data Distribuido',
     description: '100GB procesados · 3 nodos · 275 jobs · 99.8% uptime',
@@ -139,6 +185,71 @@ export const projects: Project[] = [
   },
 
   // ── WEB / MOBILE ──────────────────────────────────────────────
+  {
+    id: 'chile-abogados',
+    title: 'ChileAbogados — Plataforma Legal',
+    description: 'Django + React + WebSockets · Plataforma legal con IA, búsqueda avanzada y tiempo real',
+    longDescription: 'Plataforma legal completa con Django REST + React + TypeScript. Búsqueda avanzada de abogados con filtros, perfiles detallados, sistema de reservas, notificaciones en tiempo real con WebSockets (Channels), integración con Celery para tareas asíncronas y Redis como broker.',
+    technologies: ['Django', 'DRF', 'React', 'TypeScript', 'Tailwind', 'WebSockets', 'Celery', 'Redis', 'PostgreSQL', 'Docker'],
+    category: 'web',
+    image: '/projects/chile-abogados.jpg',
+    features: [
+      'Búsqueda avanzada de abogados con filtros dinámicos',
+      'Notificaciones en tiempo real con WebSockets (Django Channels)',
+      'Sistema de reservas y gestión de citas',
+      'Celery + Redis para tareas asíncronas',
+      'Autenticación JWT con react-hook-form + Zod',
+      'Dashboards con Recharts y visualizaciones',
+      'Tests automatizados con Playwright',
+      'Arquitectura escalable con Docker + CI/CD'
+    ],
+    status: 'completed',
+    year: 2025
+  },
+
+  {
+    id: 'syc-chile-web',
+    title: 'SYC Chile — Sitio Web Corporativo',
+    description: 'Next.js · Sitio corporativo para empresa de capacitación y consultoría',
+    longDescription: 'Sitio web corporativo para SYC Chile, empresa de capacitación y consultoría empresarial. Desarrollado con Next.js para rendimiento óptimo y SEO. Gestión de contenido, catálogo de cursos y formularios de contacto.',
+    technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Docker', 'SEO'],
+    category: 'web',
+    image: '/projects/syc-chile.jpg',
+    demoUrl: 'https://sycchile.com',
+    features: [
+      'Next.js para SSR y SEO optimizado',
+      'Catálogo completo de cursos y capacitaciones',
+      'Formularios de contacto y cotización',
+      'Diseño responsive para todos los dispositivos',
+      'Integración con sistemas internos de SYC Chile',
+      'Deploy con Docker + Nginx'
+    ],
+    status: 'completed',
+    year: 2024
+  },
+
+  {
+    id: 'bioclean-pro',
+    title: 'BioClean Pro — E-commerce',
+    description: 'WordPress + WooCommerce · Tienda online de productos de limpieza en producción',
+    longDescription: 'Tienda e-commerce en producción desarrollada con WordPress y WooCommerce. Catálogo de productos de limpieza profesional, pasarela de pagos, gestión de inventario y sistema de pedidos. Optimización SEO y rendimiento con caché y CDN.',
+    technologies: ['WordPress', 'WooCommerce', 'PHP', 'Elementor', 'SEO', 'WooCommerce Payments'],
+    category: 'web',
+    image: '/projects/bioclean.jpg',
+    features: [
+      'Tienda e-commerce completa con WooCommerce',
+      'Catálogo de productos con filtros y búsqueda',
+      'Pasarela de pagos integrada',
+      'Gestión de inventario y pedidos',
+      'Diseño con Elementor Pro',
+      'SEO optimizado con Yoast',
+      'Sistema de cupones y descuentos',
+      'Dashboard de ventas y analíticas'
+    ],
+    status: 'completed',
+    year: 2024
+  },
+
   {
     id: 'iwie-nda-facial-recognition',
     title: 'IWIE NDA — Firma Digital + Reconocimiento Facial',

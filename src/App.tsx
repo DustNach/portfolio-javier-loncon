@@ -31,11 +31,16 @@ function App() {
                 <SkillsRadar />
                 <AnimatedCounter />
                 <LiveProjects />
-                <SGCCaseStudy />
                 <TechnicalHighlights />
                 <ExperienceTimeline />
                 <Demos />
                 <Projects />
+                <Contact />
+              </>
+            } />
+            <Route path="/projects/sgc-case-study" element={
+              <>
+                <SGCCaseStudy />
                 <Contact />
               </>
             } />

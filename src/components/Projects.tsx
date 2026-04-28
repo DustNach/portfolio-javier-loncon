@@ -44,13 +44,21 @@ const Projects = () => {
               <button
                 key={category.id}
                 onClick={() => setFilter(category.id)}
-                className={`px-6 py-2 rounded-lg font-medium transition-all ${
-                  filter === category.id
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
-                }`}
+                className="relative px-6 py-2 rounded-lg font-medium transition-all duration-300 overflow-hidden group"
+                style={filter === category.id ? {
+                  background: 'linear-gradient(#0f172a, #0f172a) padding-box, linear-gradient(135deg, #3b82f6, #06b6d4) border-box',
+                  border: '1px solid transparent',
+                } : {
+                  background: 'linear-gradient(#111827, #111827) padding-box, linear-gradient(135deg, #374151, #374151) border-box',
+                  border: '1px solid transparent',
+                }}
               >
-                {category.name}
+                <span className={filter === category.id
+                  ? 'bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent font-semibold'
+                  : 'text-gray-400 group-hover:text-gray-200 transition-colors'
+                }>
+                  {category.name}
+                </span>
               </button>
             ))}
           </div>

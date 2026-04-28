@@ -2,6 +2,30 @@ import { Project } from '../types'
 
 export const projectsEn: Project[] = [
 
+  // ── ACTIVE PRODUCTION ─────────────────────────────────────────
+  {
+    id: 'edulexis',
+    title: 'EduLexis — Legal Education Platform',
+    description: '🟢 Live in production · 12 Django apps · 150+ APIs · Platform for educational administrators',
+    longDescription: 'Legal platform for educational administrators built with modular Django architecture. 12 independent Django applications, 150+ REST API endpoints, optimized PostgreSQL with high-performance queries. Live production system at edulexis.cl. Docker deployment with automated CI/CD.',
+    technologies: ['Django', 'React', 'TypeScript', 'PostgreSQL', 'Docker', 'REST API', 'Python', 'Nginx'],
+    category: 'web',
+    image: '/projects/edulexis.jpg',
+    demoUrl: 'https://edulexis.cl',
+    features: [
+      '🟢 Live production system (edulexis.cl)',
+      '12 modular and independent Django applications',
+      '150+ documented REST API endpoints',
+      'Scalable architecture with separation of concerns',
+      'PostgreSQL optimized with strategic indexes',
+      'Docker + Nginx + CI/CD deployment',
+      'JWT authentication with role-based access control',
+      '92% product roadmap completion'
+    ],
+    status: 'completed',
+    year: 2025
+  },
+
   // ── PRODUCTION ────────────────────────────────────────────────
   {
     id: 'sgc-syc-chile',
@@ -116,6 +140,28 @@ export const projectsEn: Project[] = [
   },
 
   // ── BIG DATA ──────────────────────────────────────────────────
+  {
+    id: 'eva-big-data',
+    title: 'EVA — Educational Data Analysis',
+    description: '217,013 records processed · Hadoop + R + Python · Complete Big Data Pipeline',
+    longDescription: 'Educational data analysis pipeline processing 217,013 student records. Full stack: Hadoop for distributed processing, R for statistical analysis, Python for transformations and Power BI for interactive dashboards. Query optimization achieving 60% reduction in processing time.',
+    technologies: ['Hadoop', 'R', 'Python', 'Power BI', 'HDFS', 'MapReduce', 'Pandas', 'Data Analysis'],
+    category: 'data',
+    image: '/projects/eva.jpg',
+    features: [
+      '217,013 student records processed',
+      'Full ETL pipeline with Hadoop + R + Python',
+      '60% reduction in processing time',
+      'Interactive dashboards with Power BI',
+      'Statistical analysis with R and visualizations',
+      'Actionable insights for decision making',
+      'Distributed processing with HDFS + MapReduce',
+      'Automated report export'
+    ],
+    status: 'completed',
+    year: 2024
+  },
+
   {
     id: 'big-data-hadoop-cluster',
     title: 'Hadoop Cluster — Distributed Big Data',

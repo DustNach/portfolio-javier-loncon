@@ -408,6 +408,7 @@ const translations = {
     demos: {
       title: 'AI and Machine Learning Projects',
       subtitle: 'Practical implementations of ML algorithms and data analysis',
+      badge: 'ACADEMIC PROJECTS',
       viewCode: 'View Code',
       hide: 'Hide',
       sourceCode: 'Source Code',

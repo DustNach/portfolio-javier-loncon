@@ -228,10 +228,15 @@ const SGCCaseStudy = () => {
             href="https://sgc.sycchile.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white rounded-lg font-medium transition-all duration-200 shadow-lg shadow-blue-600/20 hover:shadow-blue-500/30"
+            className="relative inline-flex items-center gap-2 px-8 py-3 rounded-lg font-medium transition-all duration-300 group overflow-hidden"
+            style={{
+              background: 'linear-gradient(#0f172a, #0f172a) padding-box, linear-gradient(135deg, #3b82f6, #06b6d4) border-box',
+              border: '1px solid transparent',
+            }}
           >
-            <ExternalLink className="h-4 w-4" />
-            {t('sgcCase.cta')}
+            <span className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
+            <ExternalLink className="h-4 w-4 text-blue-400 group-hover:text-blue-300 transition-colors relative z-10" />
+            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent font-semibold relative z-10">{t('sgcCase.cta')}</span>
           </a>
         </motion.div>
 

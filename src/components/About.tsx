@@ -204,9 +204,16 @@ const About = () => {
           <div className="mt-16 text-center">
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-medium transition-all duration-200 shadow-lg shadow-blue-600/20 hover:shadow-blue-500/30"
+              className="relative inline-flex items-center gap-2 px-8 py-3 rounded-lg font-medium transition-all duration-300 group overflow-hidden"
+              style={{
+                background: 'linear-gradient(#0f172a, #0f172a) padding-box, linear-gradient(135deg, #3b82f6, #8b5cf6) border-box',
+                border: '1px solid transparent',
+              }}
             >
-              {t('about.viewAllProjects')} →
+              <span className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-semibold relative z-10">
+                {t('about.viewAllProjects')} →
+              </span>
             </a>
           </div>
         </motion.div>

@@ -95,17 +95,32 @@ const Contact = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="mailto:jaloncon95@gmail.com"
-                className="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-medium transition-colors shadow-lg shadow-blue-600/20"
+                className="relative inline-flex items-center gap-2 px-8 py-3 rounded-lg font-medium transition-all duration-300 group overflow-hidden"
+                style={{
+                  background: 'linear-gradient(#0f172a, #0f172a) padding-box, linear-gradient(135deg, #3b82f6, #06b6d4) border-box',
+                  border: '1px solid transparent',
+                }}
               >
-                {t('contact.sendMessage')}
+                <span className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
+                <Mail className="h-4 w-4 text-blue-400 group-hover:text-blue-300 transition-colors relative z-10" />
+                <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent font-semibold relative z-10">
+                  {t('contact.sendMessage')}
+                </span>
               </a>
               <a
                 href="/files/Javier_Loncon_CV(Español).pdf"
                 download
-                className="inline-flex items-center gap-2 px-8 py-3 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white rounded-lg font-medium transition-all border border-gray-600 hover:border-green-500/60"
+                className="relative inline-flex items-center gap-2 px-8 py-3 rounded-lg font-medium transition-all duration-300 group overflow-hidden"
+                style={{
+                  background: 'linear-gradient(#0f172a, #0f172a) padding-box, linear-gradient(135deg, #10b981, #06b6d4) border-box',
+                  border: '1px solid transparent',
+                }}
               >
-                <Download className="h-4 w-4" />
-                {t('contact.downloadCV')}
+                <span className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
+                <Download className="h-4 w-4 text-emerald-400 group-hover:text-emerald-300 transition-colors relative z-10" />
+                <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent font-semibold relative z-10">
+                  {t('contact.downloadCV')}
+                </span>
               </a>
             </div>
           </div>

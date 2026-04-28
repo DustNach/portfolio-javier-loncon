@@ -78,14 +78,18 @@ export default function Demos() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-black mb-4 font-bebas uppercase">
+          <div className="text-center mb-4">
+            <span className="inline-block px-4 py-2 bg-yellow-500/10 border border-yellow-500/30 rounded-full text-yellow-400 text-sm font-semibold mb-4">
+              🎓 {t('demos.badge')}
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-4 font-bebas uppercase">
             <span className="text-image-fill">{t('demos.title')}</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+          <p className="text-gray-400 text-center mb-12 max-w-3xl mx-auto">
             {t('demos.subtitle')}
           </p>
         </motion.div>
