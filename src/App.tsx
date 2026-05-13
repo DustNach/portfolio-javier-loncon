@@ -19,7 +19,7 @@ function App() {
   return (
     <LanguageProvider>
       <Router>
-        <div className="min-h-screen">
+        <div className="min-h-screen overflow-x-hidden">
           <Background />
           <Navbar />
           <Routes>

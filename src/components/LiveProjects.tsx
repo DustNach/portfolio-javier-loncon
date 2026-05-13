@@ -40,7 +40,7 @@ const LiveProjects = () => {
             background: 'linear-gradient(135deg, #3b82f6, #06b6d4)',
           }}
         >
-          <div className="relative bg-gray-900/95 backdrop-blur-sm rounded-2xl p-10">
+          <div className="relative bg-gray-900/95 backdrop-blur-sm rounded-2xl p-6 md:p-10">
 
             {/* Live badge */}
             <div className="flex items-center gap-2 mb-6">

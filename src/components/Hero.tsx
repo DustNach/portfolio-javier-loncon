@@ -16,7 +16,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <h1 className="text-7xl md:text-9xl font-black mb-6 tracking-wider font-bebas uppercase">
+          <h1 className="text-5xl sm:text-7xl md:text-9xl font-black mb-6 tracking-wider font-bebas uppercase">
             <span className="text-image-fill">
               Javier Loncón
             </span>

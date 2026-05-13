@@ -52,41 +52,57 @@ const About = () => {
           </h2>
           
           <div className="max-w-4xl mx-auto mb-16">
-            <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-              {t('about.paragraph1').split('Chillán, Chile')[0]}
-              <span className="text-blue-400">Chillán, Chile</span>
-              {t('about.paragraph1').split('Chillán, Chile')[1]?.split('sistemas completos de forma independiente')[0]}
-              <span className="font-semibold text-white">
-                {t('about.paragraph1').includes('complete systems independently') ? 'complete systems independently' : 'sistemas completos de forma independiente'}
-              </span>
-              {t('about.paragraph1').split('sistemas completos de forma independiente')[1] || t('about.paragraph1').split('complete systems independently')[1]}
-            </p>
-            
-            <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-              {t('about.paragraph2').split('Inteligencia Artificial')[0] || t('about.paragraph2').split('Artificial Intelligence')[0]}
-              <span className="text-purple-400 font-semibold">
-                {t('about.paragraph2').includes('Artificial Intelligence') ? 'Artificial Intelligence' : 'Inteligencia Artificial'}
-              </span>
-              {(t('about.paragraph2').split('Inteligencia Artificial')[1] || t('about.paragraph2').split('Artificial Intelligence')[1])?.split('Big Data')[0]}, 
-              <span className="text-green-400 font-semibold"> Big Data</span>
-              {t('about.paragraph2').split('Big Data')[1]?.split('Desarrollo Full Stack')[0] || t('about.paragraph2').split('Big Data')[1]?.split('Full Stack Development')[0]} 
-              <span className="text-blue-400 font-semibold">
-                {t('about.paragraph2').includes('Full Stack Development') ? 'Full Stack Development' : 'Desarrollo Full Stack'}
-              </span>
-              {t('about.paragraph2').split('Desarrollo Full Stack')[1] || t('about.paragraph2').split('Full Stack Development')[1]}
-            </p>
+            {(() => {
+              const p1 = t('about.paragraph1')
+              const p2 = t('about.paragraph2')
+              const p3 = t('about.paragraph3')
+              const isEN = p1.includes('complete systems independently')
 
-            <p className="text-gray-300 text-lg leading-relaxed">
-              {t('about.paragraph3').split('administro infraestructura')[0] || t('about.paragraph3').split('manage infrastructure')[0]}
-              <span className="font-semibold text-white">
-                {t('about.paragraph3').includes('manage infrastructure') ? 'manage infrastructure' : 'administro infraestructura'}
-              </span>
-              {(t('about.paragraph3').split('administro infraestructura')[1] || t('about.paragraph3').split('manage infrastructure')[1])?.split('seguridad (OWASP)')[0] || (t('about.paragraph3').split('administro infraestructura')[1] || t('about.paragraph3').split('manage infrastructure')[1])?.split('security (OWASP)')[0]}
-              <span className="text-orange-400">
-                {t('about.paragraph3').includes('security (OWASP)') ? 'security (OWASP)' : 'seguridad (OWASP)'}
-              </span>
-              {t('about.paragraph3').split('seguridad (OWASP)')[1] || t('about.paragraph3').split('security (OWASP)')[1]}
-            </p>
+              const p1kb = isEN ? 'complete systems independently' : 'sistemas completos de forma independiente'
+              const [p1_pre_city, p1_post_city = ''] = p1.split('Chillán, Chile')
+              const [p1_pre_kw, p1_post_kw = ''] = p1_post_city.split(p1kb)
+
+              const p2ka = isEN ? 'Artificial Intelligence' : 'Inteligencia Artificial'
+              const p2kc = isEN ? 'Full Stack Development' : 'Desarrollo Full Stack'
+              const [p2_pre_ai, p2_post_ai = ''] = p2.split(p2ka)
+              const [p2_pre_bd, p2_post_bd = ''] = p2_post_ai.split('Big Data')
+              const [p2_pre_fsd, p2_post_fsd = ''] = p2_post_bd.split(p2kc)
+
+              const p3ka = isEN ? 'manage infrastructure' : 'administro infraestructura'
+              const p3kb = isEN ? 'security (OWASP)' : 'seguridad (OWASP)'
+              const [p3_pre_inf, p3_post_inf = ''] = p3.split(p3ka)
+              const [p3_pre_owasp, p3_post_owasp = ''] = p3_post_inf.split(p3kb)
+
+              return (
+                <>
+                  <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+                    {p1_pre_city}
+                    <span className="text-blue-400">Chillán, Chile</span>
+                    {p1_pre_kw}
+                    <span className="font-semibold text-white">{p1kb}</span>
+                    {p1_post_kw}
+                  </p>
+
+                  <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+                    {p2_pre_ai}
+                    <span className="text-purple-400 font-semibold">{p2ka}</span>
+                    {p2_pre_bd},&nbsp;
+                    <span className="text-green-400 font-semibold">Big Data</span>
+                    {p2_pre_fsd}
+                    <span className="text-blue-400 font-semibold">{p2kc}</span>
+                    {p2_post_fsd}
+                  </p>
+
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    {p3_pre_inf}
+                    <span className="font-semibold text-white">{p3ka}</span>
+                    {p3_pre_owasp}
+                    <span className="text-orange-400">{p3kb}</span>
+                    {p3_post_owasp}
+                  </p>
+                </>
+              )
+            })()}
           </div>
 
           <div className="mb-16 bg-gradient-to-r from-blue-900/20 to-purple-900/20 p-8 rounded-lg border border-blue-500/30 max-w-4xl mx-auto">
@@ -174,7 +190,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {skills.map((skill, index) => (
               <motion.div
                 key={skill.title}
