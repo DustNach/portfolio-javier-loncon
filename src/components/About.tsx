@@ -1,5 +1,9 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../contexts/LanguageContext'
+
+const About = () => {
+  const { t } = useLanguage()
 
   return (
     <section id="about" className="py-20 px-4 bg-gray-900/50">
@@ -154,8 +158,8 @@ import { useLanguage } from '../contexts/LanguageContext'
 
           {/* CTA hacia proyectos */}
           <div className="mt-8 text-center">
-            <a
-              href="/projects"
+            <Link
+              to="/projects"
               className="relative inline-flex items-center gap-2 px-8 py-3 rounded-lg font-medium transition-all duration-300 group overflow-hidden"
               style={{
                 background: 'linear-gradient(#0f172a, #0f172a) padding-box, linear-gradient(135deg, #3b82f6, #8b5cf6) border-box',
@@ -166,7 +170,7 @@ import { useLanguage } from '../contexts/LanguageContext'
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-semibold relative z-10">
                 {t('about.viewAllProjects')} →
               </span>
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>
