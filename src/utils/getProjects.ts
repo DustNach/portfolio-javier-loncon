@@ -16,7 +16,6 @@ export function getProjects(lang: Lang = 'es'): Project[] {
   return projectsBase.map((base) => {
     const translation = projectTranslations[base.id]
     if (!translation) {
-      console.warn(`[getProjects] Sin traduccion para proyecto: "${base.id}"`)
       const fallback = projectTranslations[base.id]?.es
       return { ...base, ...(fallback ?? { title: base.id, description: '', longDescription: '', features: [] }) }
     }

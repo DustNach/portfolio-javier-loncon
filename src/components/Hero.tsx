@@ -7,7 +7,7 @@ const Hero = () => {
   const { t } = useLanguage()
   
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center pt-16 px-4">
+    <section id="hero" className="min-h-[75vh] flex items-center justify-center pt-16 px-4">
       <div className="max-w-5xl mx-auto text-center">
 
         {/* Nombre y título */}
@@ -160,3 +160,4 @@ const Hero = () => {
 }
 
 export default Hero
+
