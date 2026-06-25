@@ -20,7 +20,7 @@ const Navbar = () => {
 
   const navItems = [
     { name: t('nav.about'), href: '#about' },
-    { name: t('nav.projects'), href: '#projects' },
+    { name: t('nav.projects'), href: '/projects' },
     { name: t('nav.demos'), href: '#demos' },
     { name: t('nav.contact'), href: '#contact' },
   ]
@@ -89,3 +89,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+

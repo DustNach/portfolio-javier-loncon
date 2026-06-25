@@ -19,23 +19,33 @@ function App() {
   return (
     <LanguageProvider>
       <Router>
-        <div className="min-h-screen overflow-x-hidden">
-          <Background />
-          <Navbar />
+        <Background />
+        <Navbar />
+        <div>
           <Routes>
+            {/* Home — corto, sin scroll infinito */}
             <Route path="/" element={
               <>
                 <Hero />
                 <About />
                 <SkillsRadar />
-                <LiveProjects />
-                <TechnicalHighlights />
                 <ExperienceTimeline />
-                <Demos />
-                <Projects />
                 <Contact />
               </>
             } />
+
+            {/* Página de proyectos */}
+            <Route path="/projects" element={
+              <>
+                <Projects />
+                <TechnicalHighlights />
+                <LiveProjects />
+                <Demos />
+                <Contact />
+              </>
+            } />
+
+            {/* Case study */}
             <Route path="/projects/sgc-case-study" element={
               <>
                 <SGCCaseStudy />
@@ -52,4 +62,3 @@ function App() {
 }
 
 export default App
-
