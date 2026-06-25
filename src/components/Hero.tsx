@@ -63,7 +63,7 @@ const Hero = () => {
         >
           {/* Ver Proyectos */}
           <a
-            href="#projects"
+            href="/projects"
             className="relative inline-flex items-center gap-2 px-8 py-3 rounded-lg font-medium transition-all duration-300 group overflow-hidden"
             style={{
               background: 'linear-gradient(#0f172a, #0f172a) padding-box, linear-gradient(135deg, #3b82f6, #06b6d4) border-box',
@@ -160,4 +160,5 @@ const Hero = () => {
 }
 
 export default Hero
+
 
