@@ -1,42 +1,5 @@
 import { motion } from 'framer-motion'
-import { Code, Database, Brain, Cloud, Server, Smartphone } from 'lucide-react'
 import { useLanguage } from '../contexts/LanguageContext'
-
-const About = () => {
-  const { t } = useLanguage()
-  
-  const skills = [
-    {
-      icon: <Code className="h-8 w-8" />,
-      title: 'Frontend',
-      items: ['React', 'Next.js', 'TypeScript', 'TailwindCSS', 'Vite', 'Framer Motion']
-    },
-    {
-      icon: <Server className="h-8 w-8" />,
-      title: 'Backend',
-      items: ['Django', 'FastAPI', 'Node.js', 'Express', 'PostgreSQL', 'MongoDB', 'REST APIs']
-    },
-    {
-      icon: <Brain className="h-8 w-8" />,
-      title: 'IA & ML',
-      items: ['TensorFlow', 'Keras', 'Scikit-learn', 'Pandas', 'NLP', 'Computer Vision']
-    },
-    {
-      icon: <Database className="h-8 w-8" />,
-      title: 'Big Data & Analytics',
-      items: ['Hadoop', 'MapReduce', 'HDFS', 'Python', 'R', 'Power BI']
-    },
-    {
-      icon: <Cloud className="h-8 w-8" />,
-      title: 'Cloud & DevOps',
-      items: ['Linux', 'Docker', 'Kubernetes', 'AWS', 'Azure', 'Nginx', 'Git/GitHub']
-    },
-    {
-      icon: <Smartphone className="h-8 w-8" />,
-      title: 'Arquitectura & Otros',
-      items: ['Microservicios', 'REST/GraphQL', 'Redis', 'Celery', 'OWASP', 'Design Patterns']
-    }
-  ]
 
   return (
     <section id="about" className="py-20 px-4 bg-gray-900/50">
@@ -86,8 +49,7 @@ const About = () => {
                   <p className="text-gray-300 text-lg mb-6 leading-relaxed">
                     {p2_pre_ai}
                     <span className="text-purple-400 font-semibold">{p2ka}</span>
-                    {p2_pre_bd},&nbsp;
-                    <span className="text-green-400 font-semibold">Big Data</span>
+                    {p2_pre_bd}<span className="text-green-400 font-semibold">Big Data</span>
                     {p2_pre_fsd}
                     <span className="text-blue-400 font-semibold">{p2kc}</span>
                     {p2_post_fsd}
@@ -190,36 +152,10 @@ const About = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {skills.map((skill, index) => (
-              <motion.div
-                key={skill.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all card-hover"
-              >
-                <div className="text-blue-500 mb-4">{skill.icon}</div>
-                <h3 className="text-xl font-bold text-white mb-3">{skill.title}</h3>
-                <div className="flex flex-wrap gap-2">
-                  {skill.items.map((item) => (
-                    <span
-                      key={item}
-                      className="px-3 py-1 bg-gray-700/50 text-gray-300 rounded-full text-sm"
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
           {/* CTA hacia proyectos */}
-          <div className="mt-16 text-center">
+          <div className="mt-8 text-center">
             <a
-              href="#projects"
+              href="/projects"
               className="relative inline-flex items-center gap-2 px-8 py-3 rounded-lg font-medium transition-all duration-300 group overflow-hidden"
               style={{
                 background: 'linear-gradient(#0f172a, #0f172a) padding-box, linear-gradient(135deg, #3b82f6, #8b5cf6) border-box',
