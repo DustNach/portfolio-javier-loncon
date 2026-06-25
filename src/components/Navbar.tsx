@@ -29,7 +29,7 @@ const Navbar = () => {
       const attempt = (tries: number) => {
         const el = document.getElementById(id)
         if (el) {
-          el.scrollIntoView({ behavior: 'smooth' })
+          el.scrollIntoView({ behavior: 'instant' })
         } else if (tries > 0) {
           setTimeout(() => attempt(tries - 1), 150)
         }
