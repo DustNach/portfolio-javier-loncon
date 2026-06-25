@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Menu, X, Code2 } from 'lucide-react'
 import { useLanguage } from '../contexts/LanguageContext'
 import LanguageSelector from './LanguageSelector'
@@ -9,9 +9,9 @@ const Navbar = () => {
   const [scrollProgress, setScrollProgress] = useState(0)
   const { t } = useLanguage()
   const location = useLocation()
-  const isHome = location.pathname === '/'
-  const isProjects = location.pathname === '/projects'
+  const navigate = useNavigate()
 
+  // Scroll progress bar
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY
@@ -22,26 +22,35 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  type NavItem = { name: string; href: string; isLink?: boolean }
-
-  const navItems: NavItem[] = [
-    { name: t('nav.about'),    href: isHome ? '#about' : '/#about' },
-    { name: t('nav.projects'), href: '/projects', isLink: true },
-    { name: t('nav.demos'),    href: isProjects ? '#demos' : '/projects#demos' },
-    { name: t('nav.contact'),  href: '#contact' },
-  ]
-
-  const desktopCls = 'text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors'
-  const mobileCls  = 'text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium'
-
-  const NavLink = ({ item, mobile = false }: { item: NavItem; mobile?: boolean }) => {
-    const cls = mobile ? mobileCls : desktopCls
-    const handleClick = () => { if (mobile) setIsOpen(false) }
-    if (item.isLink) {
-      return <Link to={item.href} className={cls} onClick={handleClick}>{item.name}</Link>
+  // After route change, scroll to hash if present
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.slice(1)
+      const attempt = (tries: number) => {
+        const el = document.getElementById(id)
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' })
+        } else if (tries > 0) {
+          setTimeout(() => attempt(tries - 1), 150)
+        }
+      }
+      setTimeout(() => attempt(5), 100)
     }
-    return <a href={item.href} className={cls} onClick={handleClick}>{item.name}</a>
+  }, [location.pathname, location.hash])
+
+  // Navigate to a section, crossing pages if needed
+  const goTo = (page: string, section: string, mobile = false) => {
+    if (mobile) setIsOpen(false)
+    if (location.pathname === page) {
+      const el = document.getElementById(section)
+      if (el) el.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      navigate(`${page}#${section}`)
+    }
   }
+
+  const cls = 'text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-transparent border-0 cursor-pointer'
+  const mCls = 'text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium bg-transparent border-0 cursor-pointer w-full text-left'
 
   return (
     <nav className="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-gray-800">
@@ -50,9 +59,11 @@ const Navbar = () => {
         className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 transition-all duration-75"
         style={{ width: `${scrollProgress}%` }}
       />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo — clickable, goes home */}
+
+          {/* Logo */}
           <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <Code2 className="h-8 w-8 text-blue-500" />
             <span className="text-xl font-bold text-white">Javier Loncón</span>
@@ -61,7 +72,10 @@ const Navbar = () => {
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-6">
             <div className="flex items-baseline space-x-4">
-              {navItems.map(item => <NavLink key={item.name} item={item} />)}
+              <button onClick={() => goTo('/', 'about')} className={cls}>{t('nav.about')}</button>
+              <Link to="/projects" className={cls}>{t('nav.projects')}</Link>
+              <button onClick={() => goTo('/projects', 'demos')} className={cls}>{t('nav.demos')}</button>
+              <button onClick={() => { const el = document.getElementById('contact'); if (el) el.scrollIntoView({ behavior: 'smooth' }) }} className={cls}>{t('nav.contact')}</button>
             </div>
             <LanguageSelector />
           </div>
@@ -85,7 +99,10 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900">
-            {navItems.map(item => <NavLink key={item.name} item={item} mobile />)}
+            <button onClick={() => goTo('/', 'about', true)} className={mCls}>{t('nav.about')}</button>
+            <Link to="/projects" className={mCls} onClick={() => setIsOpen(false)}>{t('nav.projects')}</Link>
+            <button onClick={() => goTo('/projects', 'demos', true)} className={mCls}>{t('nav.demos')}</button>
+            <button onClick={() => { setIsOpen(false); const el = document.getElementById('contact'); if (el) el.scrollIntoView({ behavior: 'smooth' }) }} className={mCls}>{t('nav.contact')}</button>
           </div>
         </div>
       )}
@@ -94,4 +111,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-
